@@ -7,6 +7,7 @@ public static class Hill_Cipher{
   public int[][] decryptKey;
   
   public static int[][] testingKey={{1,2},{2,3}};
+  public static int[][] inverseTestingKey;
   
   static int[][] minor(int[][] x, int a, int b){
     int[][] m=new int[x.length-1][x[0].length-1];
@@ -43,23 +44,40 @@ public static class Hill_Cipher{
   
   static int[][] cofactor(int[][] x){
     int[][] result=new int[x.length][x[0].length];
-    for(int i=0;i<x.length;i++){
-      for(int j=0;j<x[0].length;j++){
-        result[i][j]=determinent(x,s
+    if(x.length>2){
+      for(int i=0;i<x.length;i++){
+        for(int j=0;j<x[0].length;j++){
+          result[i][j]=determinent(minor(x, i, j))*(int)Math.pow(-1,i+j);
+        }
+      }
+    } else {
+      for(int i=0;i<x.length;i++){
+        for(int j=0;j<x[0].length;j++){
+          result[i][j]=x[(i+1)%2][(j+1)%2]*(int)Math.pow(-1,i+j);
+        }
+      }
+    }
+    return result;
   }
   
-  static void transpose(int[][] x){
+  static int[][] transpose(int[][] x){
     int[][] result=new int[x.length][x[0].length];
     for(int i=0;i<x.length;i++){
       for(int j=0;j<x[i].length;j++){
         result[i][j]=x[j][i];
       }
     }
-    x=result;
+    return result;
   }
 
-  static void makingDecryptKey(){
-    
+  static void makeDecryptKey(){
+    int d = 1/determinent(testingKey);
+    inverseTestingKey=transpose(testingKey);
+    for(int i=0;i<testingKey.length;i++){
+      for(int j=0;j<testingKey[0].length;j++){
+        inverseTestingKey[i][j]*=d;
+      }
+    }
   }
   
   static String encryt(String s){
@@ -76,7 +94,16 @@ public static class Hill_Cipher{
   }
   
   static String decrypt(String s){
-    return "";
+    int[] input=stringToNum(s);
+    int[] newInput=new int[input.length+input.length%testingKey.length];
+    for(int i=0;i<testingKey.length;i++){
+      int replace=0;
+      for(int j=0;j<testingKey[i].length;j++){
+        replace+=inverseTestingKey[i][j]*input[j];
+      }
+      newInput[i]=replace;
+    }
+    return numToString(newInput);
   }
   
   static int[] stringToNum(String s){

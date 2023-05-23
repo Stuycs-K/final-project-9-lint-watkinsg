@@ -9,10 +9,6 @@ public static class Hill_Cipher{
   public static int[][] testingKey={{1,2},{2,3}};
   public static int[][] inverseTestingKey;
   
-  public static void main(String[] args){
-    makeDecryptKey();
-    System.out.println(inverseTestingKey);
-  }
   
   static int[][] minor(int[][] x, int a, int b){
     int[][] m=new int[x.length-1][x[0].length-1];

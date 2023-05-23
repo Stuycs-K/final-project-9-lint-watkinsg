@@ -9,26 +9,43 @@ public static class Hill_Cipher{
   public static int[][] testingKey={{1,2},{2,3}};
   
   static int[][] minor(int[][] x, int a, int b){
-    return new int[1][1];
-  }
-  
-  static void cofactor(int[][] x, int a, int b, int[][] result){
-    if(x.length>2){
-      for(int i=0;i<x.length;i++){
-        if(i!=a){
-          for(int j=0;j<x[i].length;j++){
-            if(j!=b){
-              result[index]=x[i][j];
-              index++;
+    int[][] m=new int[x.length-1][x[0].length-1];
+    int row=0;
+    int col=0;
+    for(int i=0;i<x.length;i++){
+      if(i!=a){
+        for(int j=0;j<x[i].length;j++){
+          if(j!=b){
+            m[row][col]=x[i][j];
+            col++;
+            if(col==m[0].length){
+              row++;
+              col=0;
             }
           }
         }
       }
-      return result;
     }
-    else{
-      
+    return m;
+  }
+  
+  static int determinent(int[][] x){
+    if(x.length<=2){
+      return x[0][0]*x[1][1]-x[0][1]*x[1][0];
+    } else {
+      int d=0;
+      for(int i=0;i<x.length;i++){
+        d+=x[0][i]*determinent(minor(x,0,i));
+      }
+      return d;
     }
+  }
+  
+  static int[][] cofactor(int[][] x){
+    int[][] result=new int[x.length][x[0].length];
+    for(int i=0;i<x.length;i++){
+      for(int j=0;j<x[0].length;j++){
+        result[i][j]=determinent(x,s
   }
   
   static void transpose(int[][] x){
@@ -40,18 +57,7 @@ public static class Hill_Cipher{
     }
     x=result;
   }
-  
-  static int[][] cofactor(int[][] x){
-    int[][] cof=new int[x.length][x[0].length];
-    for(int i=0;i<cof.length;i++){
-      for(int j=0;j<cof[0].length;j++){
-        cof[i][j]=minor(x, i, j);
-      }
-    }
-    return cof;
 
-    
-  
   static void makingDecryptKey(){
     
   }

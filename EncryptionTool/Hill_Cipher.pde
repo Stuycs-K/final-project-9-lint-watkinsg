@@ -8,13 +8,57 @@ public static class Hill_Cipher{
   
   public static int[][] testingKey={{1,2},{2,3}};
   
+  static int[][] minor(int[][] x, int a, int b){
+    return new int[1][1];
+  }
+  
+  static void cofactor(int[][] x, int a, int b, int[][] result){
+    if(x.length>2){
+      for(int i=0;i<x.length;i++){
+        if(i!=a){
+          for(int j=0;j<x[i].length;j++){
+            if(j!=b){
+              result[index]=x[i][j];
+              index++;
+            }
+          }
+        }
+      }
+      return result;
+    }
+    else{
+      
+    }
+  }
+  
+  static void transpose(int[][] x){
+    int[][] result=new int[x.length][x[0].length];
+    for(int i=0;i<x.length;i++){
+      for(int j=0;j<x[i].length;j++){
+        result[i][j]=x[j][i];
+      }
+    }
+    x=result;
+  }
+  
+  static int[][] cofactor(int[][] x){
+    int[][] cof=new int[x.length][x[0].length];
+    for(int i=0;i<cof.length;i++){
+      for(int j=0;j<cof[0].length;j++){
+        cof[i][j]=minor(x, i, j);
+      }
+    }
+    return cof;
+
+    
+  
   static void makingDecryptKey(){
     
   }
   
   static String encryt(String s){
     int[] input=stringToNum(s);
-    int[] newInput=new int[input.length+input.length%2];
+    int[] newInput=new int[input.length+input.length%testingKey.length];
     for(int i=0;i<testingKey.length;i++){
       int replace=0;
       for(int j=0;j<testingKey[i].length;j++){

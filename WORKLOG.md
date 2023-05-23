@@ -1,14 +1,14 @@
 # Work Log
 
-## GROUP MEMBER 1
+## Gus
 
-### date x
+### 5/22
 
-info
+Talked about UML and worked on overhaul of UML
 
-### date y
+### 5/23
 
-info
+Research ControlP5, continue GUI 'screen' setup/design
 
 
 ## GROUP MEMBER 2

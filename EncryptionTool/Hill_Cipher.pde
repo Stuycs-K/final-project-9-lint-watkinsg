@@ -6,11 +6,23 @@ public static class Hill_Cipher{
   public int[][] encryptKey;
   public int[][] decryptKey;
   
-  public int[][] testingKey={{1,2},{2,3}};
+  public static int[][] testingKey={{1,2},{2,3}};
+  
+  static void makingDecryptKey(){
+    
+  }
   
   static String encryt(String s){
-    
-    return "";
+    int[] input=stringToNum(s);
+    int[] newInput=new int[input.length+input.length%2];
+    for(int i=0;i<testingKey.length;i++){
+      int replace=0;
+      for(int j=0;j<testingKey[i].length;j++){
+        replace+=testingKey[i][j]*input[j];
+      }
+      newInput[i]=replace;
+    }
+    return numToString(newInput);
   }
   
   static String decrypt(String s){

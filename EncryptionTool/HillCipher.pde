@@ -1,10 +1,7 @@
-public static class Hill_Cipher{
+public static class HillCipher extends Cipher {
   
   // A-Z 0-9 corresponds to 0-35
   //use ascii for easier conversion A==65 Z==90 0==48 9==57
-  
-  public int[][] encryptKey;
-  public int[][] decryptKey;
   
   public static int[][] testingKey={{1,2},{2,3}};
   public static int[][] inverseTestingKey;
@@ -80,7 +77,7 @@ public static class Hill_Cipher{
     }
   }
   
-  static String encryt(String s){
+  String encrypt(String s){
     int[] input=stringToNum(s);
     int[] newInput=new int[input.length+input.length%testingKey.length];
     for(int i=0;i<testingKey.length;i++){
@@ -93,7 +90,7 @@ public static class Hill_Cipher{
     return numToString(newInput);
   }
   
-  static String decrypt(String s){
+  String decrypt(String s){
     int[] input=stringToNum(s);
     int[] newInput=new int[input.length+input.length%testingKey.length];
     for(int i=0;i<testingKey.length;i++){
@@ -121,5 +118,4 @@ public static class Hill_Cipher{
     }
     return s;
   }
-  
 }

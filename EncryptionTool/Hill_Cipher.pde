@@ -1,3 +1,5 @@
+import java.util.*;
+
 public static class Hill_Cipher{
   
   // A-Z 0-9 corresponds to 0-35
@@ -6,8 +8,8 @@ public static class Hill_Cipher{
   public int[][] encryptKey;
   public int[][] decryptKey;
   
-  public static int[][] testingKey={{1,2},{2,3}};
-  public static int[][] inverseTestingKey;
+  public static int[][] defaultKey={{1,2},{2,3}};
+  public static int[][] inverseDefaultKey;
   
   
   static int[][] minor(int[][] x, int a, int b){
@@ -72,22 +74,25 @@ public static class Hill_Cipher{
   }
 
   static void makeDecryptKey(){
-    int d = 1/determinent(testingKey);
-    inverseTestingKey=transpose(testingKey);
-    for(int i=0;i<testingKey.length;i++){
-      for(int j=0;j<testingKey[0].length;j++){
-        inverseTestingKey[i][j]*=d;
+    int d = 1/determinent(defaultKey);
+    System.out.println("d: "+d);
+    inverseDefaultKey=transpose(cofactor(defaultKey));
+    System.out.println("transpose: \n"+Arrays.toString(inverseDefaultKey[0]));
+    System.out.println(Arrays.toString(inverseDefaultKey[1]));
+    for(int i=0;i<defaultKey.length;i++){
+      for(int j=0;j<defaultKey[0].length;j++){
+        inverseDefaultKey[i][j]*=d;
       }
     }
   }
   
   static String encryt(String s){
     int[] input=stringToNum(s);
-    int[] newInput=new int[input.length+input.length%testingKey.length];
-    for(int i=0;i<testingKey.length;i++){
+    int[] newInput=new int[input.length+input.length%defaultKey.length];
+    for(int i=0;i<defaultKey.length;i++){
       int replace=0;
-      for(int j=0;j<testingKey[i].length;j++){
-        replace+=testingKey[i][j]*input[j];
+      for(int j=0;j<defaultKey[i].length;j++){
+        replace+=defaultKey[i][j]*input[j];
       }
       newInput[i]=replace;
     }
@@ -96,11 +101,11 @@ public static class Hill_Cipher{
   
   static String decrypt(String s){
     int[] input=stringToNum(s);
-    int[] newInput=new int[input.length+input.length%testingKey.length];
-    for(int i=0;i<testingKey.length;i++){
+    int[] newInput=new int[input.length+input.length%defaultKey.length];
+    for(int i=0;i<defaultKey.length;i++){
       int replace=0;
-      for(int j=0;j<testingKey[i].length;j++){
-        replace+=inverseTestingKey[i][j]*input[j];
+      for(int j=0;j<defaultKey[i].length;j++){
+        replace+=inverseDefaultKey[i][j]*input[j];
       }
       newInput[i]=replace;
     }

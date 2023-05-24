@@ -7,7 +7,7 @@ public static class Hill_Cipher{
   public float[][] encryptKey;
   public float[][] decryptKey;
   
-  public static float[][] defaultKey={{1,2},{2,3}};
+  public static float[][] defaultKey={{5,3},{4,3}};
   public static float[][] inverseDefaultKey;
   
   
@@ -88,7 +88,7 @@ public static class Hill_Cipher{
     }
   }
 
-  static String encryt(String s){
+  static String encrypt(String s){
     float[][] input=stringToNum(s);
     float[][] newInput=new float[input.length][input[0].length];
     for(int i=0;i<defaultKey.length;i++){
@@ -124,43 +124,60 @@ public static class Hill_Cipher{
   }
   
   static float[][] stringToNum(String s){
-    String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    String alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
     alphabet=alpha.toCharArray();
     float[][] x=new float[defaultKey.length][ceil(s.length()/defaultKey.length)];
-    for(int i=0;i<x.length;i++){
-      for(int j=0;j<x[0].length;j++){
-        int smt=s.charAt(i*x[0].length+j);
-        //System.out.println("smt b4: "+smt);
-        if(smt<58){
-          smt=smt%48+52;
+    for(int i=0;i<x[0].length;i++){
+      for(int j=0;j<x.length;j++){
+        int smt=s.charAt(i*x.length+j);
+        System.out.println("smt b4: "+smt);
+        if(smt==32){
+          smt=alphabet.length-1;
+        } else if (smt<58){
+          smt=smt%48+26;
         } else if(smt<91){
-          smt=smt%65+26;
-        } else {
-          smt=smt%97;
+          smt=smt%65;
+        //} else {
+        //  smt=smt%97;
         }
-        //System.out.println("smt after: "+smt);
+        System.out.println("smt after: "+smt);
         x[j][i]=smt;
       }
     }
     //System.out.println("final x[i]: "+Arrays.toString(x));
+    System.out.println("x stn");
+    System.out.println(Arrays.toString(x[0]));
+    System.out.println(Arrays.toString(x[1]));
     return x;
   }
   
   static String numToString(float[][] x){
-    String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    String alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
     alphabet=alpha.toCharArray();
     String s="";
     //System.out.println(Arrays.toString(alphabet));
-    for(int i=0;i<x.length;i++){
-      for(int j=0;j<x[i].length;j++){
+    //System.out.println("x nts");
+    //System.out.println(Arrays.toString(x[0]));
+    //System.out.println(Arrays.toString(x[1]));
+    for(int i=0;i<x[0].length;i++){
+      for(int j=0;j<x.length;j++){
         //System.out.println((int)(x[i]%alphabet.length));
         //System.out.println("x[i]: "+x[i]);
-        s+=alphabet[(int)(x[j][i]%alphabet.length)];
+        float y=x[j][i];
+        while(y<0){
+          y+=alphabet.length;
+        }
+        //System.out.println((y%alphabet.length));
+        //System.out.println(alphabet[(int)(y%alphabet.length)]);
+        s+=alphabet[(int)(y%alphabet.length)];
       }
     }
     //for(int i=0;i<x.length;i++){
     //  System.out.println(x[i]);
     //}
+    System.out.println("x nts");
+    System.out.println(Arrays.toString(x[0]));
+    System.out.println(Arrays.toString(x[1]));
     return s;
   }
   

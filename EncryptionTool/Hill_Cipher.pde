@@ -109,26 +109,17 @@ public static class Hill_Cipher{
         
               
   static String decrypt(String s){
-    System.out.println("s: "+s);
-    float[] input=stringToNum(s);
-    System.out.println("Input");
-    System.out.println(Arrays.toString(input));
-    System.out.println(numToString(input));
-    float[] newInput=new float[input.length+input.length%defaultKey.length];
-    System.out.println("inverseDeFaultKey");
-    System.out.println(Arrays.toString(inverseDefaultKey[0]));
-    System.out.println(Arrays.toString(inverseDefaultKey[1]));
-    for(int i=0;i<defaultKey.length;i++){
-      float replace=0;
-      for(int j=0;j<defaultKey[i].length;j++){
-        replace+=inverseDefaultKey[i][j]*input[j];
+    float[][] input=stringToNum(s);
+    float[][] newInput=new float[input.length][input[0].length];
+    for(int i=0;i<inverseDefaultKey.length;i++){
+      for(int j=0;j<inverseDefaultKey[i].length;j++){
+        int replace=0;
+        for(int k=0;k<defaultKey.length;k++){
+          replace+=inverseDefaultKey[j][k]*input[k][i];
+        }
+        newInput[j][i]=replace;
       }
-      System.out.println("replace: "+replace);
-      newInput[i]=replace;
     }
-    System.out.println("newInput");
-    System.out.println(Arrays.toString(newInput));
-    System.out.println(numToString(newInput));
     return numToString(newInput);
   }
   

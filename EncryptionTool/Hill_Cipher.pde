@@ -2,18 +2,17 @@ import java.util.*;
 
 public static class Hill_Cipher{
   
-  // A-Z 0-9 corresponds to 0-35
-  //use ascii for easier conversion A==65 Z==90 0==48 9==57
+  public static char[] alphabet;
   
-  public int[][] encryptKey;
-  public int[][] decryptKey;
+  public float[][] encryptKey;
+  public float[][] decryptKey;
   
-  public static int[][] defaultKey={{1,2},{2,3}};
-  public static int[][] inverseDefaultKey;
+  public static float[][] defaultKey={{1,2},{2,3}};
+  public static float[][] inverseDefaultKey;
   
   
-  static int[][] minor(int[][] x, int a, int b){
-    int[][] m=new int[x.length-1][x[0].length-1];
+  static float[][] minor(float[][] x, float a, float b){
+    float[][] m=new float[x.length-1][x[0].length-1];
     int row=0;
     int col=0;
     for(int i=0;i<x.length;i++){
@@ -33,11 +32,11 @@ public static class Hill_Cipher{
     return m;
   }
   
-  static int determinent(int[][] x){
+  static float determinent(float[][] x){
     if(x.length<=2){
       return x[0][0]*x[1][1]-x[0][1]*x[1][0];
     } else {
-      int d=0;
+      float d=0;
       for(int i=0;i<x.length;i++){
         d+=x[0][i]*determinent(minor(x,0,i));
       }
@@ -45,26 +44,26 @@ public static class Hill_Cipher{
     }
   }
   
-  static int[][] cofactor(int[][] x){
-    int[][] result=new int[x.length][x[0].length];
+  static float[][] cofactor(float[][] x){
+    float[][] result=new float[x.length][x[0].length];
     if(x.length>2){
       for(int i=0;i<x.length;i++){
         for(int j=0;j<x[0].length;j++){
-          result[i][j]=determinent(minor(x, i, j))*(int)Math.pow(-1,i+j);
+          result[i][j]=determinent(minor(x, i, j))*(float)Math.pow(-1,i+j);
         }
       }
     } else {
       for(int i=0;i<x.length;i++){
         for(int j=0;j<x[0].length;j++){
-          result[i][j]=x[(i+1)%2][(j+1)%2]*(int)Math.pow(-1,i+j);
+          result[i][j]=x[(i+1)%2][(j+1)%2]*(float)Math.pow(-1,i+j);
         }
       }
     }
     return result;
   }
   
-  static int[][] transpose(int[][] x){
-    int[][] result=new int[x.length][x[0].length];
+  static float[][] transpose(float[][] x){
+    float[][] result=new float[x.length][x[0].length];
     for(int i=0;i<x.length;i++){
       for(int j=0;j<x[i].length;j++){
         result[i][j]=x[j][i];
@@ -74,11 +73,14 @@ public static class Hill_Cipher{
   }
 
   static void makeDecryptKey(){
-    int d = 1/determinent(defaultKey);
+    float d = 1/determinent(defaultKey);
     System.out.println("d: "+d);
+    System.out.println(determinent(defaultKey));
     inverseDefaultKey=transpose(cofactor(defaultKey));
-    System.out.println("transpose: \n"+Arrays.toString(inverseDefaultKey[0]));
-    System.out.println(Arrays.toString(inverseDefaultKey[1]));
+    System.out.println("transpose: ");
+    for(int i=0;i<defaultKey.length;i++){
+     System.out.println(Arrays.toString(inverseDefaultKey[i]));
+    }
     for(int i=0;i<defaultKey.length;i++){
       for(int j=0;j<defaultKey[0].length;j++){
         inverseDefaultKey[i][j]*=d;
@@ -87,10 +89,10 @@ public static class Hill_Cipher{
   }
   
   static String encryt(String s){
-    int[] input=stringToNum(s);
-    int[] newInput=new int[input.length+input.length%defaultKey.length];
+    float[] input=stringToNum(s);
+    float[] newInput=new float[input.length+input.length%defaultKey.length];
     for(int i=0;i<defaultKey.length;i++){
-      int replace=0;
+      float replace=0;
       for(int j=0;j<defaultKey[i].length;j++){
         replace+=defaultKey[i][j]*input[j];
       }
@@ -100,31 +102,44 @@ public static class Hill_Cipher{
   }
   
   static String decrypt(String s){
-    int[] input=stringToNum(s);
-    int[] newInput=new int[input.length+input.length%defaultKey.length];
+    float[] input=stringToNum(s);
+    float[] newInput=new float[input.length+input.length%defaultKey.length];
     for(int i=0;i<defaultKey.length;i++){
-      int replace=0;
+      float replace=0;
       for(int j=0;j<defaultKey[i].length;j++){
         replace+=inverseDefaultKey[i][j]*input[j];
       }
       newInput[i]=replace;
     }
+    System.out.println(Arrays.toString(newInput));
+    System.out.println(numToString(newInput));
     return numToString(newInput);
   }
   
-  static int[] stringToNum(String s){
-    int[] x=new int[s.length()];
+  static float[] stringToNum(String s){
+    String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    alphabet=alpha.toCharArray();
+    float[] x=new float[s.length()];
     for(int i=0;i<x.length;i++){
-      x[i]=s.charAt(i);
+      int smt=s.charAt(i);
+      if(smt<58){
+        smt=smt%48+52;
+        x[i]=smt;
+      }
     }
     return x;
   }
   
-  static String numToString(int[] x){
+  static String numToString(float[] x){
+    String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    alphabet=alpha.toCharArray();
     String s="";
     for(int i=0;i<x.length;i++){
-      s+=char(x[i]);
+      s+=alphabet[(int)x[i]%alphabet.length];
     }
+    //for(int i=0;i<x.length;i++){
+    //  System.out.println(x[i]);
+    //}
     return s;
   }
   

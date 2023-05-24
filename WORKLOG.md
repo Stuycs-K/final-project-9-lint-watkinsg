@@ -22,3 +22,4 @@ tried to add the picture of the diagram at home
 
 learned ez super basic level of matrix multiplication and how to find the inverse of a matrix and coded encrypt method, started on coding the inverse of the key matrix
 at home, finish all the functions and made a testing branch, it's wrong rn but i will fix it 
+did testing, trying to figure out problem

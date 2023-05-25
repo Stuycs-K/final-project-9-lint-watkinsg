@@ -2,13 +2,13 @@ import java.util.*;
 
 public static class Hill_Cipher{
   
-  public static char[] alphabet;
-  
   public float[][] encryptKey;
   public float[][] decryptKey;
   
   public static float[][] defaultKey={{5,3},{4,3}};
   public static float[][] inverseDefaultKey;
+  public static String alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
+  public static char[] alphabet=alpha.toCharArray();
   
   
   static float[][] minor(float[][] x, float a, float b){
@@ -71,9 +71,33 @@ public static class Hill_Cipher{
     }
     return result;
   }
+  
+  static void mod(float[][]x){
+    for(int i=0;i<x.length;i++){
+      for(int j=0;j<x[0].length;j++){
+        while(x[i][j]<0){
+          x[i][j]+=alphabet.length;
+        }
+        x[i][j]=x[i][j]%alphabet.length;
+      }
+    }
+  }
+  
+  static void mod(float x){
+    while(x<0){
+      x+=alphabet.length;
+    }
+    x=x%alphabet.length;
+  }
 
   static void makeDecryptKey(){
-    float d = 1/determinent(defaultKey);
+    float d = determinent(defaultKey);
+    int igiveup=0;
+    while(d%alphabet.length!=1){
+      igiveup++;
+      d*=igiveup;
+    }
+    d=igiveup;
     System.out.println("d: "+d);
     System.out.println(determinent(defaultKey));
     inverseDefaultKey=transpose(cofactor(defaultKey));
@@ -81,6 +105,7 @@ public static class Hill_Cipher{
     for(int i=0;i<defaultKey.length;i++){
      System.out.println(Arrays.toString(inverseDefaultKey[i]));
     }
+    //mod(inverseDefaultKey);
     for(int i=0;i<defaultKey.length;i++){
       for(int j=0;j<defaultKey[0].length;j++){
         inverseDefaultKey[i][j]*=d;
@@ -124,8 +149,6 @@ public static class Hill_Cipher{
   }
   
   static float[][] stringToNum(String s){
-    String alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
-    alphabet=alpha.toCharArray();
     float[][] x=new float[defaultKey.length][ceil(s.length()/defaultKey.length)];
     for(int i=0;i<x[0].length;i++){
       for(int j=0;j<x.length;j++){
@@ -152,8 +175,6 @@ public static class Hill_Cipher{
   }
   
   static String numToString(float[][] x){
-    String alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
-    alphabet=alpha.toCharArray();
     String s="";
     //System.out.println(Arrays.toString(alphabet));
     //System.out.println("x nts");

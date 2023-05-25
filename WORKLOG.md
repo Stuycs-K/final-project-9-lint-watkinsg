@@ -28,3 +28,4 @@ did testing, trying to figure out problem
 
 in class: finish float[][] and allow input of various length
 at home: did a bit of testing, it's mostly working, or enough for mvp but needs tweaking, the determinent seems off
+also got mvp done for the encrypting part, gonna work on making it available in different matrixes

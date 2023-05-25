@@ -5,9 +5,9 @@ public static class Hill_Cipher{
   public float[][] encryptKey;
   public float[][] decryptKey;
   
-  public static float[][] defaultKey={{5,3},{4,3}};
+  public static float[][] defaultKey={{7,5,6},{3,8,2},{6,6,5}};
   public static float[][] inverseDefaultKey;
-  public static String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
+  public static String alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   public static char[] alphabet=alpha.toCharArray();
   
   
@@ -105,6 +105,10 @@ public static class Hill_Cipher{
       igiveup++;
       if(igiveup<5)
       System.out.println(igiveup);
+      if(igiveup>100){
+        System.out.println("key noninvertible mod "+alphabet.length);
+        break;
+      }
     }
     if(b){
       igiveup*=-1;
@@ -118,9 +122,11 @@ public static class Hill_Cipher{
      System.out.println(Arrays.toString(inverseDefaultKey[i]));
     }
     //mod(inverseDefaultKey);
-    for(int i=0;i<defaultKey.length;i++){
-      for(int j=0;j<defaultKey[0].length;j++){
-        inverseDefaultKey[i][j]*=d;
+    if(defaultKey.length<=2){
+      for(int i=0;i<defaultKey.length;i++){
+        for(int j=0;j<defaultKey[0].length;j++){
+          inverseDefaultKey[i][j]*=d;
+        }
       }
     }
     inverseDefaultKey=mod(inverseDefaultKey);
@@ -140,8 +146,9 @@ public static class Hill_Cipher{
       }
     }
     System.out.println("newInput");
-    System.out.println(Arrays.toString(newInput[0]));
-    System.out.println(Arrays.toString(newInput[1]));
+    for(int i=0;i<newInput.length;i++){
+      System.out.println(Arrays.toString(newInput[i]));
+    }
     return numToString(newInput);
   }
   
@@ -169,8 +176,10 @@ public static class Hill_Cipher{
     float[][] x=new float[defaultKey.length][ceil(float(s.length())/defaultKey.length)];
     //System.out.println(x[0].length);
     while(s.length()%defaultKey.length!=0){
-      s+=" ";
+      s+="A";
     }
+    System.out.println(s);
+    System.out.println(x.length+" "+x[0].length);
     for(int i=0;i<x[0].length;i++){
       for(int j=0;j<x.length;j++){
         int smt=0;
@@ -178,17 +187,17 @@ public static class Hill_Cipher{
         
         //System.out.println("smt b4: "+smt);
         
-        //smt=smt%65;
+        smt=smt%65;
         
-        if(smt==32){
-          smt=alphabet.length-1;
-        } else if (smt<58){
-          smt=smt%48+52;
-        } else if(smt<91){
-          smt=smt%65+26;
-        } else {
-          smt=smt%97;
-        }
+        //if(smt==32){
+        //  smt=alphabet.length-1;
+        //} else if (smt<58){
+        //  smt=smt%48+52;
+        //} else if(smt<91){
+        //  smt=smt%65+26;
+        //} else {
+        //  smt=smt%97;
+        //}
         
         //System.out.println("smt after: "+smt);
         x[j][i]=smt;
@@ -196,8 +205,9 @@ public static class Hill_Cipher{
     }
     //System.out.println("final x[i]: "+Arrays.toString(x));
     System.out.println("x stn");
-    System.out.println(Arrays.toString(x[0]));
-    System.out.println(Arrays.toString(x[1]));
+    for(int i=0;i<x.length;i++){
+      System.out.println(Arrays.toString(x[i]));
+    }
     return x;
   }
   
@@ -225,8 +235,9 @@ public static class Hill_Cipher{
     //  System.out.println(x[i]);
     //}
     System.out.println("x nts");
-    System.out.println(Arrays.toString(x[0]));
-    System.out.println(Arrays.toString(x[1]));
+    for(int i=0;i<x.length;i++){
+      System.out.println(Arrays.toString(x[i]));
+    }
     return s;
   }
   

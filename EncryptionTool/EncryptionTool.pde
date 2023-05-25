@@ -9,7 +9,7 @@ void setup() {
     text(Arrays.toString(Hill_Cipher.inverseDefaultKey[1]), 200.0, 300.0);
     text(Hill_Cipher.encrypt("URMOM"), 200.0, 400.0);
     System.out.println("-----break-----");
-    text(Hill_Cipher.decrypt("VBYMIW"), 200.0, 500.0);
+    text(Hill_Cipher.decrypt("S96u9x"), 200.0, 500.0);
   }
   void draw() {
   }

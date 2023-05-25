@@ -7,7 +7,7 @@ public static class Hill_Cipher{
   
   public static float[][] defaultKey={{5,3},{4,3}};
   public static float[][] inverseDefaultKey;
-  public static String alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  public static String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
   public static char[] alphabet=alpha.toCharArray();
   
   
@@ -85,18 +85,31 @@ public static class Hill_Cipher{
     while(x<0){
       x+=alphabet.length;
     }
+    //System.out.println("x:   "+x%alphabet.length);
     return x%alphabet.length;
   }
 
   static void makeDecryptKey(){
     //System.out.println("testing");
     //System.out.println(alphabet.length);
+    System.out.println("makeDecryptKey");
     float d = determinent(defaultKey);
-    //System.out.println(d);
+    boolean b=false;
+    if(d<0){
+      d*=-1;
+      b=true;
+    }
+    System.out.println("d: "+d);
     int igiveup=0;
     while((d*igiveup)%alphabet.length!=1){
       igiveup++;
+      if(igiveup<5)
+      System.out.println(igiveup);
     }
+    if(b){
+      igiveup*=-1;
+    }
+    System.out.println("makeDecryptKey");
     d=igiveup;
     System.out.println("d: "+d);
     inverseDefaultKey=transpose(cofactor(defaultKey));
@@ -114,6 +127,7 @@ public static class Hill_Cipher{
   }
 
   static String encrypt(String s){
+    System.out.println("encrypt");
     float[][] input=stringToNum(s);
     float[][] newInput=new float[input.length][input[0].length];
     for(int i=0;i<input[0].length;i++){
@@ -155,7 +169,7 @@ public static class Hill_Cipher{
     float[][] x=new float[defaultKey.length][ceil(float(s.length())/defaultKey.length)];
     //System.out.println(x[0].length);
     while(s.length()%defaultKey.length!=0){
-      s+="A";
+      s+=" ";
     }
     for(int i=0;i<x[0].length;i++){
       for(int j=0;j<x.length;j++){
@@ -164,18 +178,17 @@ public static class Hill_Cipher{
         
         //System.out.println("smt b4: "+smt);
         
-        smt=smt%65;
+        //smt=smt%65;
         
-        //if(smt==32){
-        //  smt=alphabet.length-1;
-        //} else if (smt<58){
-        //  smt=smt%48+26;
-        //} else if(smt<91){
-        //  smt=smt%65;
-        //}
-          
-        //} else {
-        //  smt=smt%97;
+        if(smt==32){
+          smt=alphabet.length-1;
+        } else if (smt<58){
+          smt=smt%48+52;
+        } else if(smt<91){
+          smt=smt%65+26;
+        } else {
+          smt=smt%97;
+        }
         
         //System.out.println("smt after: "+smt);
         x[j][i]=smt;

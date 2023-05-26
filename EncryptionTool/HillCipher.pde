@@ -1,17 +1,16 @@
 import java.util.*;
 
-public static class Hill_Cipher{
-  
+public class HillCipher extends Cipher {
+
   public float[][] encryptKey;
   public float[][] decryptKey;
   
-  public static float[][] defaultKey={{7,5,6},{3,8,2},{6,6,5}};
-  public static float[][] inverseDefaultKey;
-  public static String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
-  public static char[] alphabet=alpha.toCharArray();
-  
-  
-  static float[][] minor(float[][] x, float a, float b){
+  public float[][] defaultKey={{7,5,6},{3,8,2},{6,6,5}};
+  public float[][] inverseDefaultKey;
+  public String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
+  public char[] alphabet=alpha.toCharArray();
+   
+  float[][] minor(float[][] x, float a, float b){
     float[][] m=new float[x.length-1][x[0].length-1];
     int row=0;
     int col=0;
@@ -32,7 +31,7 @@ public static class Hill_Cipher{
     return m;
   }
   
-  static float determinent(float[][] x){
+  float determinent(float[][] x){
     if(x.length<=2){
       return x[0][0]*x[1][1]-x[0][1]*x[1][0];
     } else {
@@ -44,7 +43,7 @@ public static class Hill_Cipher{
     }
   }
   
-  static float[][] cofactor(float[][] x){
+  float[][] cofactor(float[][] x){
     float[][] result=new float[x.length][x[0].length];
     if(x.length>2){
       for(int i=0;i<x.length;i++){
@@ -62,7 +61,7 @@ public static class Hill_Cipher{
     return result;
   }
   
-  static float[][] transpose(float[][] x){
+  float[][] transpose(float[][] x){
     float[][] result=new float[x.length][x[0].length];
     for(int i=0;i<x.length;i++){
       for(int j=0;j<x[i].length;j++){
@@ -72,7 +71,7 @@ public static class Hill_Cipher{
     return result;
   }
   
-  static float[][] mod(float[][]x){
+  float[][] mod(float[][]x){
     for(int i=0;i<x.length;i++){
       for(int j=0;j<x[0].length;j++){
           x[i][j]=mod(x[i][j]);
@@ -81,7 +80,7 @@ public static class Hill_Cipher{
     return x;
   }
   
-  static float mod(float x){
+  float mod(float x){
     while(x<0){
       x+=alphabet.length;
     }
@@ -89,7 +88,7 @@ public static class Hill_Cipher{
     return x%alphabet.length;
   }
 
-  static void makeDecryptKey(){
+  void makeDecryptKey(){
     //System.out.println("testing");
     //System.out.println(alphabet.length);
     System.out.println("makeDecryptKey");
@@ -131,8 +130,8 @@ public static class Hill_Cipher{
     }
     inverseDefaultKey=mod(inverseDefaultKey);
   }
-
-  static String encrypt(String s){
+  
+  String encrypt(String s){
     System.out.println("encrypt");
     float[][] input=stringToNum(s);
     float[][] newInput=new float[input.length][input[0].length];
@@ -151,13 +150,14 @@ public static class Hill_Cipher{
     }
     return numToString(newInput);
   }
-  
+
+
   //a b c       m n o x             am   
   //e f g       q r s y             bq
   //i j k       u v w z             cu
         
-              
-  static String decrypt(String s){
+     
+  String decrypt(String s){
     float[][] input=stringToNum(s);
     float[][] newInput=new float[input.length][input[0].length];
     for(int i=0;i<input[0].length;i++){
@@ -172,7 +172,7 @@ public static class Hill_Cipher{
     return numToString(newInput);
   }
   
-  static float[][] stringToNum(String s){
+  float[][] stringToNum(String s){
     float[][] x=new float[defaultKey.length][ceil(float(s.length())/defaultKey.length)];
     //System.out.println(x[0].length);
     while(s.length()%defaultKey.length!=0){
@@ -211,7 +211,7 @@ public static class Hill_Cipher{
     return x;
   }
   
-  static String numToString(float[][] x){
+  String numToString(float[][] x){
     String s="";
     x=mod(x);
     //System.out.println(Arrays.toString(alphabet));
@@ -240,5 +240,4 @@ public static class Hill_Cipher{
     }
     return s;
   }
-  
 }

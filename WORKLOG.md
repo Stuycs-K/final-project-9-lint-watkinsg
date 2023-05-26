@@ -35,3 +35,7 @@ also got mvp done for the encrypting part, gonna work on making it available in 
 in class: did more testing, and figured out the problem
 at home: it only works for invertible and modable matrixes but at least now it works, time to work on allowing lowercase number and space too
 fix the problem now any workable key works and allows lowercase number and space
+
+### date 5/26
+
+read about control p 5

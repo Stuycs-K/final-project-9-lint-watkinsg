@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class HillCipher extends Cipher {
+public class HillCipher implements Cipher {
 
   public float[][] encryptKey;
   public float[][] decryptKey;

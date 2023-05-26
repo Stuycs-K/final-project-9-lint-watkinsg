@@ -7,7 +7,7 @@ public static class Hill_Cipher{
   
   public static float[][] defaultKey={{7,5,6},{3,8,2},{6,6,5}};
   public static float[][] inverseDefaultKey;
-  public static String alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  public static String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
   public static char[] alphabet=alpha.toCharArray();
   
   
@@ -176,7 +176,7 @@ public static class Hill_Cipher{
     float[][] x=new float[defaultKey.length][ceil(float(s.length())/defaultKey.length)];
     //System.out.println(x[0].length);
     while(s.length()%defaultKey.length!=0){
-      s+="A";
+      s+=" ";
     }
     System.out.println(s);
     System.out.println(x.length+" "+x[0].length);
@@ -187,17 +187,17 @@ public static class Hill_Cipher{
         
         //System.out.println("smt b4: "+smt);
         
-        smt=smt%65;
+        //smt=smt%65;
         
-        //if(smt==32){
-        //  smt=alphabet.length-1;
-        //} else if (smt<58){
-        //  smt=smt%48+52;
-        //} else if(smt<91){
-        //  smt=smt%65+26;
-        //} else {
-        //  smt=smt%97;
-        //}
+        if(smt==32){
+          smt=alphabet.length-1;
+        } else if (smt<58){
+          smt=smt%48+52;
+        } else if(smt<91){
+          smt=smt%65+26;
+        } else {
+          smt=smt%97;
+        }
         
         //System.out.println("smt after: "+smt);
         x[j][i]=smt;

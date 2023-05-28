@@ -141,26 +141,26 @@ public class HillCipher implements Cipher {
                     ;
     elements.add(s);
     for(int i=0;i<defaultKey[0].length;i++){
-      for(int j=0;j<defaultKey.length,j++){
+      for(int j=0;j<defaultKey.length;j++){
         cp5.addTextlabel("key")
-                        .setText((String(defaultKey[j][i]))
+                        .setText(defaultKey[j][i]+"")
                         .setPosition(100,50)
                         .setColorValue(0xffffff00)
                         .setFont(createFont("Georgia",20))
                         ;
-        elements.add(String(defaultKey[j][i]));
+        elements.add(defaultKey[j][i]+"");
       }
     }
     float[][] input=stringToNum(s);
     for(int i=0;i<input[0].length;i++){
-      for(int j=0;j<input.length,j++){
+      for(int j=0;j<input.length;j++){
         cp5.addTextlabel("user input translated to numbers")
-                        .setText((String(input[j][i]))
+                        .setText(input[j][i]+"")
                         .setPosition(100,50)
                         .setColorValue(0xffffff00)
                         .setFont(createFont("Georgia",20))
                         ;
-        elements.add(String(input[j][i]));
+        elements.add(input[j][i]+"");
       }
     }
     float[][] newInput=new float[input.length][input[0].length];
@@ -172,12 +172,12 @@ public class HillCipher implements Cipher {
         }
         newInput[j][i]=replace;
         cp5.addTextlabel("input after change")
-                        .setText((String(newInput[j][i]))
+                        .setText(newInput[j][i]+"")
                         .setPosition(100,50)
                         .setColorValue(0xffffff00)
                         .setFont(createFont("Georgia",20))
                         ;
-        elements.add(String(newInput[j][i]));
+        elements.add(newInput[j][i]+"");
       }
     }
     System.out.println("newInput");
@@ -201,28 +201,28 @@ public class HillCipher implements Cipher {
   //i j k       u v w z             cu
         
      
-  String decrypt(String s){
+  String decrypt(String s, ControlP5 cp5, ArrayList<String> elements){
     float[][] input=stringToNum(s);
     for(int i=0;i<input[0].length;i++){
-      for(int j=0;j<input.length,j++){
+      for(int j=0;j<input.length;j++){
         cp5.addTextlabel("user input translated to numbers")
-                        .setText((String(input[j][i]))
+                        .setText(input[j][i]+"")
                         .setPosition(100,50)
                         .setColorValue(0xffffff00)
                         .setFont(createFont("Georgia",20))
                         ;
-        elements.add(String(input[j][i]));
+        elements.add(input[j][i]+"");
       }
     }
     for(int i=0;i<inverseDefaultKey[0].length;i++){
-      for(int j=0;j<inverseDefaultKey.length,j++){
+      for(int j=0;j<inverseDefaultKey.length;j++){
         cp5.addTextlabel("key")
-                        .setText((String(inverseDefaultKey[j][i]))
+                        .setText(inverseDefaultKey[j][i]+"")
                         .setPosition(100,50)
                         .setColorValue(0xffffff00)
                         .setFont(createFont("Georgia",20))
                         ;
-        elements.add(String(inverseDefaultKey[j][i]));
+        elements.add(inverseDefaultKey[j][i]+"");
       }
     }
     float[][] newInput=new float[input.length][input[0].length];
@@ -234,12 +234,12 @@ public class HillCipher implements Cipher {
         }
         newInput[j][i]=replace;
         cp5.addTextlabel("input after change")
-                        .setText((String(newInput[j][i]))
+                        .setText(newInput[j][i]+"")
                         .setPosition(100,50)
                         .setColorValue(0xffffff00)
                         .setFont(createFont("Georgia",20))
                         ;
-        elements.add(String(newInput[j][i]));
+        elements.add(newInput[j][i]+"");
       }
     }
     String ihatelife=numToString(newInput);

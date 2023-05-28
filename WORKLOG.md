@@ -39,3 +39,11 @@ fix the problem now any workable key works and allows lowercase number and space
 ### date 5/26
 
 read about control p 5
+
+### date 5/27
+
+read more about control p 5 and discuss with gus what is the work distributon later
+
+### date 5/28
+
+work on adding cp5 to the encrypt and decrypt function

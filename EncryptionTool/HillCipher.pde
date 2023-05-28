@@ -131,9 +131,38 @@ public class HillCipher implements Cipher {
     inverseDefaultKey=mod(inverseDefaultKey);
   }
   
-  String encrypt(String s){
+  String encrypt(String s, ControlP5 cp5, ArrayList<String> elements){
     System.out.println("encrypt");
+    cp5.addTextlabel("user input")
+                    .setText(s)
+                    .setPosition(100,50)
+                    .setColorValue(0xffffff00)
+                    .setFont(createFont("Georgia",20))
+                    ;
+    elements.add(s);
+    for(int i=0;i<defaultKey[0].length;i++){
+      for(int j=0;j<defaultKey.length,j++){
+        cp5.addTextlabel("key")
+                        .setText((String(defaultKey[j][i]))
+                        .setPosition(100,50)
+                        .setColorValue(0xffffff00)
+                        .setFont(createFont("Georgia",20))
+                        ;
+        elements.add(String(defaultKey[j][i]));
+      }
+    }
     float[][] input=stringToNum(s);
+    for(int i=0;i<input[0].length;i++){
+      for(int j=0;j<input.length,j++){
+        cp5.addTextlabel("user input translated to numbers")
+                        .setText((String(input[j][i]))
+                        .setPosition(100,50)
+                        .setColorValue(0xffffff00)
+                        .setFont(createFont("Georgia",20))
+                        ;
+        elements.add(String(input[j][i]));
+      }
+    }
     float[][] newInput=new float[input.length][input[0].length];
     for(int i=0;i<input[0].length;i++){
       for(int j=0;j<defaultKey[0].length;j++){
@@ -142,13 +171,28 @@ public class HillCipher implements Cipher {
           replace+=defaultKey[j][k]*input[k][i];
         }
         newInput[j][i]=replace;
+        cp5.addTextlabel("input after change")
+                        .setText((String(newInput[j][i]))
+                        .setPosition(100,50)
+                        .setColorValue(0xffffff00)
+                        .setFont(createFont("Georgia",20))
+                        ;
+        elements.add(String(newInput[j][i]));
       }
     }
     System.out.println("newInput");
     for(int i=0;i<newInput.length;i++){
       System.out.println(Arrays.toString(newInput[i]));
     }
-    return numToString(newInput);
+    String ihatelife=numToString(newInput);
+    cp5.addTextlabel("new number converted to text")
+                    .setText(ihatelife)
+                    .setPosition(100,50)
+                    .setColorValue(0xffffff00)
+                    .setFont(createFont("Georgia",20))
+                    ;
+    elements.add(ihatelife);
+    return ihatelife;
   }
 
 
@@ -159,6 +203,28 @@ public class HillCipher implements Cipher {
      
   String decrypt(String s){
     float[][] input=stringToNum(s);
+    for(int i=0;i<input[0].length;i++){
+      for(int j=0;j<input.length,j++){
+        cp5.addTextlabel("user input translated to numbers")
+                        .setText((String(input[j][i]))
+                        .setPosition(100,50)
+                        .setColorValue(0xffffff00)
+                        .setFont(createFont("Georgia",20))
+                        ;
+        elements.add(String(input[j][i]));
+      }
+    }
+    for(int i=0;i<inverseDefaultKey[0].length;i++){
+      for(int j=0;j<inverseDefaultKey.length,j++){
+        cp5.addTextlabel("key")
+                        .setText((String(inverseDefaultKey[j][i]))
+                        .setPosition(100,50)
+                        .setColorValue(0xffffff00)
+                        .setFont(createFont("Georgia",20))
+                        ;
+        elements.add(String(inverseDefaultKey[j][i]));
+      }
+    }
     float[][] newInput=new float[input.length][input[0].length];
     for(int i=0;i<input[0].length;i++){
       for(int j=0;j<inverseDefaultKey[0].length;j++){
@@ -167,9 +233,24 @@ public class HillCipher implements Cipher {
           replace+=inverseDefaultKey[j][k]*input[k][i];
         }
         newInput[j][i]=replace;
+        cp5.addTextlabel("input after change")
+                        .setText((String(newInput[j][i]))
+                        .setPosition(100,50)
+                        .setColorValue(0xffffff00)
+                        .setFont(createFont("Georgia",20))
+                        ;
+        elements.add(String(newInput[j][i]));
       }
     }
-    return numToString(newInput);
+    String ihatelife=numToString(newInput);
+    cp5.addTextlabel("new number converted to text")
+                    .setText(ihatelife)
+                    .setPosition(100,50)
+                    .setColorValue(0xffffff00)
+                    .setFont(createFont("Georgia",20))
+                    ;
+    elements.add(ihatelife);
+    return ihatelife;
   }
   
   float[][] stringToNum(String s){

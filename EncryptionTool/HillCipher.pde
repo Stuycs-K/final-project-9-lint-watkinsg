@@ -1,11 +1,15 @@
 import java.util.*;
 
 public class HillCipher implements Cipher {
+  
+  public float[][] encryptKey0={{1,2},{3,4}};
+  public float[][] encryptKey1={{2,3},{2,2}};
+  public float[][] encryptKey2={{1,2},{3,4}};
+  public float[][] encryptKey3={{4,3},{3,2}};
+  public float[][] encryptKey4={{7,5,6},{3,8,2},{6,6,5}};
+  public float[][] encryptKey5={{1,0,5},{2,1,6},{3,4,0}};
 
-  public float[][] encryptKey;
-  public float[][] decryptKey;
-
-  public float[][] defaultKey={{7, 5, 6}, {3, 8, 2}, {6, 6, 5}};
+  public float[][] defaultKey=encryptKey5;
   public float[][] inverseDefaultKey;
   public String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
   public char[] alphabet=alpha.toCharArray();

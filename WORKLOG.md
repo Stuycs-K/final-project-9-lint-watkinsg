@@ -47,3 +47,11 @@ read more about control p 5 and discuss with gus what is the work distributon la
 ### date 5/28
 
 work on adding cp5 to the encrypt and decrypt function
+
+### date 5/29
+
+tested encrypt decrypt with user interface and made sure it works
+
+### date 5/30
+
+added extra key options and a method for random key generator

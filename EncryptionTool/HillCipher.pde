@@ -13,9 +13,55 @@ public class HillCipher implements Cipher {
   public float[][] inverseDefaultKey;
   public String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
   public char[] alphabet=alpha.toCharArray();
+  
   public HillCipher() {
     makeDecryptKey();
+    randomKey(cp5);
   }
+  
+  void randomKey(ControlP5 cp5){
+    float[][] x=new float[2][2];
+    boolean b=true;
+    while(b){
+      x[0][0]=round(random(100));
+      x[0][1]=round(random(100));
+      x[1][0]=round(random(100));
+      x[1][1]=round(random(100));
+      float huh=x[0][0]*x[1][1]-x[0][1]*x[1][0];
+      if(huh==0)
+        break;
+      boolean doomedEssay=true;
+      int keepCount=1;
+      if(huh<0){
+        huh*=-1;
+      }
+      while(huh*keepCount%alphabet.length!=1){
+        keepCount++;
+        if(keepCount>100){
+          doomedEssay=false;
+          break;
+        }
+      }
+      if(doomedEssay){
+        b=false;
+      }
+    }
+    defaultKey=x;
+    makeDecryptKey();
+    //cp5.addTextlabel("user input translated to numbers")
+    //      .setText(x)
+    //      .setPosition(100, 50)
+    //      .setColorValue(0xffffff00)
+    //      .setFont(createFont("Georgia", 20))
+    //      ;
+    //cp5.addTextlabel("user input translated to numbers")
+    //      .setText(inverseDefaultKey)
+    //      .setPosition(100, 50)
+    //      .setColorValue(0xffffff00)
+    //      .setFont(createFont("Georgia", 20))
+    //      ;
+  }
+  
   float[][] minor(float[][] x, float a, float b) {
     float[][] m=new float[x.length-1][x[0].length-1];
     int row=0;

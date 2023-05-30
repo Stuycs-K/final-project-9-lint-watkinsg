@@ -314,4 +314,7 @@ public class HillCipher implements Cipher {
     }
     return s;
   }
+  String toString() {
+    return "Hill Cipher";
+  }
 }

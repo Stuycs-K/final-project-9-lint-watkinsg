@@ -54,7 +54,8 @@ void setup() {
     .setBarHeight(20)
     .setItemHeight(20)
     .addItems(Arrays.asList(cs));
-    // TODO: callback handler to set which cipher is 'selected' (+ other options ex. font)
+  // TODO: callback handler to set which cipher is 'selected' (+ other options ex. font)
 }
-void draw() {}
+void draw() {
+}
 // function to draw a 2d array as a matrix, params are int[][] arr, x, y and returns [width, height]

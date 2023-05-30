@@ -4,6 +4,7 @@ import controlP5.*;
 final Cipher[] ciphers = { new HillCipher() };
 ControlP5 cp5;
 void setup() {
+  printArray(PFont.list());
   size(1600, 800);
   cp5 = new ControlP5(this);
   cp5.addTextfield("textinput")
@@ -57,5 +58,17 @@ void setup() {
   // TODO: callback handler to set which cipher is 'selected' (+ other options ex. font)
 }
 void draw() {
+  // createMatrix(new int[][]{{}}, 0, 0);
 }
-// function to draw a 2d array as a matrix, params are int[][] arr, x, y and returns [width, height]
+// function to draw a 2d array as a matrix, params are int[][] arr, x, y and returns int width
+static int createMatrix(int[][] m, int x, int y, ControlP5 cp5) {
+  int currentDist = 0;
+  int mostwidth = 0;
+  // text label for opening ( (deal with size later)
+  // loop by col first then row, if textWidth of the thing is larger than mostwidth then mostwidth = <it> (when drawing, draw at x+currentDist,y)
+  // end of each col loop, add set px to currentDist (spacing)
+  // draw final ")", add to currentDist
+  // return currentDist
+  return 0;
+}
+  

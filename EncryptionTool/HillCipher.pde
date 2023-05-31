@@ -1,48 +1,49 @@
 import java.util.*;
+import controlP5.*;
 
 public class HillCipher implements Cipher {
-  
-  public float[][] encryptKey0={{1,2},{3,4}};
-  public float[][] encryptKey1={{2,3},{2,2}};
-  public float[][] encryptKey2={{1,2},{3,4}};
-  public float[][] encryptKey3={{4,3},{3,2}};
-  public float[][] encryptKey4={{7,5,6},{3,8,2},{6,6,5}};
-  public float[][] encryptKey5={{1,0,5},{2,1,6},{3,4,0}};
+
+  public float[][] encryptKey0={{1, 2}, {3, 4}};
+  public float[][] encryptKey1={{2, 3}, {2, 2}};
+  public float[][] encryptKey2={{1, 2}, {3, 4}};
+  public float[][] encryptKey3={{4, 3}, {3, 2}};
+  public float[][] encryptKey4={{7, 5, 6}, {3, 8, 2}, {6, 6, 5}};
+  public float[][] encryptKey5={{1, 0, 5}, {2, 1, 6}, {3, 4, 0}};
 
   public float[][] defaultKey=encryptKey5;
   public float[][] inverseDefaultKey;
   public String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
   public char[] alphabet=alpha.toCharArray();
-  
+
   public HillCipher() {
     makeDecryptKey();
-    randomKey(cp5);
+    // randomKey(cp5);
   }
-  
-  void randomKey(ControlP5 cp5){
+
+  void randomKey(ControlP5 cp5) {
     float[][] x=new float[2][2];
     boolean b=true;
-    while(b){
+    while (b) {
       x[0][0]=round(random(100));
       x[0][1]=round(random(100));
       x[1][0]=round(random(100));
       x[1][1]=round(random(100));
       float huh=x[0][0]*x[1][1]-x[0][1]*x[1][0];
-      if(huh==0)
+      if (huh==0)
         break;
       boolean doomedEssay=true;
       int keepCount=1;
-      if(huh<0){
+      if (huh<0) {
         huh*=-1;
       }
-      while(huh*keepCount%alphabet.length!=1){
+      while (huh*keepCount%alphabet.length!=1) {
         keepCount++;
-        if(keepCount>100){
+        if (keepCount>100) {
           doomedEssay=false;
           break;
         }
       }
-      if(doomedEssay){
+      if (doomedEssay) {
         b=false;
       }
     }
@@ -60,8 +61,22 @@ public class HillCipher implements Cipher {
     //      .setColorValue(0xffffff00)
     //      .setFont(createFont("Georgia", 20))
     //      ;
+    String keystring = "(";
+    for (float[] arr : defaultKey) {
+      for (float i : arr) {
+        keystring += (int) i;
+        keystring += " ";
+      }
+      keystring += "\n";
+    }
+    cp5.remove("keydisplay");
+    cp5.addTextlabel("keydisplay")
+      .setFont(createFont("Georgia", 20))
+      .setSize(200, 200)
+      .setPosition(102, 375)
+      .setText(keystring);
   }
-  
+
   float[][] minor(float[][] x, float a, float b) {
     float[][] m=new float[x.length-1][x[0].length-1];
     int row=0;
@@ -143,14 +158,14 @@ public class HillCipher implements Cipher {
   void makeDecryptKey() {
     //System.out.println("testing");
     //System.out.println(alphabet.length);
-    System.out.println("makeDecryptKey");
+    // System.out.println("makeDecryptKey");
     float d = determinent(defaultKey);
     boolean b=false;
     if (d<0) {
       d*=-1;
       b=true;
     }
-    System.out.println("d: "+d);
+    // System.out.println("d: "+d);
     int igiveup=0;
     while ((d*igiveup)%alphabet.length!=1) {
       igiveup++;
@@ -164,14 +179,14 @@ public class HillCipher implements Cipher {
     if (b) {
       igiveup*=-1;
     }
-    System.out.println("makeDecryptKey");
+    // System.out.println("makeDecryptKey");
     d=igiveup;
-    System.out.println("d: "+d);
+    // System.out.println("d: "+d);
     inverseDefaultKey=transpose(cofactor(defaultKey));
-    System.out.println("transpose: ");
-    for (int i=0; i<defaultKey.length; i++) {
-      System.out.println(Arrays.toString(inverseDefaultKey[i]));
-    }
+    // System.out.println("transpose: ");
+    //for (int i=0; i<defaultKey.length; i++) {
+    //  System.out.println(Arrays.toString(inverseDefaultKey[i]));
+    //}
     //mod(inverseDefaultKey);
     if (defaultKey.length<=2) {
       for (int i=0; i<defaultKey.length; i++) {

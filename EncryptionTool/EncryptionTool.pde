@@ -1,10 +1,9 @@
 import controlP5.*;
 
 // array of identifiers for controlp5 stuff
-final Cipher[] ciphers = { new HillCipher() };
 ControlP5 cp5;
+final Cipher[] ciphers = { new HillCipher() };
 void setup() {
-  printArray(PFont.list());
   size(1600, 800);
   cp5 = new ControlP5(this);
   cp5.addTextfield("textinput")
@@ -45,6 +44,25 @@ void setup() {
     .setSize(100, 50)
     .setPosition(155, 300)
     .setLabel("Decrypt");
+  cp5.addTextlabel("keydisplay")
+    .setFont(createFont("Georgia", 20))
+    .setSize(200, 200)
+    .setPosition(102, 375);
+  // .setText(keystring);
+  ((HillCipher) ciphers[0]).randomKey(cp5);
+  cp5.addButton("newKeyButton")
+    .setFont(createFont("Georgia", 20))
+    .setPosition(102, 425)
+    .setLabel("New Key")
+    .onPress(new CallbackListener() {
+    public void controlEvent(CallbackEvent theEvent) {
+      String name = theEvent.getController().getName();
+      float value = theEvent.getController().getValue();
+      println("got a press from a " + name + ", the value is " + value);
+      ((HillCipher) ciphers[0]).randomKey(cp5);
+    }
+  }
+  );
   String[] cs = new String[ciphers.length];
   for (int i = 0; i < ciphers.length; i++) {
     cs[i] = ciphers[i].toString();
@@ -71,4 +89,3 @@ static int createMatrix(int[][] m, int x, int y, ControlP5 cp5) {
   // return currentDist
   return 0;
 }
-  

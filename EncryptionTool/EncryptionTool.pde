@@ -47,7 +47,8 @@ void setup() {
   cp5.addTextlabel("keydisplay")
     .setFont(createFont("Georgia", 20))
     .setSize(200, 200)
-    .setPosition(102, 375);
+    .setPosition(102, 375)
+    .setText("83 8 2\n3 6 9\n18 74 24");
   // .setText(keystring);
   ((HillCipher) ciphers[0]).randomKey(cp5);
   cp5.addButton("newKeyButton")

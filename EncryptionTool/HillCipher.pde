@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Arrays;
 import controlP5.*;
 
 public class HillCipher implements Cipher {
@@ -61,20 +61,20 @@ public class HillCipher implements Cipher {
     //      .setColorValue(0xffffff00)
     //      .setFont(createFont("Georgia", 20))
     //      ;
-    String keystring = "(";
-    for (float[] arr : defaultKey) {
-      for (float i : arr) {
-        keystring += (int) i;
-        keystring += " ";
-      }
-      keystring += "\n";
-    }
-    cp5.remove("keydisplay");
-    cp5.addTextlabel("keydisplay")
-      .setFont(createFont("Georgia", 20))
-      .setSize(200, 200)
-      .setPosition(102, 375)
-      .setText(keystring);
+    //String keystring = "(";
+    //for (float[] arr : defaultKey) {
+    //  for (float i : arr) {
+    //    keystring += (int) i;
+    //    keystring += " ";
+    //  }
+    //  keystring += "\n";
+    //}
+    //cp5.remove("keydisplay");
+    //cp5.addTextlabel("keydisplay")
+    //  .setFont(createFont("Georgia", 20))
+    //  .setSize(200, 200)
+    //  .setPosition(102, 375)
+    //  .setText(keystring);
   }
 
   float[][] minor(float[][] x, float a, float b) {
@@ -158,7 +158,7 @@ public class HillCipher implements Cipher {
   void makeDecryptKey() {
     //System.out.println("testing");
     //System.out.println(alphabet.length);
-    // System.out.println("makeDecryptKey");
+    // System.out.ln("makeDecryptKey");
     float d = determinent(defaultKey);
     boolean b=false;
     if (d<0) {
@@ -170,9 +170,9 @@ public class HillCipher implements Cipher {
     while ((d*igiveup)%alphabet.length!=1) {
       igiveup++;
       if (igiveup<5)
-        System.out.println(igiveup);
+        // System.out.println(igiveup);
       if (igiveup>100) {
-        System.out.println("key noninvertible mod "+alphabet.length);
+        // System.out.println("key noninvertible mod "+alphabet.length);
         break;
       }
     }
@@ -199,7 +199,7 @@ public class HillCipher implements Cipher {
   }
 
   String encrypt(String s, ControlP5 cp5) {
-    System.out.println("encrypt");
+    // System.out.println("encrypt");
     cp5.addTextlabel("user input")
       .setText(s)
       .setPosition(100, 50)
@@ -243,9 +243,9 @@ public class HillCipher implements Cipher {
           ;
       }
     }
-    System.out.println("newInput");
+    // System.out.println("newInput");
     for (int i=0; i<newInput.length; i++) {
-      System.out.println(Arrays.toString(newInput[i]));
+      // System.out.println(Arrays.toString(newInput[i]));
     }
     String ihatelife=numToString(newInput);
     cp5.addTextlabel("new number converted to text")
@@ -317,8 +317,8 @@ public class HillCipher implements Cipher {
     while (s.length()%defaultKey.length!=0) {
       s+=" ";
     }
-    System.out.println(s);
-    System.out.println(x.length+" "+x[0].length);
+    // System.out.println(s);
+    // System.out.println(x.length+" "+x[0].length);
     for (int i=0; i<x[0].length; i++) {
       for (int j=0; j<x.length; j++) {
         int smt=0;
@@ -343,9 +343,9 @@ public class HillCipher implements Cipher {
       }
     }
     //System.out.println("final x[i]: "+Arrays.toString(x));
-    System.out.println("x stn");
+    // System.out.println("x stn");
     for (int i=0; i<x.length; i++) {
-      System.out.println(Arrays.toString(x[i]));
+      // System.out.println(Arrays.toString(x[i]));
     }
     return x;
   }
@@ -373,10 +373,10 @@ public class HillCipher implements Cipher {
     //for(int i=0;i<x.length;i++){
     //  System.out.println(x[i]);
     //}
-    System.out.println("x nts");
-    for (int i=0; i<x.length; i++) {
-      System.out.println(Arrays.toString(x[i]));
-    }
+    // System.out.println("x nts");
+    //for (int i=0; i<x.length; i++) {
+    //  System.out.println(Arrays.toString(x[i]));
+    //}
     return s;
   }
   String toString() {

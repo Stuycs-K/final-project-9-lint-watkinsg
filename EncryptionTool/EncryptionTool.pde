@@ -6,13 +6,17 @@ ControlP5 cp5;
 void setup() {
   printArray(PFont.list());
   size(1600, 800);
+  background(245,208,208);
   cp5 = new ControlP5(this);
+  int textBoxSize=1000;
   cp5.addTextfield("textinput")
     .setFont(createFont("arial", 20))
-    .setPosition(50, 200)
+    .setPosition(width/2-textBoxSize/2, 680)
     .setLabelVisible(false)
-    .setSize(200, 50)
-    .setAutoClear(false);
+    .setSize(textBoxSize, 50)
+    .setAutoClear(false)
+    .setColorForeground(color(140,201,157))
+    .setColorBackground(color(140,201,157));
   cp5.addButton("encryptButton")
     .onPress(new CallbackListener() { // a callback function that will be called onPress
     public void controlEvent(CallbackEvent theEvent) {
@@ -28,6 +32,8 @@ void setup() {
   .setFont(createFont("Georgia", 20))
     .setSize(100, 50)
     .setPosition(50, 300)
+    .setColorForeground(color(140,201,157))
+    .setColorBackground(color(140,201,157))
     .setLabel("Encrypt");
   cp5.addButton("decryptButton")
     .onPress(new CallbackListener() { // a callback function that will be called onPress
@@ -44,6 +50,8 @@ void setup() {
   .setFont(createFont("Georgia", 20))
     .setSize(100, 50)
     .setPosition(155, 300)
+    .setColorForeground(color(140,201,157))
+    .setColorBackground(color(140,201,157))
     .setLabel("Decrypt");
   String[] cs = new String[ciphers.length];
   for (int i = 0; i < ciphers.length; i++) {
@@ -54,6 +62,8 @@ void setup() {
     .setSize(200, 100)
     .setBarHeight(20)
     .setItemHeight(20)
+    .setColorForeground(color(140,201,157))
+    .setColorBackground(color(140,201,157))
     .addItems(Arrays.asList(cs));
   // TODO: callback handler to set which cipher is 'selected' (+ other options ex. font)
 }

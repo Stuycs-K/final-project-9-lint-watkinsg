@@ -2,6 +2,7 @@ import controlP5.*;
 
 // array of identifiers for controlp5 stuff
 final Cipher[] ciphers = { new HillCipher() };
+int MODE=0;
 ControlP5 cp5;
 void setup() {
   printArray(PFont.list());
@@ -17,6 +18,24 @@ void setup() {
     .setAutoClear(false)
     .setColorForeground(color(140,201,157))
     .setColorBackground(color(140,201,157));
+    cp5.addTextfield("key")
+    .setFont(createFont("arial", 40))
+    .setPosition(width/2-700, height/2-100-100)
+    .setColorForeground(color(245,208,208))
+    .setColorBackground(color(245,208,208))
+    ;
+  Textlabel encryptKey = cp5.addTextlabel("user input translated to numbers")
+    .setText(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
+    .setPosition(width/2-700, height/2-100)
+    .setColorValue(#F5D0D0)
+    .setFont(createFont("Georgia", 40))
+    ;
+ Textlabel decryptKey = cp5.addTextlabel("user input translated to numbers")
+    .setText(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,10))
+    .setPosition(width/2-700, height/2-100)
+    .setColorValue(#F5D0D0)
+    .setFont(createFont("Georgia", 40))
+    ;
   cp5.addButton("encryptButton")
     .onPress(new CallbackListener() { // a callback function that will be called onPress
     public void controlEvent(CallbackEvent theEvent) {
@@ -26,6 +45,8 @@ void setup() {
       String encrypted = ciphers[0].encrypt(cp5.get(Textfield.class, "textinput").getText(), cp5);
       cp5.get(Textfield.class, "textinput").setText(encrypted);
       println("encrypted: " + encrypted);
+      decryptKey.setColorValue(#F5D0D0);
+      encryptKey.setColorValue(#FFFFFF);
     }
   }
   )
@@ -44,6 +65,8 @@ void setup() {
       String decrypted = ciphers[0].decrypt(cp5.get(Textfield.class, "textinput").getText(), cp5);
       cp5.get(Textfield.class, "textinput").setText(decrypted);
       println("encrypted: " + decrypted);
+      encryptKey.setColorValue(#F5D0D0);
+      decryptKey.setColorValue(#FFFFFF);
     }
   }
   )
@@ -81,4 +104,6 @@ static int createMatrix(int[][] m, int x, int y, ControlP5 cp5) {
   // return currentDist
   return 0;
 }
+
+
   

@@ -17,6 +17,31 @@ public class HillCipher implements Cipher {
   public HillCipher() {
     makeDecryptKey();
     randomKey(cp5);
+    //System.out.println("testing ------------ \n"+arrayToString(inverseDefaultKey, 3));
+  }
+  
+  String arrayToString(float[][] x, int space){
+    String name="";
+    for(int i=0;i<x.length;i++){
+      for(int j=0;j<x[i].length;j++){
+        int huh=space;
+        if(x[i][j]<10){
+          huh++;
+        }
+        name+=(int)x[i][j]+spaces(huh);
+      }
+      name+="\n";
+    }
+    return name;
+      
+  }
+  
+  String spaces(int x){
+    String space="";
+    for(int i=0;i<x;i++){
+      space+=" ";
+    }
+    return space;
   }
   
   void randomKey(ControlP5 cp5){

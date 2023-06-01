@@ -31,7 +31,7 @@ void setup() {
   )
   .setFont(createFont("Georgia", 20))
     .setSize(100, 50)
-    .setPosition(50, 300)
+    .setPosition(width/2-100-50+10+10, height/2+200+10)
     .setColorForeground(color(140,201,157))
     .setColorBackground(color(140,201,157))
     .setLabel("Encrypt");
@@ -49,7 +49,7 @@ void setup() {
   )
   .setFont(createFont("Georgia", 20))
     .setSize(100, 50)
-    .setPosition(155, 300)
+    .setPosition(width/2+100-50-10-10, height/2+200+10)
     .setColorForeground(color(140,201,157))
     .setColorBackground(color(140,201,157))
     .setLabel("Decrypt");
@@ -58,7 +58,7 @@ void setup() {
     cs[i] = ciphers[i].toString();
   }
   cp5.addScrollableList("dropdown")
-    .setPosition(50, 500)
+    .setPosition(50, 50)
     .setSize(200, 100)
     .setBarHeight(20)
     .setItemHeight(20)

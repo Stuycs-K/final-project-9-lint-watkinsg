@@ -59,3 +59,7 @@ added extra key options and a method for random key generator
 ### date 5/31
 
 read more about controlp5, moved buttons to their spot, changed color, made array into string for visualization, basically making the screen look nicer
+
+### date 6/1
+
+try to show key for visualization purpose but the keys kept on overlapping each other

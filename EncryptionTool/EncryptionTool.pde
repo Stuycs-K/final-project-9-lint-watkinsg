@@ -4,8 +4,8 @@ import controlP5.*;
 final Cipher[] ciphers = { new HillCipher() };
 int MODE=0;
 ControlP5 cp5;
-Textlabel displayKey;
-Textlabel coverKey;
+Textlabel encryptKey;
+Textlabel decryptKey;
 
 void setup() {
   size(1600, 800);
@@ -32,12 +32,25 @@ void setup() {
   //  .setColor(#F5D0D0)
   //  .setFont(createFont("Georgia", 40))
   //  ;
+<<<<<<< HEAD
   //displayKey = cp5.addTextlabel("user input translated to numbers")
   //  .setText(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
   //  .setPosition(width/2-700, height/2-100)
   //  .setColor(#F5D0D0)
   //  .setFont(createFont("Georgia", 40))
   //  ;
+=======
+  //encryptKey = cp5.addTextlabel("ek")
+  //  .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
+  //  .setPosition(width/2-700, height/2-100)
+  //  .setColor(color(245,208,208))
+  //  .setFont(createFont("Georgia", 40));
+  //decryptKey = cp5.addTextlabel("dk")
+  //  .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,10))
+  //  .setPosition(width/2-700, height/2-100)
+  //  .setColor(color(245,208,208))
+  //  .setFont(createFont("Georgia", 40));
+>>>>>>> c3e3095e0fda3fe36d015c03aa6f19aaefb28e37
   cp5.addButton("encryptButton")
     .onPress(new CallbackListener() { // a callback function that will be called onPress
     public void controlEvent(CallbackEvent theEvent) {
@@ -59,6 +72,19 @@ void setup() {
       //  .setColor(#FFFFFF)
       //  .setFont(createFont("Georgia", 40))
       //  ;
+<<<<<<< HEAD
+=======
+      decryptKey = cp5.addTextlabel("dk")
+        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,10))
+        .setPosition(width/2-700, height/2-100)
+        .setColor(color(245,208,208))
+        .setFont(createFont("Georgia", 40));
+      encryptKey = cp5.addTextlabel("ek")
+        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
+        .setPosition(width/2-700, height/2-100)
+        .setColor(#FFFFFF)
+        .setFont(createFont("Georgia", 40));
+>>>>>>> c3e3095e0fda3fe36d015c03aa6f19aaefb28e37
     }
   }
   )
@@ -89,6 +115,19 @@ void setup() {
       //  .setColor(#FFFFFF)
       //  .setFont(createFont("Georgia", 40))
       //  ;
+<<<<<<< HEAD
+=======
+      encryptKey = cp5.addTextlabel("ek")
+        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
+        .setPosition(width/2-700, height/2-100)
+        .setColor(color(245,208,208))
+        .setFont(createFont("Georgia", 40));
+      decryptKey = cp5.addTextlabel("dk")
+        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,10))
+        .setPosition(width/2-700, height/2-100)
+        .setColor(#FFFFFF)
+        .setFont(createFont("Georgia", 40));
+>>>>>>> c3e3095e0fda3fe36d015c03aa6f19aaefb28e37
     }
   }
   )
@@ -104,7 +143,6 @@ void setup() {
   //  .setPosition(102, 375)
   //  .setText("83 8 2\n3 6 9\n18 74 24");
   // .setText(keystring);
-  ((HillCipher) ciphers[0]).randomKey(cp5);
   cp5.addButton("newKeyButton")
     .setFont(createFont("Georgia", 20))
     .setPosition(100, 680)
@@ -130,6 +168,24 @@ void setup() {
       //  .setColor(#F5D0D0)
       //  .setFont(createFont("Georgia", 40))
       //  ;
+<<<<<<< HEAD
+=======
+      cp5.addButton("")
+        .setPosition(width/2-700, height/2-100)
+        .setSize(400,300)
+        .setColorForeground(color(245,208,208))
+        .setColorBackground(color(245,208,208));
+      encryptKey = cp5.addTextlabel("ek")
+        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
+        .setPosition(width/2-700, height/2-100)
+        .setColor(color(245,208,208))
+        .setFont(createFont("Georgia", 40));
+      decryptKey = cp5.addTextlabel("dk")
+        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,10))
+        .setPosition(width/2-700, height/2-100)
+        .setColor(color(245,208,208))
+        .setFont(createFont("Georgia", 40));
+>>>>>>> c3e3095e0fda3fe36d015c03aa6f19aaefb28e37
     }
   }
   );

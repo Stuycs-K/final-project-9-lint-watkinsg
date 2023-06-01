@@ -17,8 +17,7 @@ public class HillCipher implements Cipher {
 
   public HillCipher() {
     makeDecryptKey();
-<<<<<<< HEAD
-    randomKey(cp5);
+    //randomKey(cp5);
     //cp5.addTextlabel("user input translated to numbers")
     //  .setText(x)
     //  .setPosition(100, 50)
@@ -47,7 +46,6 @@ public class HillCipher implements Cipher {
       name+="\n\n";
     }
     return name;
-      
   }
   
   String spaces(int x){
@@ -56,9 +54,6 @@ public class HillCipher implements Cipher {
       space+=" ";
     }
     return space;
-=======
-    // randomKey(cp5);
->>>>>>> e5f043809d4f2c58869893bc0975f272da810cba
   }
 
   void randomKey(ControlP5 cp5) {
@@ -240,7 +235,6 @@ public class HillCipher implements Cipher {
   }
 
   String encrypt(String s, ControlP5 cp5) {
-<<<<<<< HEAD
     System.out.println("encrypt");
     //cp5.addTextlabel("user input")
     //  .setText(s)
@@ -258,25 +252,24 @@ public class HillCipher implements Cipher {
     //      ;
     //  }
     //}
-=======
     // System.out.println("encrypt");
-    cp5.addTextlabel("user input")
-      .setText(s)
-      .setPosition(100, 50)
-      .setColorValue(0xffffff00)
-      .setFont(createFont("Georgia", 20))
-      ;
-    for (int i=0; i<defaultKey[0].length; i++) {
-      for (int j=0; j<defaultKey.length; j++) {
-        cp5.addTextlabel("key")
-          .setText(defaultKey[j][i]+"")
-          .setPosition(100, 50)
-          .setColorValue(0xffffff00)
-          .setFont(createFont("Georgia", 20))
-          ;
-      }
-    }
->>>>>>> e5f043809d4f2c58869893bc0975f272da810cba
+    //cp5.addTextlabel("user input")
+    //  .setText(s)
+    //  .setPosition(100, 50)
+    //  .setColorValue(0xffffff00)
+    //  .setFont(createFont("Georgia", 20))
+    //  ;
+    //for (int i=0; i<defaultKey[0].length; i++) {
+    //  for (int j=0; j<defaultKey.length; j++) {
+    //    cp5.addTextlabel("key")
+    //      .setText(defaultKey[j][i]+"")
+    //      .setPosition(100, 50)
+    //      .setColorValue(0xffffff00)
+    //      .setFont(createFont("Georgia", 20))
+    //      ;
+    //  }
+    //}
+    
     float[][] input=stringToNum(s);
     //for (int i=0; i<input[0].length; i++) {
     //  for (int j=0; j<input.length; j++) {

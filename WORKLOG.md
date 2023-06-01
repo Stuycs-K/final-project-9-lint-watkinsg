@@ -55,3 +55,7 @@ tested encrypt decrypt with user interface and made sure it works
 ### date 5/30
 
 added extra key options and a method for random key generator
+
+### date 5/31
+
+read more about controlp5, moved buttons to their spot, changed color, made array into string for visualization, basically making the screen look nicer

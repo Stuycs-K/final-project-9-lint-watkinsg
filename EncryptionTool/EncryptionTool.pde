@@ -1,11 +1,14 @@
 import controlP5.*;
 
 // array of identifiers for controlp5 stuff
+<<<<<<< HEAD
 final Cipher[] ciphers = { new HillCipher() };
 int MODE=0;
+=======
+>>>>>>> e5f043809d4f2c58869893bc0975f272da810cba
 ControlP5 cp5;
+final Cipher[] ciphers = { new HillCipher() };
 void setup() {
-  printArray(PFont.list());
   size(1600, 800);
   background(245,208,208);
   cp5 = new ControlP5(this);
@@ -76,6 +79,26 @@ void setup() {
     .setColorForeground(color(140,201,157))
     .setColorBackground(color(140,201,157))
     .setLabel("Decrypt");
+  cp5.addTextlabel("keydisplay")
+    .setFont(createFont("Georgia", 20))
+    .setSize(200, 200)
+    .setPosition(102, 375)
+    .setText("83 8 2\n3 6 9\n18 74 24");
+  // .setText(keystring);
+  ((HillCipher) ciphers[0]).randomKey(cp5);
+  cp5.addButton("newKeyButton")
+    .setFont(createFont("Georgia", 20))
+    .setPosition(102, 425)
+    .setLabel("New Key")
+    .onPress(new CallbackListener() {
+    public void controlEvent(CallbackEvent theEvent) {
+      String name = theEvent.getController().getName();
+      float value = theEvent.getController().getValue();
+      println("got a press from a " + name + ", the value is " + value);
+      ((HillCipher) ciphers[0]).randomKey(cp5);
+    }
+  }
+  );
   String[] cs = new String[ciphers.length];
   for (int i = 0; i < ciphers.length; i++) {
     cs[i] = ciphers[i].toString();
@@ -104,6 +127,9 @@ static int createMatrix(int[][] m, int x, int y, ControlP5 cp5) {
   // return currentDist
   return 0;
 }
+<<<<<<< HEAD
 
 
   
+=======
+>>>>>>> e5f043809d4f2c58869893bc0975f272da810cba

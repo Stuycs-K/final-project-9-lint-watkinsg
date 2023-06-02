@@ -63,3 +63,4 @@ read more about controlp5, moved buttons to their spot, changed color, made arra
 ### date 6/1
 
 try to show key for visualization purpose but the keys kept on overlapping each other
+fix the problem and made visualization show key input and output and changes it when the input and key changes too

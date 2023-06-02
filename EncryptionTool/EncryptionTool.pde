@@ -20,28 +20,24 @@ void setup() {
     .setAutoClear(false)
     .setColorForeground(color(140,201,157))
     .setColorBackground(color(140,201,157));
-    cp5.addTextfield("key")
-    .setFont(createFont("arial", 40))
-    .setPosition(width/2-700, height/2-100-100)
+  cp5.addTextfield("key")
+    .setFont(createFont("arial", 30))
+    .setPosition(width/2-700, height/2-100-100+20)
     .setColorForeground(color(245,208,208))
     .setColorBackground(color(245,208,208))
     ;
-  //coverKey = cp5.addTextlabel("user input translated to numbers")
-  //  .setText(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
-  //  .setPosition(width/2-700, height/2-100)
-  //  .setColor(#F5D0D0)
-  //  .setFont(createFont("Georgia", 40))
-  //  ;
-  //encryptKey = cp5.addTextlabel("ek")
-  //  .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
-  //  .setPosition(width/2-700, height/2-100)
-  //  .setColor(color(245,208,208))
-  //  .setFont(createFont("Georgia", 40));
-  //decryptKey = cp5.addTextlabel("dk")
-  //  .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,10))
-  //  .setPosition(width/2-700, height/2-100)
-  //  .setColor(color(245,208,208))
-  //  .setFont(createFont("Georgia", 40));
+  cp5.addTextfield("Input")
+    .setFont(createFont("arial", 30))
+    .setPosition(width/2-49+15, 15)
+    .setColorForeground(color(245,208,208))
+    .setColorBackground(color(245,208,208))
+    ;
+  cp5.addTextfield("Output")
+    .setFont(createFont("arial", 30))
+    .setPosition(width/2-700+500+400, height/2-100-100+20)
+    .setColorForeground(color(245,208,208))
+    .setColorBackground(color(245,208,208))
+    ;
   cp5.addButton("encryptButton")
     .onPress(new CallbackListener() { // a callback function that will be called onPress
     public void controlEvent(CallbackEvent theEvent) {
@@ -51,28 +47,16 @@ void setup() {
       String encrypted = ciphers[0].encrypt(cp5.get(Textfield.class, "textinput").getText(), cp5);
       cp5.get(Textfield.class, "textinput").setText(encrypted);
       println("encrypted: " + encrypted);
-      //coverKey 
-      //  .setText(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,10))
-      //  .setPosition(width/2-700, height/2-100)
-      //  .setColor(#F5D0D0)
-      //  .setFont(createFont("Georgia", 40))
-      //  ;
-      //displayKey
-      //  .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
-      //  .setPosition(width/2-700, height/2-100)
-      //  .setColor(#FFFFFF)
-      //  .setFont(createFont("Georgia", 40))
-      //  ;
       decryptKey = cp5.addTextlabel("dk")
-        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,10))
-        .setPosition(width/2-700, height/2-100)
+        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,6))
+        .setPosition(width/2-700, height/2-100+20)
         .setColor(color(245,208,208))
-        .setFont(createFont("Georgia", 40));
+        .setFont(createFont("Georgia", 30));
       encryptKey = cp5.addTextlabel("ek")
-        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
-        .setPosition(width/2-700, height/2-100)
+        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,6))
+        .setPosition(width/2-700, height/2-100+20)
         .setColor(#FFFFFF)
-        .setFont(createFont("Georgia", 40));
+        .setFont(createFont("Georgia", 30));
     }
   }
   )
@@ -91,28 +75,16 @@ void setup() {
       String decrypted = ciphers[0].decrypt(cp5.get(Textfield.class, "textinput").getText(), cp5);
       cp5.get(Textfield.class, "textinput").setText(decrypted);
       println("encrypted: " + decrypted);
-      //coverKey 
-      //  .setText(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
-      //  .setPosition(width/2-700, height/2-100)
-      //  .setColor(#F5D0D0)
-      //  .setFont(createFont("Georgia", 40))
-      //  ;
-      //displayKey
-      //  .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,10))
-      //  .setPosition(width/2-700, height/2-100)
-      //  .setColor(#FFFFFF)
-      //  .setFont(createFont("Georgia", 40))
-      //  ;
       encryptKey = cp5.addTextlabel("ek")
-        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
-        .setPosition(width/2-700, height/2-100)
+        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,6))
+        .setPosition(width/2-700, height/2-100+20)
         .setColor(color(245,208,208))
-        .setFont(createFont("Georgia", 40));
+        .setFont(createFont("Georgia", 30));
       decryptKey = cp5.addTextlabel("dk")
-        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,10))
-        .setPosition(width/2-700, height/2-100)
+        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,6))
+        .setPosition(width/2-700, height/2-100+20)
         .setColor(#FFFFFF)
-        .setFont(createFont("Georgia", 40));
+        .setFont(createFont("Georgia", 30));
     }
   }
   )
@@ -122,12 +94,6 @@ void setup() {
     .setColorForeground(color(140,201,157))
     .setColorBackground(color(140,201,157))
     .setLabel("Decrypt");
-  //cp5.addTextlabel("keydisplay")
-  //  .setFont(createFont("Georgia", 20))
-  //  .setSize(200, 200)
-  //  .setPosition(102, 375)
-  //  .setText("83 8 2\n3 6 9\n18 74 24");
-  // .setText(keystring);
   cp5.addButton("newKeyButton")
     .setFont(createFont("Georgia", 20))
     .setPosition(100, 680)
@@ -141,33 +107,31 @@ void setup() {
       float value = theEvent.getController().getValue();
       println("got a press from a " + name + ", the value is " + value);
       ((HillCipher) ciphers[0]).randomKey(cp5);
-      //coverKey 
-      //  .setText(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,10))
-      //  .setPosition(width/2-700, height/2-100)
-      //  .setColor(#F5D0D0)
-      //  .setFont(createFont("Georgia", 40))
-      //  ;
-      //displayKey
-      //  .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
-      //  .setPosition(width/2-700, height/2-100)
-      //  .setColor(#F5D0D0)
-      //  .setFont(createFont("Georgia", 40))
-      //  ;
       cp5.addButton("")
-        .setPosition(width/2-700, height/2-100)
-        .setSize(400,300)
+        .setPosition(width/2-700, height/2-100+20)
+        .setSize(250,250)
         .setColorForeground(color(245,208,208))
         .setColorBackground(color(245,208,208));
-      encryptKey = cp5.addTextlabel("ek")
-        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,10))
-        .setPosition(width/2-700, height/2-100)
-        .setColor(color(245,208,208))
-        .setFont(createFont("Georgia", 40));
+      cp5.addButton("  ")
+        .setPosition(width/2-700, height/2-100+20)
+        .setSize(250,250)
+        .setColorForeground(color(245,208,208))
+        .setColorBackground(color(245,208,208));
+      cp5.addButton("   ")
+        .setPosition(width/2-700, height/2-100+20)
+        .setSize(250,250)
+        .setColorForeground(color(245,208,208))
+        .setColorBackground(color(245,208,208));
       decryptKey = cp5.addTextlabel("dk")
-        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,10))
-        .setPosition(width/2-700, height/2-100)
+        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,6))
+        .setPosition(width/2-700, height/2-100+20)
         .setColor(color(245,208,208))
-        .setFont(createFont("Georgia", 40));
+        .setFont(createFont("Georgia", 30));
+      encryptKey = cp5.addTextlabel("ek")
+        .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,6))
+        .setPosition(width/2-700, height/2-100+20)
+        .setColor(#FFFFFF)
+        .setFont(createFont("Georgia", 30));
     }
   }
   );

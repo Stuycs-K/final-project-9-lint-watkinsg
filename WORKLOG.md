@@ -67,4 +67,8 @@ fix the problem and made visualization show key input and output and changes it 
 
 ### date 6/2
 
-read more about cp5, what is textfield, textlabel, color, colorvalue, etcetcetc
+read more about cp5, what is textfield, textlabel, color, colorvalue, etcetcetc and talk to gus
+
+### date 6/3
+
+discuss next step and work distribution and what to do next

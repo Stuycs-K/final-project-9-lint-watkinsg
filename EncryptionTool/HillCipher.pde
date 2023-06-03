@@ -225,7 +225,7 @@ public class HillCipher implements Cipher {
         .setColorBackground(color(245,208,208));
     inputText = cp5.addTextlabel("input")
         .setValue(arrayToString(input,2))
-        .setPosition(position+25, 15+80)
+        .setPosition(position+20, 15+80)
         .setColor(#FFFFFF)
         .setFont(createFont("Georgia", 20));
 

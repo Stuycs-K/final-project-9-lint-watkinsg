@@ -64,3 +64,7 @@ read more about controlp5, moved buttons to their spot, changed color, made arra
 
 try to show key for visualization purpose but the keys kept on overlapping each other
 fix the problem and made visualization show key input and output and changes it when the input and key changes too
+
+### date 6/2
+
+read more about cp5, what is textfield, textlabel, color, colorvalue, etcetcetc

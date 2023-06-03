@@ -73,4 +73,4 @@ read more about cp5, what is textfield, textlabel, color, colorvalue, etcetcetc 
 
 discuss next step and work distribution and what to do next
 read over gus's changes, did not merge cause i could not understand, well i do but it interfere with my works
-worked on adding other ciphers (caesar)
+worked on adding other ciphers, namely caesar (had to learn what caesar is 💀)

@@ -3,6 +3,7 @@ import controlP5.*;
 // array of identifiers for controlp5 stuff
 final Cipher[] ciphers = { new HillCipher(), new Caesar(), new MorseCode() };
 int MODE=0;
+Cipher cipher=ciphers[0];
 ControlP5 cp5;
 Textlabel encryptKey;
 Textlabel decryptKey;
@@ -44,7 +45,7 @@ void setup() {
       String name = theEvent.getController().getName();
       float value = theEvent.getController().getValue();
       println("got a press from a " + name + ", the value is " + value);
-      String encrypted = ciphers[0].encrypt(cp5.get(Textfield.class, "textinput").getText(), cp5);
+      String encrypted = cipher.encrypt(cp5.get(Textfield.class, "textinput").getText(), cp5);
       cp5.get(Textfield.class, "textinput").setText(encrypted);
       println("encrypted: " + encrypted);
       decryptKey = cp5.addTextlabel("dk")
@@ -72,7 +73,7 @@ void setup() {
       String name = theEvent.getController().getName();
       float value = theEvent.getController().getValue();
       println("got a press from a " + name + ", the value is " + value);
-      String decrypted = ciphers[0].decrypt(cp5.get(Textfield.class, "textinput").getText(), cp5);
+      String decrypted = cipher.decrypt(cp5.get(Textfield.class, "textinput").getText(), cp5);
       cp5.get(Textfield.class, "textinput").setText(decrypted);
       println("encrypted: " + decrypted);
       encryptKey = cp5.addTextlabel("ek")

@@ -1,7 +1,7 @@
 import controlP5.*;
 
 // array of identifiers for controlp5 stuff
-final Cipher[] ciphers = { new HillCipher(), new Caesar() };
+final Cipher[] ciphers = { new HillCipher(), new Caesar(), new MorseCode() };
 int MODE=0;
 ControlP5 cp5;
 Textlabel encryptKey;

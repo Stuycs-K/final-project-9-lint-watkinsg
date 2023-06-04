@@ -183,7 +183,7 @@ public class MorseCode implements Cipher {
   public String decrypt(String s, ControlP5 cp5){
     String answer="";
     String[] x=s.split(" ");
-    for(int i=0;i<x.length();i++){
+    for(int i=0;i<x.length;i++){
       String a=" ";
       if(x[i].equals(".-")){
         a="a";
@@ -263,88 +263,88 @@ public class MorseCode implements Cipher {
       if(x[i].equals("--..")){
         a="z";
       }
-      if(s.charAt(i)=='----.')){
+      if(x[i].equals("----.")){
         a="9";
       }
-      if(s.charAt(i)=='---..')){
+      if(x[i].equals("---..")){
         a="8";
       }
-      if(s.charAt(i)=='--...')){
+      if(x[i].equals("--...")){
         a="7";
       }
-      if(s.charAt(i)=='-....')){
+      if(x[i].equals("-....")){
         a="6";
       }
-      if(s.charAt(i)=='.....')){
+      if(x[i].equals(".....")){
         a="5";
       }
-      if(s.charAt(i)=='....-')){
+      if(x[i].equals("....-")){
         a="4";
       }
-      if(s.charAt(i)=='...--')){
+      if(x[i].equals("...--")){
         a="3";
       }
-      if(s.charAt(i)=='..---')){
+      if(x[i].equals("..---")){
         a="2";
       }
-      if(s.charAt(i)=='.----')){
+      if(x[i].equals(".----")){
         a="1";
       }
-      if(s.charAt(i)=='-----')){
+      if(x[i].equals("-----")){
         a="0";
       }
-      if(s.charAt(i)=='.-.-.-')){
+      if(x[i].equals(".-.-.-")){
         a=".";
       }
-      if(s.charAt(i)=='--..--')){
+      if(x[i].equals("--..--")){
         a=",";
       }
-      if(s.charAt(i)=='..--..')){
+      if(x[i].equals("..--..")){
         a="?";
       }
-      if(s.charAt(i)=='-.-.--')){
+      if(x[i].equals("-.-.--")){
         a="!";
       }
-      if(s.charAt(i)=='.----.')){
+      if(x[i].equals(".----.")){
         a="\'";
       }
-      if(s.charAt(i)=='.-..-.')){
+      if(x[i].equals(".-..-.")){
         a="\"";
       }
-      if(s.charAt(i)=='-.--.')){
+      if(x[i].equals("-.--.")){
         a="(";
       }
-      if(s.charAt(i)=='-.--.-')){
+      if(x[i].equals("-.--.-")){
         a=")";
       }
-      if(s.charAt(i)=='.-...')){
+      if(x[i].equals(".-...")){
         a="&";
       }
-      if(s.charAt(i)=='---...')){
+      if(x[i].equals("---...")){
         a=":";
       }
-      if(s.charAt(i)=='-.-.-.')){
+      if(x[i].equals("-.-.-.")){
         a=";";
       }
-      if(s.charAt(i)=='-..-.')){
+      if(x[i].equals("-..-.")){
         a="/";
       }
-      if(s.charAt(i)=='..--.-')){
+      if(x[i].equals("..--.-")){
         a="_";
       }
-      if(s.charAt(i)=='-...-')){
+      if(x[i].equals("-...-")){
         a="=";
       }
-      if(s.charAt(i)=='.-.-.')){
+      if(x[i].equals(".-.-.")){
         a="+";
       }
-      if(s.charAt(i)=='-...-')){
+      if(x[i].equals("-...-")){
         a="-";
       }
-      if(s.charAt(i)=='...-..-')){
+      if(x[i].equals("...-..-")){
         a="$";
       }
-      if(s.charAt(i)=='.--.-.')){
+      if(x[i].equals(".--.-.")){
         a="@";
       }
       answer+=a;

@@ -316,7 +316,7 @@ public class HillCipher implements Cipher {
       for (int j=0; j<x.length; j++) {
         int smt=s.charAt(i*x.length+j);
 
-        System.out.println("smt b4: "+smt);
+        //System.out.println("smt b4: "+smt);
 
         //smt=smt%65;
 
@@ -326,7 +326,7 @@ public class HillCipher implements Cipher {
           smt=smt%126-33;
         }
 
-        System.out.println("smt after: "+smt);
+        //System.out.println("smt after: "+smt);
         x[j][i]=smt;
       }
     }

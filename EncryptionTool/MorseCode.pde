@@ -8,8 +8,10 @@ public class MorseCode implements Cipher {
   }
   
   public String encrypt(String s, ControlP5 cp5){
+    String answer="":
     String x[]=new String[s.length()];
     for(int i=0;i<s.length();i++){
+      x[i]=" ";
       if(s.charAt(i)=='a'||s.charAt(i)=='A'){
         x[i]=".-";
       }
@@ -175,6 +177,9 @@ public class MorseCode implements Cipher {
       if(s.charAt(i)=='@'){
         x[i]=".--.-.";
       }
+      answer+=x[i]+" ";
     }
+    return answer;
   }
+  
 }

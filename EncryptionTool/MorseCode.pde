@@ -1,7 +1,6 @@
 import java.util.Arrays;
 import controlP5.*;
 import java.util.*;
-import org.apache.commons.lang3.StringUtils;
 
 public class MorseCode implements Cipher {
   
@@ -179,9 +178,9 @@ public class MorseCode implements Cipher {
       if(s.charAt(i)=='@'){
         x[i]=".--.-.";
       }
+      answer+=x[i]+" ";
     }
-    answer+=StringUtils.join(x," ");
-    return answer;
+    return answer.substring(0,answer.length()-1);
   }
   
   public String decrypt(String s, ControlP5 cp5){

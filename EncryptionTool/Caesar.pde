@@ -66,7 +66,7 @@ public class Caesar implements Cipher {
     return s;
   }
   
-  String toString(){
+  public String toString() {
     return "Caesar (rot"+" "+rot+")";
   }
   

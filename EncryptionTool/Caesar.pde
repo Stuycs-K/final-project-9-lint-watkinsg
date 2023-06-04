@@ -34,9 +34,9 @@ public class Caesar implements Cipher {
     int[] x=stringToNum(s);
     for(int i=0;i<x.length;i++){
       if(x[i]!=alphabet.length-1){
-        x[i]+=rot;
-        if(x[i]>=alphabet.length){
-          x[i]+=1;
+        x[i]-=rot;
+        if(x[i]<=0){
+          x[i]=alphabet.length-x[i]-1;
         }
       }
       answer+=alphabet[x[i]];

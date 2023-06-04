@@ -79,3 +79,4 @@ added morse code cause y not
 ### date 6/4
 
 finish morse code
+try to test them, does not work idk y, looked at other ciphers

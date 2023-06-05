@@ -158,3 +158,12 @@ static int createMatrix(int[][] m, int x, int y, ControlP5 cp5) {
   // return currentDist
   return 0;
 }
+
+void dropdown(int index) {
+  String x= cp5.get(ScrollableList.class, "dropdown").getItem(index).get("name").toString();
+  for(int i=0;i<ciphers.length;i++){
+    if(ciphers[i].toString().equals(x)){
+      cipher=ciphers[i];
+    }
+  }
+}

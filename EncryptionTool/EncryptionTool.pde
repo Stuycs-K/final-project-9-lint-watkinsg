@@ -139,8 +139,7 @@ void setup() {
   for (int i = 0; i < ciphers.length; i++) {
     cs[i] = ciphers[i].toString();
   }
-  ScrollableList list = cp5.addScrollableList("dropdown");
-  list
+  cp5.addScrollableList("dropdown")
     .setPosition(50, 50)
     .setSize(200, 100)
     .setBarHeight(20)
@@ -148,19 +147,19 @@ void setup() {
     .setColorForeground(color(140,201,157))
     .setColorBackground(color(140,201,157))
     .addItems(Arrays.asList(cs))
-    .onPress(new CallbackListener() { // a callback function that will be called onPress
-      public void controlEvent(CallbackEvent theEvent) {
-        if(!list.isOpen()){
-          list.close();
-        }
-      }
-    })
-    ;
+    .setOpen(false)
+    .onPress(new CallbackListener() {
+    public void controlEvent(CallbackEvent theEvent) {
+      
+    }
+  }
+  );
   // TODO: callback handler to set which cipher is 'selected' (+ other options ex. font)
 }
 
 void draw() {
   // createMatrix(new int[][]{{}}, 0, 0);
+  background(245,208,208);
 }
 
 // function to draw a 2d array as a matrix, params are int[][] arr, x, y and returns int width

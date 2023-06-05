@@ -80,3 +80,8 @@ added morse code cause y not
 
 finish morse code
 try to test them, does not work idk y, looked at other ciphers
+
+### date 6/5
+
+talk with gus about visualization and what to say during demo and demoed, annnnnnnnd i figure out why it kept overlapping its because we never clear the background in draw herqiohugiflekhigudfkjqfwhsaufikhqwusdf
+at least i no longer hate controlp5 🙃

@@ -25,8 +25,7 @@ void setup() {
     .setFont(createFont("arial", 30))
     .setPosition(width/2-700, height/2-100-100+20)
     .setColorForeground(color(245,208,208))
-    .setColorBackground(color(245,208,208))
-    ;
+    .setColorBackground(color(245,208,208));
   cp5.addTextfield("Input")
     .setFont(createFont("arial", 30))
     .setPosition(width/2-49+15, 15)
@@ -140,14 +139,23 @@ void setup() {
   for (int i = 0; i < ciphers.length; i++) {
     cs[i] = ciphers[i].toString();
   }
-  cp5.addScrollableList("dropdown")
+  ScrollableList list = cp5.addScrollableList("dropdown");
+  list
     .setPosition(50, 50)
     .setSize(200, 100)
     .setBarHeight(20)
     .setItemHeight(20)
     .setColorForeground(color(140,201,157))
     .setColorBackground(color(140,201,157))
-    .addItems(Arrays.asList(cs));
+    .addItems(Arrays.asList(cs))
+    .onPress(new CallbackListener() { // a callback function that will be called onPress
+      public void controlEvent(CallbackEvent theEvent) {
+        if(!list.isOpen()){
+          list.close();
+        }
+      }
+    })
+    ;
   // TODO: callback handler to set which cipher is 'selected' (+ other options ex. font)
 }
 

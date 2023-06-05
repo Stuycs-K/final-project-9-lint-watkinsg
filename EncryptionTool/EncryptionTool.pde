@@ -107,21 +107,6 @@ void setup() {
       float value = theEvent.getController().getValue();
       println("got a press from a " + name + ", the value is " + value);
       ((HillCipher) ciphers[0]).randomKey(cp5);
-      cp5.addButton("")
-        .setPosition(width/2-700, height/2-100+20)
-        .setSize(250,250)
-        .setColorForeground(color(245,208,208))
-        .setColorBackground(color(245,208,208));
-      cp5.addButton("  ")
-        .setPosition(width/2-700, height/2-100+20)
-        .setSize(250,250)
-        .setColorForeground(color(245,208,208))
-        .setColorBackground(color(245,208,208));
-      cp5.addButton("   ")
-        .setPosition(width/2-700, height/2-100+20)
-        .setSize(250,250)
-        .setColorForeground(color(245,208,208))
-        .setColorBackground(color(245,208,208));
       decryptKey = cp5.addTextlabel("dk")
         .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,6))
         .setPosition(width/2-700, height/2-100+20)

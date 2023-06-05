@@ -218,11 +218,6 @@ public class HillCipher implements Cipher {
     float[][] input=stringToNum(s);
     //System.out.println("--------------------------------------------------\n"+(int)Math.pow(arrayToString(input,2).length(),0.5));
     int position=width/2-(int)(7.55*(arrayToString(input,2).length()/(defaultKey.length+(defaultKey.length-1)*2)));
-    cp5.addButton("")
-        .setPosition(0, 15+80-4)
-        .setSize(1600,150)
-        .setColorForeground(color(245,208,208))
-        .setColorBackground(color(245,208,208));
     inputText = cp5.addTextlabel("input")
         .setValue(arrayToString(input,2))
         .setPosition(position+20, 15+80)
@@ -244,11 +239,6 @@ public class HillCipher implements Cipher {
       // System.out.println(Arrays.toString(newInput[i]));
     }
     newInput=mod(newInput);
-    cp5.addButton(" ")
-        .setPosition(width/2-700+500+400-20-20, height/2-100-20)
-        .setSize(1000,200)
-        .setColorForeground(color(245,208,208))
-        .setColorBackground(color(245,208,208));
     outputText = cp5.addTextlabel("output")
         .setValue(arrayToString(newInput,2))
         .setPosition(width/2-700+500+400, height/2-100+20)
@@ -268,11 +258,6 @@ public class HillCipher implements Cipher {
     float[][] input=stringToNum(s);
     
     int position=width/2-(int)(7.55*(arrayToString(input,2).length()/(defaultKey.length+(defaultKey.length-1)*2)));
-    cp5.addButton("")
-        .setPosition(0, 15+80-4)
-        .setSize(1600,150)
-        .setColorForeground(color(245,208,208))
-        .setColorBackground(color(245,208,208));
     inputText = cp5.addTextlabel("input")
         .setValue(arrayToString(input,2))
         .setPosition(position+25, 15+80)
@@ -290,11 +275,6 @@ public class HillCipher implements Cipher {
       }
     }
     newInput=mod(newInput);
-    cp5.addButton(" ")
-        .setPosition(width/2-700+500+400-20-20, height/2-100-20)
-        .setSize(1000,200)
-        .setColorForeground(color(245,208,208))
-        .setColorBackground(color(245,208,208));
     outputText = cp5.addTextlabel("output")
         .setValue(arrayToString(newInput,2))
         .setPosition(width/2-700+500+400, height/2-100+20)

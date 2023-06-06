@@ -12,7 +12,7 @@ public class MorseCode implements Cipher {
     String answer="";
     String x[]=new String[s.length()];
     for(int i=0;i<s.length();i++){
-      x[i]=" ";
+      x[i]="/";
       if(s.charAt(i)=='a'||s.charAt(i)=='A'){
         x[i]=".-";
       }
@@ -183,8 +183,12 @@ public class MorseCode implements Cipher {
   public String decrypt(String s, ControlP5 cp5){
     String answer="";
     String[] x=s.split(" ");
+    System.out.println("s.split(\" \": "+ Arrays.toString(x));
     for(int i=0;i<x.length;i++){
-      String a=" ";
+      String a="";
+      if(x[i].equals("/")){
+        a=" ";
+      }
       if(x[i].equals(".-")){
         a="a";
       }

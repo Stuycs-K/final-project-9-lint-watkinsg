@@ -8,7 +8,7 @@ Textlabel theKey;
 
 void setup() {
   size(1600, 800);
-  background(#B4635F);
+  background(#A55653);
   cp5 = new ControlP5(this);
   int textBoxSize=1000;
   cp5.addTextfield("textinput")
@@ -22,19 +22,19 @@ void setup() {
   cp5.addTextfield("key")
     .setFont(createFont("arial", 30))
     .setPosition(width/2-700, height/2-100-100+20)
-    .setColorForeground(color(#B4635F))
-    .setColorBackground(color(#B4635F));
+    .setColorForeground(color(#A55653))
+    .setColorBackground(color(#A55653));
   cp5.addTextfield("Input")
     .setFont(createFont("arial", 30))
     .setPosition(width/2-49+15, 15)
-    .setColorForeground(color(#B4635F))
-    .setColorBackground(color(#B4635F))
+    .setColorForeground(color(#A55653))
+    .setColorBackground(color(#A55653))
     ;
   cp5.addTextfield("Output")
     .setFont(createFont("arial", 30))
     .setPosition(width/2-700+500+400, height/2-100-100+20)
-    .setColorForeground(color(#B4635F))
-    .setColorBackground(color(#B4635F))
+    .setColorForeground(color(#A55653))
+    .setColorBackground(color(#A55653))
     ;
   theKey = cp5.addTextlabel("ek")
     .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,6))
@@ -121,7 +121,7 @@ void setup() {
 
 void draw() {
   // createMatrix(new int[][]{{}}, 0, 0);
-  background(#B4635F);
+  background(#A55653);
 }
 
 // function to draw a 2d array as a matrix, params are int[][] arr, x, y and returns int width

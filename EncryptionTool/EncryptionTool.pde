@@ -4,11 +4,13 @@ import controlP5.*;
 final Cipher[] ciphers = { new HillCipher(), new Caesar(), new MorseCode() };
 Cipher cipher=ciphers[0];
 ControlP5 cp5;
+color bgColor=#4a7a6e;
+color buttonColor=#8f4b28;
 Textlabel theKey;
 
 void setup() {
   size(1600, 800);
-  background(#A55653);
+  background(bgColor);
   cp5 = new ControlP5(this);
   int textBoxSize=1000;
   cp5.addTextfield("textinput")
@@ -17,24 +19,25 @@ void setup() {
     .setLabelVisible(false)
     .setSize(textBoxSize, 50)
     .setAutoClear(false)
-    .setColorForeground(color(#779D75))
-    .setColorBackground(color(#779D75));
+    .setColorForeground(buttonColor)
+    .setColorBackground(buttonColor)
+    ;
   cp5.addTextfield("key")
     .setFont(createFont("arial", 30))
     .setPosition(width/2-700, height/2-100-100+20)
-    .setColorForeground(color(#A55653))
-    .setColorBackground(color(#A55653));
+    .setColorForeground(bgColor)
+    .setColorBackground(bgColor);
   cp5.addTextfield("Input")
     .setFont(createFont("arial", 30))
     .setPosition(width/2-49+15, 15)
-    .setColorForeground(color(#A55653))
-    .setColorBackground(color(#A55653))
+    .setColorForeground(bgColor)
+    .setColorBackground(bgColor)
     ;
   cp5.addTextfield("Output")
     .setFont(createFont("arial", 30))
     .setPosition(width/2-700+500+400, height/2-100-100+20)
-    .setColorForeground(color(#A55653))
-    .setColorBackground(color(#A55653))
+    .setColorForeground(bgColor)
+    .setColorBackground(bgColor)
     ;
   theKey = cp5.addTextlabel("ek")
     .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,6))
@@ -58,8 +61,8 @@ void setup() {
   .setFont(createFont("Georgia", 20))
     .setSize(100, 50)
     .setPosition(width/2-100-50+10+10, height/2+200+10)
-    .setColorForeground(color(#779D75))
-    .setColorBackground(color(#779D75))
+    .setColorForeground(buttonColor)
+    .setColorBackground(buttonColor)
     .setLabel("Encrypt");
   cp5.addButton("decryptButton")
     .onPress(new CallbackListener() { // a callback function that will be called onPress
@@ -77,15 +80,15 @@ void setup() {
   .setFont(createFont("Georgia", 20))
     .setSize(100, 50)
     .setPosition(width/2+100-50-10-10, height/2+200+10)
-    .setColorForeground(color(#779D75))
-    .setColorBackground(color(#779D75))
+    .setColorForeground(buttonColor)
+    .setColorBackground(buttonColor)
     .setLabel("Decrypt");
   cp5.addButton("newKeyButton")
     .setFont(createFont("Georgia", 20))
     .setPosition(100, 680)
     .setSize(105,45)
-    .setColorForeground(color(#779D75))
-    .setColorBackground(color(#779D75))
+    .setColorForeground(buttonColor)
+    .setColorBackground(buttonColor)
     .setLabel("New Key")
     .onPress(new CallbackListener() {
     public void controlEvent(CallbackEvent theEvent) {
@@ -106,8 +109,8 @@ void setup() {
     .setSize(200, 100)
     .setBarHeight(20)
     .setItemHeight(20)
-    .setColorForeground(color(#779D75))
-    .setColorBackground(color(#779D75))
+    .setColorForeground(buttonColor)
+    .setColorBackground(buttonColor)
     .addItems(Arrays.asList(cs))
     .setOpen(false)
     .onPress(new CallbackListener() {
@@ -121,19 +124,7 @@ void setup() {
 
 void draw() {
   // createMatrix(new int[][]{{}}, 0, 0);
-  background(#A55653);
-}
-
-// function to draw a 2d array as a matrix, params are int[][] arr, x, y and returns int width
-static int createMatrix(int[][] m, int x, int y, ControlP5 cp5) {
-  int currentDist = 0;
-  int mostwidth = 0;
-  // text label for opening ( (deal with size later)
-  // loop by col first then row, if textWidth of the thing is larger than mostwidth then mostwidth = <it> (when drawing, draw at x+currentDist,y)
-  // end of each col loop, add set px to currentDist (spacing)
-  // draw final ")", add to currentDist
-  // return currentDist
-  return 0;
+  background(#4a7a6e);
 }
 
 void dropdown(int index) {

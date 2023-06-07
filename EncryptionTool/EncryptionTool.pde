@@ -5,14 +5,18 @@ color bgColor=#962832;
 color buttonColor=#629b5e;
 
 // array of identifiers for controlp5 stuff
-final Cipher[] ciphers = { new HillCipher(cp5), new Caesar(), new MorseCode() };
-Cipher cipher=ciphers[0];
+Cipher[] ciphers;
+Cipher cipher;
 
 void setup() {
   size(1600, 800);
   background(bgColor);
-  System.out.println("______________"+cipher.toString());
   cp5 = new ControlP5(this);
+  ciphers = new Cipher[3];
+  ciphers[0]=new HillCipher(cp5);
+  ciphers[1]=new Caesar(cp5);
+  ciphers[2]=new MorseCode(cp5);
+  cipher=ciphers[0];
   int textBoxSize=1000;
   cp5.addTextfield("textinput")
     .setFont(createFont("arial", 20))

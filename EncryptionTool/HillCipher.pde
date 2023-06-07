@@ -23,12 +23,13 @@ public class HillCipher implements Cipher {
   public HillCipher(ControlP5 cp5) {
     makeDecryptKey();
     this.cp5 = cp5;
-    theKey = cp5.addTextlabel("ek")
-    .setValue(arrayToString(defaultKey,6))
-    .setPosition(width/2-700, height/2-100+20)
-    .setColor(#FFFFFF)
-    .setFont(createFont("Georgia", 30))
-    ;
+    println(this.cp5);
+    theKey =  cp5.addTextlabel("ek");
+    //.setValue(arrayToString(defaultKey,6))
+    //.setPosition(width/2-700, height/2-100+20)
+    //.setColor(#FFFFFF)
+    //.setFont(createFont("Georgia", 30))
+    //;
   }
   
   String arrayToString(float[][] x, int space){

@@ -6,7 +6,7 @@ public class Caesar implements Cipher {
   Character[] alphabet={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' '};
   int rot=13;
   
-  public Caesar(){
+  public Caesar(ControlP5 cp5){
     rot=13;
   }
   

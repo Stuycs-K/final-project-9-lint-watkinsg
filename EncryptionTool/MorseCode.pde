@@ -4,6 +4,10 @@ import java.util.*;
 
 public class MorseCode implements Cipher {
   
+  public MorseCode(ControlP5 cp5){
+    
+  }
+  
   String toString(){
     return "Morse Code";
   }

@@ -17,23 +17,18 @@ public class HillCipher implements Cipher {
   
   public Textlabel inputText;
   public Textlabel outputText;
+  public Textlabel theKey;
+  public ControlP5 cp5;
 
-  public HillCipher() {
+  public HillCipher(ControlP5 cp5) {
     makeDecryptKey();
-    //randomKey(cp5);
-    //cp5.addTextlabel("user input translated to numbers")
-    //  .setText(x)
-    //  .setPosition(100, 50)
-    //  .setColorValue(0xffffff00)
-    //  .setFont(createFont("Georgia", 20))
-    //  ;
-    //cp5.addTextlabel("user input translated to numbers")
-    //  .setText(x)
-    //  .setPosition(100, 50)
-    //  .setColorValue(0xffffff00)
-    //  .setFont(createFont("Georgia", 20))
-    //  ;
-    //System.out.println("testing ------------ \n"+arrayToString(inverseDefaultKey, 3));
+    this.cp5 = cp5;
+    theKey = cp5.addTextlabel("ek")
+    .setValue(arrayToString(defaultKey,6))
+    .setPosition(width/2-700, height/2-100+20)
+    .setColor(#FFFFFF)
+    .setFont(createFont("Georgia", 30))
+    ;
   }
   
   String arrayToString(float[][] x, int space){

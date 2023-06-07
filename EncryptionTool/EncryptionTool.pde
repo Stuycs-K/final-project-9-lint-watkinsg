@@ -1,16 +1,17 @@
 import controlP5.*;
 
-// array of identifiers for controlp5 stuff
-final Cipher[] ciphers = { new HillCipher(), new Caesar(), new MorseCode() };
-Cipher cipher=ciphers[0];
 ControlP5 cp5;
 color bgColor=#962832;
 color buttonColor=#629b5e;
-Textlabel theKey;
+
+// array of identifiers for controlp5 stuff
+final Cipher[] ciphers = { new HillCipher(cp5), new Caesar(), new MorseCode() };
+Cipher cipher=ciphers[0];
 
 void setup() {
   size(1600, 800);
   background(bgColor);
+  System.out.println("______________"+cipher.toString());
   cp5 = new ControlP5(this);
   int textBoxSize=1000;
   cp5.addTextfield("textinput")
@@ -39,12 +40,6 @@ void setup() {
     .setColorForeground(bgColor)
     .setColorBackground(bgColor)
     ;
-  theKey = cp5.addTextlabel("ek")
-    .setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,6))
-    .setPosition(width/2-700, height/2-100+20)
-    .setColor(#FFFFFF)
-    .setFont(createFont("Georgia", 30))
-    ;
   cp5.addButton("encryptButton")
     .onPress(new CallbackListener() { // a callback function that will be called onPress
     public void controlEvent(CallbackEvent theEvent) {
@@ -54,7 +49,9 @@ void setup() {
       String encrypted = cipher.encrypt(cp5.get(Textfield.class, "textinput").getText(), cp5);
       cp5.get(Textfield.class, "textinput").setText(encrypted);
       println("encrypted: " + encrypted);
-      theKey.setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,6));
+      if(cipher.toString().equals("HillCipher")){
+        ((HillCipher)cipher).theKey.setValue(((HillCipher)cipher).arrayToString(((HillCipher)cipher).defaultKey,6));
+      }
     }
   }
   )
@@ -73,7 +70,9 @@ void setup() {
       String decrypted = cipher.decrypt(cp5.get(Textfield.class, "textinput").getText(), cp5);
       cp5.get(Textfield.class, "textinput").setText(decrypted);
       println("encrypted: " + decrypted);
-      theKey.setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).inverseDefaultKey,6));
+      if(cipher.toString().equals("HillCipher")){
+        ((HillCipher)cipher).theKey.setValue(((HillCipher)cipher).arrayToString(((HillCipher)cipher).inverseDefaultKey,6));
+      }
     }
   }
   )
@@ -96,7 +95,9 @@ void setup() {
       float value = theEvent.getController().getValue();
       println("got a press from a " + name + ", the value is " + value);
       ((HillCipher) ciphers[0]).randomKey(cp5);
-      theKey.setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,6));
+      if(cipher.toString().equals("HillCipher")){
+        ((HillCipher)cipher).theKey.setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,6));
+      }
     }
   }
   );

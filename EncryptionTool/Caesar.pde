@@ -18,12 +18,15 @@ public class Caesar implements Cipher {
     String answer="";
     int[] x=stringToNum(s);
     for(int i=0;i<x.length;i++){
+      System.out.println("b4: "+x[i]);
       if(x[i]!=alphabet.length-1){
         x[i]+=rot;
         if(x[i]>=alphabet.length){
           x[i]+=1;
+          x[i]=x[i]%alphabet.length;
         }
       }
+      System.out.println("b4: "+x[i]);
       answer+=alphabet[x[i]];
     }
     return answer;
@@ -33,12 +36,14 @@ public class Caesar implements Cipher {
     String answer="";
     int[] x=stringToNum(s);
     for(int i=0;i<x.length;i++){
+      System.out.println("b4: "+x[i]);
       if(x[i]!=alphabet.length-1){
         x[i]-=rot;
         if(x[i]<=0){
-          x[i]=alphabet.length-x[i]-1;
+          x[i]=alphabet.length+x[i]-1;
         }
       }
+      System.out.println("after: "+x[i]);
       answer+=alphabet[x[i]];
     }
     return answer;

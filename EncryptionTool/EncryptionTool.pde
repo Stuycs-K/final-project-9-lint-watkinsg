@@ -5,7 +5,7 @@ final Cipher[] ciphers = { new HillCipher(), new Caesar(), new MorseCode() };
 Cipher cipher=ciphers[0];
 ControlP5 cp5;
 color bgColor=#962832;
-color buttonColor=#629b5e;
+color buttonColor=#781726;
 Textlabel theKey;
 
 void setup() {

@@ -185,10 +185,7 @@ public class MorseCode implements Cipher {
     String[] x=s.split(" ");
     System.out.println("s.split(\" \": "+ Arrays.toString(x));
     for(int i=0;i<x.length;i++){
-      String a="";
-      if(x[i].equals("/")){
-        a=" ";
-      }
+      String a=" ";
       if(x[i].equals(".-")){
         a="a";
       }
@@ -352,12 +349,6 @@ public class MorseCode implements Cipher {
         a="@";
       }
       answer+=a;
-    }
-    for(int i=1;i<answer.length()-1;i++){
-      if(answer.substring(i,i+1).equals(" ")&&answer.substring(i-1,i).equals(" ")){
-        answer=answer.substring(0,i)+answer.substring(i+1);
-      }
-      i--;
     }
     return answer;
   }

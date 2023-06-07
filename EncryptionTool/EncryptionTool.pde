@@ -4,7 +4,7 @@ import controlP5.*;
 final Cipher[] ciphers = { new HillCipher(), new Caesar(), new MorseCode() };
 Cipher cipher=ciphers[0];
 ControlP5 cp5;
-color bgColor=#d05667;
+color bgColor=#962832;
 color buttonColor=#629b5e;
 Textlabel theKey;
 

@@ -4,8 +4,8 @@ import controlP5.*;
 final Cipher[] ciphers = { new HillCipher(), new Caesar(), new MorseCode() };
 Cipher cipher=ciphers[0];
 ControlP5 cp5;
-color bgColor=#4a7a6e;
-color buttonColor=#8f4b28;
+color bgColor=#d05667;
+color buttonColor=#629b5e;
 Textlabel theKey;
 
 void setup() {
@@ -124,7 +124,7 @@ void setup() {
 
 void draw() {
   // createMatrix(new int[][]{{}}, 0, 0);
-  background(#4a7a6e);
+  background(bgColor);
 }
 
 void dropdown(int index) {

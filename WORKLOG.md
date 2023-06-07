@@ -85,3 +85,10 @@ try to test them, does not work idk y, looked at other ciphers
 
 talk with gus about visualization and what to say during demo and demoed, annnnnnnnd i figure out why it kept overlapping its because we never clear the background in draw herqiohugiflekhigudfkjqfwhsaufikhqwusdf
 at least i no longer hate controlp5 🙃
+
+### date 6/6
+
+talk with gus and distributed the work, i do visualization for hillcipher and morse code and he do the visualization for caesar and base64 which he will added
+set the background to a darker color (y does it take so long TT)
+fix bug in caesar an morse
+start visualization for hillcipher by trying to keep all the necessary component in hillcipher

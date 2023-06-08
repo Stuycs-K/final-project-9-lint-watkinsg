@@ -92,3 +92,8 @@ talk with gus and distributed the work, i do visualization for hillcipher and mo
 set the background to a darker color (y does it take so long TT)
 fix bug in caesar an morse
 start visualization for hillcipher by trying to keep all the necessary component in hillcipher
+
+### date 6/7
+
+solve cp5 error, apparently me just dumb and blind
+more visualization planning

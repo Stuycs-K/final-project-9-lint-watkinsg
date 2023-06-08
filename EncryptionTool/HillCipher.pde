@@ -23,13 +23,11 @@ public class HillCipher implements Cipher {
   public HillCipher(ControlP5 cp5) {
     makeDecryptKey();
     this.cp5 = cp5;
-    println(this.cp5);
-    theKey =  cp5.addTextlabel("ek");
-    //.setValue(arrayToString(defaultKey,6))
-    //.setPosition(width/2-700, height/2-100+20)
-    //.setColor(#FFFFFF)
-    //.setFont(createFont("Georgia", 30))
-    //;
+    cp5.addTextfield("key")
+      .setFont(createFont("arial", 30))
+      .setPosition(width/2-700, height/2-100-100+20)
+      .setColorForeground(bgColor)
+      .setColorBackground(bgColor);
   }
   
   String arrayToString(float[][] x, int space){
@@ -212,13 +210,27 @@ public class HillCipher implements Cipher {
     System.out.println("encrypt");
     
     float[][] input=stringToNum(s);
+    
+    theKey =  cp5.addTextlabel("ek")
+      .setValue(arrayToString(defaultKey,6))
+      .setPosition(width/2-700, height/2-100+20)
+      .setColor(#FFFFFF)
+      .setFont(createFont("Georgia", 30))
+      ;
+      
     //System.out.println("--------------------------------------------------\n"+(int)Math.pow(arrayToString(input,2).length(),0.5));
     int position=width/2-(int)(7.55*(arrayToString(input,2).length()/(defaultKey.length+(defaultKey.length-1)*2)));
     inputText = cp5.addTextlabel("input")
-        .setValue(arrayToString(input,2))
-        .setPosition(position+20, 15+80)
-        .setColor(#FFFFFF)
-        .setFont(createFont("Georgia", 20));
+      .setValue(arrayToString(input,2))
+      .setPosition(position+20, 15+80)
+      .setColor(#FFFFFF)
+      .setFont(createFont("Georgia", 20));
+    cp5.addTextfield("Input")
+      .setFont(createFont("arial", 30))
+      .setPosition(width/2-49+15, 15)
+      .setColorForeground(bgColor)
+      .setColorBackground(bgColor)
+      ;
 
     float[][] newInput=new float[input.length][input[0].length];
     for (int i=0; i<input[0].length; i++) {
@@ -236,10 +248,16 @@ public class HillCipher implements Cipher {
     }
     newInput=mod(newInput);
     outputText = cp5.addTextlabel("output")
-        .setValue(arrayToString(newInput,2))
-        .setPosition(width/2-700+500+400, height/2-100+20)
-        .setColor(#FFFFFF)
-        .setFont(createFont("Georgia", 20));
+      .setValue(arrayToString(newInput,2))
+      .setPosition(width/2-700+500+400, height/2-100+20)
+      .setColor(#FFFFFF)
+      .setFont(createFont("Georgia", 20));
+    cp5.addTextfield("Output")
+      .setFont(createFont("arial", 30))
+      .setPosition(width/2-700+500+400, height/2-100-100+20)
+      .setColorForeground(bgColor)
+      .setColorBackground(bgColor)
+      ;
     String ihatelife=numToString(newInput);
     return ihatelife;
   }
@@ -253,12 +271,25 @@ public class HillCipher implements Cipher {
   String decrypt(String s, ControlP5 cp5) {
     float[][] input=stringToNum(s);
     
+    theKey =  cp5.addTextlabel("ek")
+      .setValue(arrayToString(defaultKey,6))
+      .setPosition(width/2-700, height/2-100+20)
+      .setColor(#FFFFFF)
+      .setFont(createFont("Georgia", 30))
+      ;
+    
     int position=width/2-(int)(7.55*(arrayToString(input,2).length()/(defaultKey.length+(defaultKey.length-1)*2)));
     inputText = cp5.addTextlabel("input")
-        .setValue(arrayToString(input,2))
-        .setPosition(position+25, 15+80)
-        .setColor(#FFFFFF)
-        .setFont(createFont("Georgia", 20));
+      .setValue(arrayToString(input,2))
+      .setPosition(position+25, 15+80)
+      .setColor(#FFFFFF)
+      .setFont(createFont("Georgia", 20));
+    cp5.addTextfield("Input")
+      .setFont(createFont("arial", 30))
+      .setPosition(width/2-49+15, 15)
+      .setColorForeground(bgColor)
+      .setColorBackground(bgColor)
+      ;
         
     float[][] newInput=new float[input.length][input[0].length];
     for (int i=0; i<input[0].length; i++) {
@@ -272,10 +303,16 @@ public class HillCipher implements Cipher {
     }
     newInput=mod(newInput);
     outputText = cp5.addTextlabel("output")
-        .setValue(arrayToString(newInput,2))
-        .setPosition(width/2-700+500+400, height/2-100+20)
-        .setColor(#FFFFFF)
-        .setFont(createFont("Georgia", 20));
+      .setValue(arrayToString(newInput,2))
+      .setPosition(width/2-700+500+400, height/2-100+20)
+      .setColor(#FFFFFF)
+      .setFont(createFont("Georgia", 20));
+    cp5.addTextfield("Output")
+      .setFont(createFont("arial", 30))
+      .setPosition(width/2-700+500+400, height/2-100-100+20)
+      .setColorForeground(bgColor)
+      .setColorBackground(bgColor)
+      ;
     String ihatelife=numToString(newInput);
     return ihatelife;
   }

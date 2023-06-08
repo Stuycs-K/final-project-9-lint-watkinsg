@@ -27,23 +27,6 @@ void setup() {
     .setColorForeground(buttonColor)
     .setColorBackground(buttonColor)
     ;
-  cp5.addTextfield("key")
-    .setFont(createFont("arial", 30))
-    .setPosition(width/2-700, height/2-100-100+20)
-    .setColorForeground(bgColor)
-    .setColorBackground(bgColor);
-  cp5.addTextfield("Input")
-    .setFont(createFont("arial", 30))
-    .setPosition(width/2-49+15, 15)
-    .setColorForeground(bgColor)
-    .setColorBackground(bgColor)
-    ;
-  cp5.addTextfield("Output")
-    .setFont(createFont("arial", 30))
-    .setPosition(width/2-700+500+400, height/2-100-100+20)
-    .setColorForeground(bgColor)
-    .setColorBackground(bgColor)
-    ;
   cp5.addButton("encryptButton")
     .onPress(new CallbackListener() { // a callback function that will be called onPress
     public void controlEvent(CallbackEvent theEvent) {
@@ -98,7 +81,7 @@ void setup() {
       String name = theEvent.getController().getName();
       float value = theEvent.getController().getValue();
       println("got a press from a " + name + ", the value is " + value);
-      ((HillCipher) ciphers[0]).randomKey(cp5);
+      ((HillCipher) cipher).randomKey(cp5);
       if(cipher.toString().equals("HillCipher")){
         ((HillCipher)cipher).theKey.setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,6));
       }

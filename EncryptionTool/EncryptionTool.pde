@@ -17,6 +17,7 @@ void setup() {
   ciphers[1]=new Caesar(cp5);
   ciphers[2]=new MorseCode(cp5);
   cipher=ciphers[0];
+  cipher.showTextlabels();
   int textBoxSize=1000;
   cp5.addTextfield("textinput")
     .setFont(createFont("arial", 20))
@@ -109,7 +110,13 @@ void dropdown(int index) {
   String x= cp5.get(ScrollableList.class, "dropdown").getItem(index).get("name").toString();
   for(int i=0;i<ciphers.length;i++){
     if(ciphers[i].toString().equals(x)){
+      println("me no get");
+      cipher.emptyTextlabels();
+      println("is");
       cipher=ciphers[i];
+      println("it");
+      cipher.showTextlabels();
+      println("this");
     }
   }
 }

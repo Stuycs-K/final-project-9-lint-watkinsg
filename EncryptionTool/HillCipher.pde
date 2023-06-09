@@ -21,47 +21,35 @@ public class HillCipher implements Cipher {
   public Textlabel outputLabel;
   public Textlabel keyContent;
   public Textlabel keyLabel;
+  public Textlabel[] textlabels={keyLabel, keyContent, inputLabel, inputContent, outputLabel, outputContent};
   public ControlP5 cp5;
 
   public HillCipher(ControlP5 cp5) {
     makeDecryptKey();
     this.cp5 = cp5;
-    keyLabel =  cp5.addTextlabel("keyLabel")
-      .setValue("KEY")
-      .setPosition(width/2-700, height/2-100-100+20)
-      .setColor(#FFFFFF)
-      .setFont(createFont("arial", 30))
-      ;
-    keyContent =  cp5.addTextlabel("keyContent")
-      .setValue(arrayToString(defaultKey,6))
-      .setPosition(width/2-700, height/2-100+20)
-      .setColor(#FFFFFF)
-      .setFont(createFont("Georgia", 30))
-      ;
-    inputLabel=cp5.addTextlabel("inputLabel")
-      .setValue("INPUT")
-      .setPosition(width/2-49+15, 15)
-      .setColor(#FFFFFF)
-      .setFont(createFont("arial", 30))
-      ;
-    outputLabel=cp5.addTextlabel("outputLabel")
-      .setValue("OUTPUT")
-      .setPosition(width/2-700+500+400, height/2-100-100+20)
-      .setColor(#FFFFFF)
-      .setFont(createFont("arial", 30))
-      ;
-    inputContent=cp5.addTextlabel("inputContent")
-      .setColor(#FFFFFF)
-      .setFont(createFont("Georgia", 20));
-    outputContent=cp5.addTextlabel("OutputContent")
-      .setColor(#FFFFFF)
-      .setFont(createFont("Georgia", 20));
+    keyLabel =  cp5.addTextlabel("keyLabel");
+    keyContent =  cp5.addTextlabel("keyContent");
+    inputLabel=cp5.addTextlabel("inputLabel");
+    outputLabel=cp5.addTextlabel("outputLabel");
+    inputContent=cp5.addTextlabel("inputContent");
+    outputContent=cp5.addTextlabel("outputContent");
+    System.out.println(Arrays.toString(textlabels));
   }
   
   public HillCipher(float[][] newKey, ControlP5 cp5){
     defaultKey=newKey;
     makeDecryptKey();
     this.cp5=cp5;
+    keyLabel =  cp5.addTextlabel("keyLabel");
+    keyContent =  cp5.addTextlabel("keyContent");
+    inputLabel=cp5.addTextlabel("inputLabel");
+    outputLabel=cp5.addTextlabel("outputLabel");
+    inputContent=cp5.addTextlabel("inputContent");
+    outputContent=cp5.addTextlabel("outputContent");
+    System.out.println(Arrays.toString(textlabels));
+  }
+  
+  public void showTextlabels(){
     keyLabel =  cp5.addTextlabel("keyLabel")
       .setValue("KEY")
       .setPosition(width/2-700, height/2-100-100+20)
@@ -92,10 +80,6 @@ public class HillCipher implements Cipher {
     outputContent=cp5.addTextlabel("OutputContent")
       .setColor(#FFFFFF)
       .setFont(createFont("Georgia", 20));
-    System.out.println("new key: ");
-    for(float[] i:defaultKey){
-      System.out.println(Arrays.toString(i));
-    }
   }
   
   String arrayToString(float[][] x, int space){
@@ -418,4 +402,14 @@ public class HillCipher implements Cipher {
   String toString() {
     return "Hill Cipher";
   }
+  
+  public void emptyTextlabels(){
+    println(Arrays.toString(textlabels));
+    if(textlabels.length>0){
+      for(int i=0;i<textlabels.length;i++){
+        textlabels[i].setValue("");
+      }
+    }
+  }
+  
 }

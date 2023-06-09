@@ -21,12 +21,12 @@ public class Caesar implements Cipher {
       System.out.println("b4: "+x[i]);
       if(x[i]!=alphabet.length-1){
         x[i]+=rot;
-        if(x[i]>=alphabet.length){
+        if(x[i]>=alphabet.length-1){
           x[i]+=1;
           x[i]=x[i]%alphabet.length;
         }
       }
-      System.out.println("b4: "+x[i]);
+      System.out.println("after: "+x[i]);
       answer+=alphabet[x[i]];
     }
     return answer;
@@ -39,7 +39,7 @@ public class Caesar implements Cipher {
       System.out.println("b4: "+x[i]);
       if(x[i]!=alphabet.length-1){
         x[i]-=rot;
-        if(x[i]<=0){
+        if(x[i]<0){
           x[i]=alphabet.length+x[i]-1;
         }
       }

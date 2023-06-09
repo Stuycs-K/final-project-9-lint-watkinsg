@@ -27,6 +27,11 @@ void setup() {
     .setColorForeground(buttonColor)
     .setColorBackground(buttonColor)
     ;
+  cp5.addTextfield("key")
+    .setFont(createFont("arial", 30))
+    .setPosition(width/2-700, height/2-100-100+20)
+    .setColorForeground(bgColor)
+    .setColorBackground(bgColor);
   cp5.addButton("encryptButton")
     .onPress(new CallbackListener() { // a callback function that will be called onPress
     public void controlEvent(CallbackEvent theEvent) {
@@ -81,7 +86,7 @@ void setup() {
       String name = theEvent.getController().getName();
       float value = theEvent.getController().getValue();
       println("got a press from a " + name + ", the value is " + value);
-      ((HillCipher) cipher).randomKey(cp5);
+      ((HillCipher) ciphers[0]).randomKey(cp5);
       if(cipher.toString().equals("HillCipher")){
         ((HillCipher)cipher).theKey.setValue(((HillCipher)ciphers[0]).arrayToString(((HillCipher)ciphers[0]).defaultKey,6));
       }

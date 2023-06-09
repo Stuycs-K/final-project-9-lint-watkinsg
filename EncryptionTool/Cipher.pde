@@ -5,5 +5,6 @@ interface Cipher {
   public String toString();
   public void emptyTextlabels();
   public void showTextlabels();
+  public String textlabelsToString();
   
 }

@@ -110,13 +110,13 @@ void dropdown(int index) {
   String x= cp5.get(ScrollableList.class, "dropdown").getItem(index).get("name").toString();
   for(int i=0;i<ciphers.length;i++){
     if(ciphers[i].toString().equals(x)){
-      println("me no get");
+      println("old: "+cipher);
+      println(cipher.textlabelsToString());
       cipher.emptyTextlabels();
-      println("is");
       cipher=ciphers[i];
-      println("it");
+      println("new: "+cipher);
+      println(cipher.textlabelsToString());
       cipher.showTextlabels();
-      println("this");
     }
   }
 }

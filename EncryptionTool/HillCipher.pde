@@ -39,7 +39,6 @@ public class HillCipher implements Cipher {
     textlabels[4]=inputContent;
     outputContent=cp5.addTextlabel("outputContent");
     textlabels[5]=outputContent;
-    System.out.println(Arrays.toString(textlabels));
   }
   
   public HillCipher(float[][] newKey, ControlP5 cp5){
@@ -58,7 +57,6 @@ public class HillCipher implements Cipher {
     textlabels[4]=inputContent;
     outputContent=cp5.addTextlabel("outputContent");
     textlabels[5]=outputContent;
-    System.out.println(Arrays.toString(textlabels));
   }
   
   public void showTextlabels(){
@@ -416,12 +414,15 @@ public class HillCipher implements Cipher {
   }
   
   public void emptyTextlabels(){
-    println(Arrays.toString(textlabels));
     if(textlabels.length>0){
       for(int i=0;i<textlabels.length;i++){
         textlabels[i].setValue("");
       }
     }
+  }
+  
+  public String textlabelsToString(){
+    return Arrays.toString(textlabels);
   }
   
 }

@@ -15,11 +15,23 @@ public class MorseCode implements Cipher {
   
   public MorseCode(ControlP5 cp5){
     this.cp5=cp5;
+    keyLabel =  cp5.addTextlabel("keyLabel");
+    textlabels[0]=keyLabel;
+    keyContent =  cp5.addTextlabel("keyContent");
+    textlabels[1]=keyContent;
+    inputLabel=cp5.addTextlabel("inputLabel");
+    textlabels[2]=inputLabel;
+    outputLabel=cp5.addTextlabel("outputLabel");
+    textlabels[3]=outputLabel;
+    inputContent=cp5.addTextlabel("inputContent");
+    textlabels[4]=inputContent;
+    outputContent=cp5.addTextlabel("outputContent");
+    textlabels[5]=outputContent;
   }
   
   public void showTextlabels(){
     keyLabel =  cp5.addTextlabel("keyLabel")
-      .setValue("KEY")
+      //.setValue("KEY")
       //.setPosition(width/2-700, height/2-100-100+20)
       .setColor(#FFFFFF)
       .setFont(createFont("arial", 30))
@@ -31,13 +43,13 @@ public class MorseCode implements Cipher {
       .setFont(createFont("Georgia", 30))
       ;
     inputLabel=cp5.addTextlabel("inputLabel")
-      .setValue("INPUT")
+      //.setValue("INPUT")
       //.setPosition(width/2-49+15, 15)
       .setColor(#FFFFFF)
       .setFont(createFont("arial", 30))
       ;
     outputLabel=cp5.addTextlabel("outputLabel")
-      .setValue("OUTPUT")
+      //.setValue("OUTPUT")
       //.setPosition(width/2-700+500+400, height/2-100-100+20)
       .setColor(#FFFFFF)
       .setFont(createFont("arial", 30))
@@ -405,6 +417,10 @@ public class MorseCode implements Cipher {
         textlabels[i].setValue("");
       }
     }
+  }
+  
+  public String textlabelsToString(){
+    return Arrays.toString(textlabels);
   }
   
 }

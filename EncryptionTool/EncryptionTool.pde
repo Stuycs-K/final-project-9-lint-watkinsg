@@ -35,11 +35,11 @@ void setup() {
       println("got a press from a " + name + ", the value is " + value);
       String encrypted = cipher.encrypt(cp5.get(Textfield.class, "textinput").getText(), cp5);
       cp5.get(Textfield.class, "textinput").setText(encrypted);
-      println("encrypted: " + encrypted);\
+      println("encrypted: " + encrypted);
     }
-  }
-  )
-  .setFont(createFont("Georgia", 20))
+    }
+    )
+    .setFont(createFont("Georgia", 20))
     .setSize(100, 50)
     .setPosition(width/2-100-50+10+10, height/2+200+10)
     .setColorForeground(buttonColor)
@@ -55,9 +55,9 @@ void setup() {
       cp5.get(Textfield.class, "textinput").setText(decrypted);
       println("encrypted: " + decrypted);
     }
-  }
-  )
-  .setFont(createFont("Georgia", 20))
+    }
+    )
+    .setFont(createFont("Georgia", 20))
     .setSize(100, 50)
     .setPosition(width/2+100-50-10-10, height/2+200+10)
     .setColorForeground(buttonColor)
@@ -81,8 +81,8 @@ void setup() {
         cipher=new HillCipher(((HillCipher) cipher).randomKey(), cp5);
       }
     }
-  }
-  );
+    }
+    );
   String[] cs = new String[ciphers.length];
   for (int i = 0; i < ciphers.length; i++) {
     cs[i] = ciphers[i].toString();
@@ -96,12 +96,7 @@ void setup() {
     .setColorBackground(buttonColor)
     .addItems(Arrays.asList(cs))
     .setOpen(false)
-    .onPress(new CallbackListener() {
-    public void controlEvent(CallbackEvent theEvent) {
-      
-    }
-  }
-  );
+    ;
   // TODO: callback handler to set which cipher is 'selected' (+ other options ex. font)
 }
 

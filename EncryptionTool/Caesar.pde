@@ -4,14 +4,17 @@ import controlP5.*;
 public class Caesar implements Cipher {
   
   Character[] alphabet={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' '};
-  int rot=13;
+  int rot;
+  ControlP5 cp5;
   
   public Caesar(ControlP5 cp5){
     rot=13;
+    this.cp5=cp5;
   }
   
-  public Caesar(int x){
+  public Caesar(int x, ControlP5 cp5){
     rot=x;
+    this.cp5=cp5;
   }
   
   public String encrypt(String s, ControlP5 cp5){

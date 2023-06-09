@@ -80,6 +80,7 @@ void setup() {
       if(cipher.toString().equals("Hill Cipher")){
         System.out.println("press newkey");
         cipher=new HillCipher(((HillCipher) cipher).randomKey(), cp5);
+        cipher.showTextlabels();
       }
     }
     }

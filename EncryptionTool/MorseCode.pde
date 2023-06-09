@@ -4,44 +4,54 @@ import java.util.*;
 
 public class MorseCode implements Cipher {
   
+  public Character[] cha={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9','0','.',',','?','!','\'','\"','(',')','&',':',';','/','_','=','+','-','$','@'};
+  public String[] morse={".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--..",".----","..---","...--","....-",".....","-....","--...","---..","----.","-----",".-.-.-","--..--","..--..","-.-.--",".----.",".-..-.","-.--.","-.--.-",".-...","---...","-.-.-.","-..-.","..--.-","-...-",".-.-.","-....-","...-..-",".--.-."};
+  
+  public Textlabel[] keyContent=new Textlabel[morse.length];
   public Textlabel inputContent;
   public Textlabel inputLabel;
   public Textlabel outputContent;
   public Textlabel outputLabel;
-  public Textlabel keyContent;
   public Textlabel keyLabel;
-  public Textlabel[] textlabels={keyLabel, keyContent, inputLabel, inputContent, outputLabel, outputContent};
+  public Textlabel[] textlabels={keyLabel, inputLabel, inputContent, outputLabel, outputContent};
   public ControlP5 cp5;
   
   public MorseCode(ControlP5 cp5){
     this.cp5=cp5;
     keyLabel =  cp5.addTextlabel("keyLabel");
     textlabels[0]=keyLabel;
-    keyContent =  cp5.addTextlabel("keyContent");
-    textlabels[1]=keyContent;
     inputLabel=cp5.addTextlabel("inputLabel");
-    textlabels[2]=inputLabel;
+    textlabels[1]=inputLabel;
     outputLabel=cp5.addTextlabel("outputLabel");
-    textlabels[3]=outputLabel;
+    textlabels[2]=outputLabel;
     inputContent=cp5.addTextlabel("inputContent");
-    textlabels[4]=inputContent;
+    textlabels[3]=inputContent;
     outputContent=cp5.addTextlabel("outputContent");
-    textlabels[5]=outputContent;
+    textlabels[4]=outputContent;
   }
   
   public void showTextlabels(){
     keyLabel =  cp5.addTextlabel("keyLabel")
-      //.setValue("KEY")
-      //.setPosition(width/2-700, height/2-100-100+20)
+      .setValue("KEY")
+      .setPosition(width/2-49+15, 30)
       .setColor(#FFFFFF)
       .setFont(createFont("arial", 30))
       ;
-    keyContent =  cp5.addTextlabel("keyContent")
-      //.setValue(arrayToString(defaultKey,6))
-      //.setPosition(width/2-700, height/2-100+20)
-      .setColor(#FFFFFF)
-      .setFont(createFont("Georgia", 30))
-      ;
+    for(int i=0;i<morse.length;i++){
+      String value="";
+      float xposition=150;
+      float yposition=120;
+      value+=cha[i]+":  "+morse[i];
+      yposition+=i%6*60;
+      xposition+=i/6*150;
+      println("x: "+xposition+"  y: "+yposition);
+      keyContent[i]=cp5.addTextlabel(cha[i]+"")
+        .setValue(value)
+        .setPosition(xposition,yposition)
+        .setColor(#FFFFFF)
+        .setFont(createFont("Georgia", 30))
+        ;
+    }
     inputLabel=cp5.addTextlabel("inputLabel")
       //.setValue("INPUT")
       //.setPosition(width/2-49+15, 15)
@@ -61,6 +71,17 @@ public class MorseCode implements Cipher {
       .setColor(#FFFFFF)
       .setFont(createFont("Georgia", 20));
   }
+  
+  //String morseComparison(){
+  //  String x="";
+  //  for(int i=0;i<morse.length;i++){
+  //    x+=cha[i]+":  "+morse[i]+"     ";
+  //    if(i>0&&i%4==0){
+  //      x+="\n";
+  //    }
+  //  }
+  //  return x;
+  //}
   
   String toString(){
     return "Morse Code";

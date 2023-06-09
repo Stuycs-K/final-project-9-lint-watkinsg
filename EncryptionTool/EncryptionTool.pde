@@ -16,7 +16,7 @@ void setup() {
   ciphers[0]=new HillCipher(cp5);
   ciphers[1]=new Caesar(cp5);
   ciphers[2]=new MorseCode(cp5);
-  cipher=ciphers[0];
+  cipher=ciphers[2];
   cipher.showTextlabels();
   int textBoxSize=1000;
   cp5.addTextfield("textinput")

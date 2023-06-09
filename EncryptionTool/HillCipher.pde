@@ -21,18 +21,24 @@ public class HillCipher implements Cipher {
   public Textlabel outputLabel;
   public Textlabel keyContent;
   public Textlabel keyLabel;
-  public Textlabel[] textlabels={keyLabel, keyContent, inputLabel, inputContent, outputLabel, outputContent};
+  public Textlabel[] textlabels=new Textlabel[6];
   public ControlP5 cp5;
 
   public HillCipher(ControlP5 cp5) {
     makeDecryptKey();
     this.cp5 = cp5;
     keyLabel =  cp5.addTextlabel("keyLabel");
+    textlabels[0]=keyLabel;
     keyContent =  cp5.addTextlabel("keyContent");
+    textlabels[1]=keyContent;
     inputLabel=cp5.addTextlabel("inputLabel");
+    textlabels[2]=inputLabel;
     outputLabel=cp5.addTextlabel("outputLabel");
+    textlabels[3]=outputLabel;
     inputContent=cp5.addTextlabel("inputContent");
+    textlabels[4]=inputContent;
     outputContent=cp5.addTextlabel("outputContent");
+    textlabels[5]=outputContent;
     System.out.println(Arrays.toString(textlabels));
   }
   
@@ -41,11 +47,17 @@ public class HillCipher implements Cipher {
     makeDecryptKey();
     this.cp5=cp5;
     keyLabel =  cp5.addTextlabel("keyLabel");
+    textlabels[0]=keyLabel;
     keyContent =  cp5.addTextlabel("keyContent");
+    textlabels[1]=keyContent;
     inputLabel=cp5.addTextlabel("inputLabel");
+    textlabels[2]=inputLabel;
     outputLabel=cp5.addTextlabel("outputLabel");
+    textlabels[3]=outputLabel;
     inputContent=cp5.addTextlabel("inputContent");
+    textlabels[4]=inputContent;
     outputContent=cp5.addTextlabel("outputContent");
+    textlabels[5]=outputContent;
     System.out.println(Arrays.toString(textlabels));
   }
   

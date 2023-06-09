@@ -27,7 +27,36 @@ public class HillCipher implements Cipher {
       .setFont(createFont("arial", 30))
       .setPosition(width/2-700, height/2-100-100+20)
       .setColorForeground(bgColor)
-      .setColorBackground(bgColor);
+      .setColorBackground(bgColor)
+      ;
+    theKey =  cp5.addTextlabel("ek")
+      .setValue(arrayToString(defaultKey,6))
+      .setPosition(width/2-700, height/2-100+20)
+      .setColor(#FFFFFF)
+      .setFont(createFont("Georgia", 30))
+      ;
+  }
+  
+  public HillCipher(float[][] newKey, ControlP5 cp5){
+    defaultKey=newKey;
+    makeDecryptKey();
+    this.cp5=cp5;
+    cp5.addTextfield("key")
+      .setFont(createFont("arial", 30))
+      .setPosition(width/2-700, height/2-100-100+20)
+      .setColorForeground(bgColor)
+      .setColorBackground(bgColor)
+      ;
+    theKey =  cp5.addTextlabel("ek")
+      .setValue(arrayToString(defaultKey,6))
+      .setPosition(width/2-700, height/2-100+20)
+      .setColor(#FFFFFF)
+      .setFont(createFont("Georgia", 30))
+      ;
+    System.out.println("new key: ");
+    for(float[] i:defaultKey){
+      System.out.println(Arrays.toString(i));
+    }
   }
   
   String arrayToString(float[][] x, int space){
@@ -54,7 +83,7 @@ public class HillCipher implements Cipher {
     return space;
   }
 
-  void randomKey(ControlP5 cp5) {
+  float[][] randomKey() {
     float[][] x=new float[2][2];
     boolean b=true;
     while (b) {
@@ -81,8 +110,7 @@ public class HillCipher implements Cipher {
         b=false;
       }
     }
-    defaultKey=x;
-    makeDecryptKey();
+    return x;
   }
 
   float[][] minor(float[][] x, float a, float b) {
@@ -211,6 +239,12 @@ public class HillCipher implements Cipher {
     
     float[][] input=stringToNum(s);
     
+    cp5.addTextfield("key")
+      .setFont(createFont("arial", 30))
+      .setPosition(width/2-700, height/2-100-100+20)
+      .setColorForeground(bgColor)
+      .setColorBackground(bgColor)
+      ;
     theKey =  cp5.addTextlabel("ek")
       .setValue(arrayToString(defaultKey,6))
       .setPosition(width/2-700, height/2-100+20)
@@ -271,6 +305,12 @@ public class HillCipher implements Cipher {
   String decrypt(String s, ControlP5 cp5) {
     float[][] input=stringToNum(s);
     
+    cp5.addTextfield("key")
+      .setFont(createFont("arial", 30))
+      .setPosition(width/2-700, height/2-100-100+20)
+      .setColorForeground(bgColor)
+      .setColorBackground(bgColor)
+      ;
     theKey =  cp5.addTextlabel("ek")
       .setValue(arrayToString(defaultKey,6))
       .setPosition(width/2-700, height/2-100+20)

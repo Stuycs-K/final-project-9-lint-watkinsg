@@ -96,9 +96,9 @@ public class MorseCode implements Cipher {
         keyContent[0].setColor(#03FF22);
         x[i]=".-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[0]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -106,9 +106,9 @@ public class MorseCode implements Cipher {
         keyContent[1].setColor(#03FF22);
         x[i]="-...";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[1]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -116,9 +116,9 @@ public class MorseCode implements Cipher {
         keyContent[2].setColor(#03FF22);
         x[i]="-.-.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[2]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -126,9 +126,9 @@ public class MorseCode implements Cipher {
         keyContent[3].setColor(#03FF22);
         x[i]="-..";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[3]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -136,9 +136,9 @@ public class MorseCode implements Cipher {
         keyContent[4].setColor(#03FF22);
         x[i]=".";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[4]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -146,9 +146,9 @@ public class MorseCode implements Cipher {
         keyContent[5].setColor(#03FF22);
         x[i]="..-.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[5]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -156,9 +156,9 @@ public class MorseCode implements Cipher {
         keyContent[6].setColor(#03FF22);
         x[i]="--.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[6]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -166,9 +166,9 @@ public class MorseCode implements Cipher {
         keyContent[7].setColor(#03FF22);
         x[i]="....";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[7]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -176,9 +176,9 @@ public class MorseCode implements Cipher {
         keyContent[8].setColor(#03FF22);
         x[i]="..";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[8]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -186,9 +186,9 @@ public class MorseCode implements Cipher {
         keyContent[9].setColor(#03FF22);
         x[i]=".---";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[9]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -196,9 +196,9 @@ public class MorseCode implements Cipher {
         keyContent[10].setColor(#03FF22);
         x[i]="-.-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[10]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -206,9 +206,9 @@ public class MorseCode implements Cipher {
         keyContent[11].setColor(#03FF22);
         x[i]=".-..";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[11]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -216,9 +216,9 @@ public class MorseCode implements Cipher {
         keyContent[12].setColor(#03FF22);
         x[i]="--";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[12]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -226,9 +226,9 @@ public class MorseCode implements Cipher {
         keyContent[13].setColor(#03FF22);
         x[i]="-.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[13]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -236,9 +236,9 @@ public class MorseCode implements Cipher {
         keyContent[14].setColor(#03FF22);
         x[i]="---";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[14]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -246,9 +246,9 @@ public class MorseCode implements Cipher {
         keyContent[15].setColor(#03FF22);
         x[i]=".--.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[15]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -256,9 +256,9 @@ public class MorseCode implements Cipher {
         keyContent[16].setColor(#03FF22);
         x[i]="--.-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[16]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -266,9 +266,9 @@ public class MorseCode implements Cipher {
         keyContent[17].setColor(#03FF22);
         x[i]=".-.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[17]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -276,9 +276,9 @@ public class MorseCode implements Cipher {
         keyContent[18].setColor(#03FF22);
         x[i]="...";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[18]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -286,9 +286,9 @@ public class MorseCode implements Cipher {
         keyContent[19].setColor(#03FF22);
         x[i]="-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[19]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -296,9 +296,9 @@ public class MorseCode implements Cipher {
         keyContent[20].setColor(#03FF22);
         x[i]="..-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[20]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -306,9 +306,9 @@ public class MorseCode implements Cipher {
         keyContent[21].setColor(#03FF22);
         x[i]="...-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[21]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -316,9 +316,9 @@ public class MorseCode implements Cipher {
         keyContent[22].setColor(#03FF22);
         x[i]=".--";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[22]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -326,9 +326,9 @@ public class MorseCode implements Cipher {
         keyContent[23].setColor(#03FF22);
         x[i]="-..-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[23]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -336,9 +336,9 @@ public class MorseCode implements Cipher {
         keyContent[24].setColor(#03FF22);
         x[i]="-.--";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[24]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -346,9 +346,9 @@ public class MorseCode implements Cipher {
         keyContent[25].setColor(#03FF22);
         x[i]="--..";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[25]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -356,9 +356,9 @@ public class MorseCode implements Cipher {
         keyContent[34].setColor(#03FF22);
         x[i]="----.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[34]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -366,9 +366,9 @@ public class MorseCode implements Cipher {
         keyContent[33].setColor(#03FF22);
         x[i]="---..";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[33]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -376,9 +376,9 @@ public class MorseCode implements Cipher {
         keyContent[32].setColor(#03FF22);
         x[i]="--...";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[32]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -386,9 +386,9 @@ public class MorseCode implements Cipher {
         keyContent[31].setColor(#03FF22);
         x[i]="-....";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[31]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -396,9 +396,9 @@ public class MorseCode implements Cipher {
         keyContent[30].setColor(#03FF22);
         x[i]=".....";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[30]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -406,9 +406,9 @@ public class MorseCode implements Cipher {
         keyContent[29].setColor(#03FF22);
         x[i]="....-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[29]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -416,9 +416,9 @@ public class MorseCode implements Cipher {
         keyContent[28].setColor(#03FF22);
         x[i]="...--";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[28]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -426,9 +426,9 @@ public class MorseCode implements Cipher {
         keyContent[27].setColor(#03FF22);
         x[i]="..---";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[27]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -436,9 +436,9 @@ public class MorseCode implements Cipher {
         keyContent[26].setColor(#03FF22);
         x[i]=".----";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[26]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -446,9 +446,9 @@ public class MorseCode implements Cipher {
         keyContent[35].setColor(#03FF22);
         x[i]="-----";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[35]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -456,9 +456,9 @@ public class MorseCode implements Cipher {
         keyContent[36].setColor(#03FF22);
         x[i]=".-.-.-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[36]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -466,9 +466,9 @@ public class MorseCode implements Cipher {
         keyContent[37].setColor(#03FF22);
         x[i]="--..--";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[37]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -476,9 +476,9 @@ public class MorseCode implements Cipher {
         keyContent[38].setColor(#03FF22);
         x[i]="..--..";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[38]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -486,9 +486,9 @@ public class MorseCode implements Cipher {
         keyContent[39].setColor(#03FF22);
         x[i]="-.-.--";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[39]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -496,9 +496,9 @@ public class MorseCode implements Cipher {
         keyContent[40].setColor(#03FF22);
         x[i]=".----.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[40]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -506,9 +506,9 @@ public class MorseCode implements Cipher {
         keyContent[41].setColor(#03FF22);
         x[i]=".-..-.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[41]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -516,9 +516,9 @@ public class MorseCode implements Cipher {
         keyContent[42].setColor(#03FF22);
         x[i]="-.--.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[42]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -526,9 +526,9 @@ public class MorseCode implements Cipher {
         keyContent[43].setColor(#03FF22);
         x[i]="-.--.-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[43]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -536,9 +536,9 @@ public class MorseCode implements Cipher {
         keyContent[44].setColor(#03FF22);
         x[i]=".-...";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[44]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -546,9 +546,9 @@ public class MorseCode implements Cipher {
         keyContent[45].setColor(#03FF22);
         x[i]="---...";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[45]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -556,9 +556,9 @@ public class MorseCode implements Cipher {
         keyContent[46].setColor(#03FF22);
         x[i]="-.-.-.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[46]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -566,9 +566,9 @@ public class MorseCode implements Cipher {
         keyContent[47].setColor(#03FF22);
         x[i]="-..-.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[47]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -576,9 +576,9 @@ public class MorseCode implements Cipher {
         keyContent[48].setColor(#03FF22);
         x[i]="..--.-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[48]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -586,9 +586,9 @@ public class MorseCode implements Cipher {
         keyContent[49].setColor(#03FF22);
         x[i]="-...-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[49]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -596,9 +596,9 @@ public class MorseCode implements Cipher {
         keyContent[50].setColor(#03FF22);
         x[i]=".-.-.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[50]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -606,9 +606,9 @@ public class MorseCode implements Cipher {
         keyContent[51].setColor(#03FF22);
         x[i]="-...-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[51]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -616,9 +616,9 @@ public class MorseCode implements Cipher {
         keyContent[52].setColor(#03FF22);
         x[i]="...-..-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[52]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -626,9 +626,9 @@ public class MorseCode implements Cipher {
         keyContent[53].setColor(#03FF22);
         x[i]=".--.-.";
         cp5.addTextlabel("input "+i+"")
-          .setValue(cha[i])
-          .setPosition(100+i*20,450)
-          .setColor(#FFFFFF)
+          .setValue(cha[53]+"")
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -647,9 +647,9 @@ public class MorseCode implements Cipher {
         keyContent[0].setColor(#03FF22);
         a="a";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[0])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -657,9 +657,9 @@ public class MorseCode implements Cipher {
         keyContent[1].setColor(#03FF22);
         a="b";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[1])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -667,9 +667,9 @@ public class MorseCode implements Cipher {
         keyContent[2].setColor(#03FF22);
         a="c";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[2])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -677,9 +677,9 @@ public class MorseCode implements Cipher {
         keyContent[3].setColor(#03FF22);
         a="d";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[3])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -687,9 +687,9 @@ public class MorseCode implements Cipher {
         keyContent[4].setColor(#03FF22);
         a="e";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[4])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -697,9 +697,9 @@ public class MorseCode implements Cipher {
         keyContent[5].setColor(#03FF22);
         a="f";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[5])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -707,9 +707,9 @@ public class MorseCode implements Cipher {
         keyContent[6].setColor(#03FF22);
         a="g";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[6])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -717,9 +717,9 @@ public class MorseCode implements Cipher {
         keyContent[7].setColor(#03FF22);
         a="h";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[7])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -727,9 +727,9 @@ public class MorseCode implements Cipher {
         keyContent[8].setColor(#03FF22);
         a="i";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[8])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -737,9 +737,9 @@ public class MorseCode implements Cipher {
         keyContent[9].setColor(#03FF22);
         a="j";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[9])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -747,9 +747,9 @@ public class MorseCode implements Cipher {
         keyContent[10].setColor(#03FF22);
         a="k";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[10])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -757,9 +757,9 @@ public class MorseCode implements Cipher {
         keyContent[11].setColor(#03FF22);
         a="l";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[11])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -767,9 +767,9 @@ public class MorseCode implements Cipher {
         keyContent[12].setColor(#03FF22);
         a="m";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[12])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -777,9 +777,9 @@ public class MorseCode implements Cipher {
         keyContent[13].setColor(#03FF22);
         a="n";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[13])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -787,9 +787,9 @@ public class MorseCode implements Cipher {
         keyContent[14].setColor(#03FF22);
         a="o";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[14])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -797,9 +797,9 @@ public class MorseCode implements Cipher {
         keyContent[15].setColor(#03FF22);
         a="p";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[15])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -807,9 +807,9 @@ public class MorseCode implements Cipher {
         keyContent[16].setColor(#03FF22);
         a="q";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[16])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -817,9 +817,9 @@ public class MorseCode implements Cipher {
         keyContent[17].setColor(#03FF22);
         a="r";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[17])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -827,9 +827,9 @@ public class MorseCode implements Cipher {
         keyContent[18].setColor(#03FF22);
         a="s";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[18])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -837,9 +837,9 @@ public class MorseCode implements Cipher {
         keyContent[19].setColor(#03FF22);
         a="t";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[19])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -847,9 +847,9 @@ public class MorseCode implements Cipher {
         keyContent[20].setColor(#03FF22);
         a="u";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[20])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -857,9 +857,9 @@ public class MorseCode implements Cipher {
         keyContent[21].setColor(#03FF22);
         a="v";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[21])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -867,9 +867,9 @@ public class MorseCode implements Cipher {
         keyContent[22].setColor(#03FF22);
         a="w";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[22])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -877,9 +877,9 @@ public class MorseCode implements Cipher {
         keyContent[23].setColor(#03FF22);
         a="x";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[23])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -887,9 +887,9 @@ public class MorseCode implements Cipher {
         keyContent[24].setColor(#03FF22);
         a="y";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[24])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -897,9 +897,9 @@ public class MorseCode implements Cipher {
         keyContent[25].setColor(#03FF22);
         a="z";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[25])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -907,9 +907,9 @@ public class MorseCode implements Cipher {
         keyContent[34].setColor(#03FF22);
         a="9";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[34])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -917,9 +917,9 @@ public class MorseCode implements Cipher {
         keyContent[33].setColor(#03FF22);
         a="8";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[33])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -927,9 +927,9 @@ public class MorseCode implements Cipher {
         keyContent[32].setColor(#03FF22);
         a="7";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[32])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -937,9 +937,9 @@ public class MorseCode implements Cipher {
         keyContent[31].setColor(#03FF22);
         a="6";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[31])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -947,9 +947,9 @@ public class MorseCode implements Cipher {
         keyContent[30].setColor(#03FF22);
         a="5";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[30])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -957,9 +957,9 @@ public class MorseCode implements Cipher {
         keyContent[29].setColor(#03FF22);
         a="4";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[29])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -967,9 +967,9 @@ public class MorseCode implements Cipher {
         keyContent[28].setColor(#03FF22);
         a="3";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[28])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -977,9 +977,9 @@ public class MorseCode implements Cipher {
         keyContent[27].setColor(#03FF22);
         a="2";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[27])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -987,9 +987,9 @@ public class MorseCode implements Cipher {
         keyContent[26].setColor(#03FF22);
         a="1";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[26])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -997,9 +997,9 @@ public class MorseCode implements Cipher {
         keyContent[35].setColor(#03FF22);
         a="0";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[35])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1007,9 +1007,9 @@ public class MorseCode implements Cipher {
         keyContent[36].setColor(#03FF22);
         a=".";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[36])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1017,9 +1017,9 @@ public class MorseCode implements Cipher {
         keyContent[37].setColor(#03FF22);
         a=",";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[37])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1027,9 +1027,9 @@ public class MorseCode implements Cipher {
         keyContent[38].setColor(#03FF22);
         a="?";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[38])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1037,9 +1037,9 @@ public class MorseCode implements Cipher {
         keyContent[39].setColor(#03FF22);
         a="!";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[39])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1047,9 +1047,9 @@ public class MorseCode implements Cipher {
         keyContent[40].setColor(#03FF22);
         a="\'";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[40])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1057,9 +1057,9 @@ public class MorseCode implements Cipher {
         keyContent[41].setColor(#03FF22);
         a="\"";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[41])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1067,9 +1067,9 @@ public class MorseCode implements Cipher {
         keyContent[42].setColor(#03FF22);
         a="(";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[42])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1077,9 +1077,9 @@ public class MorseCode implements Cipher {
         keyContent[43].setColor(#03FF22);
         a=")";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[43])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1087,9 +1087,9 @@ public class MorseCode implements Cipher {
         keyContent[44].setColor(#03FF22);
         a="&";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[44])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1097,9 +1097,9 @@ public class MorseCode implements Cipher {
         keyContent[45].setColor(#03FF22);
         a=":";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[45])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1107,9 +1107,9 @@ public class MorseCode implements Cipher {
         keyContent[46].setColor(#03FF22);
         a=";";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[46])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1117,9 +1117,9 @@ public class MorseCode implements Cipher {
         keyContent[47].setColor(#03FF22);
         a="/";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[47])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1127,9 +1127,9 @@ public class MorseCode implements Cipher {
         keyContent[48].setColor(#03FF22);
         a="_";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[48])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1137,9 +1137,9 @@ public class MorseCode implements Cipher {
         keyContent[49].setColor(#03FF22);
         a="=";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[49])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1147,9 +1147,9 @@ public class MorseCode implements Cipher {
         keyContent[50].setColor(#03FF22);
         a="+";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[50])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1157,9 +1157,9 @@ public class MorseCode implements Cipher {
         keyContent[51].setColor(#03FF22);
         a="-";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[51])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1167,9 +1167,9 @@ public class MorseCode implements Cipher {
         keyContent[52].setColor(#03FF22);
         a="$";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[52])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }
@@ -1177,9 +1177,9 @@ public class MorseCode implements Cipher {
         keyContent[53].setColor(#03FF22);
         a="@";
         cp5.addTextlabel("input "+i+"")
-          .setValue(morse[i])
-          .setPosition(100+i*50,450)
-          .setColor(#FFFFFF)
+          .setValue(morse[53])
+          .setPosition(100+(i+1)*50,520)
+           .setColor(#03ff22)
           .setFont(createFont("arial", 30))
           ;
       }

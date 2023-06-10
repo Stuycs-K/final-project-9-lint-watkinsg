@@ -12,7 +12,7 @@ public class HillCipher implements Cipher {
 
   public float[][] defaultKey=encryptKey5;
   public float[][] inverseDefaultKey;
-  public String alpha="!\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ";
+  public String alpha=" !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
   public char[] alphabet=alpha.toCharArray();
   
   public Textlabel inputContent;
@@ -362,11 +362,7 @@ public class HillCipher implements Cipher {
 
         //smt=smt%65;
 
-        if (smt==32) {
-          smt=alphabet.length-1;
-        } else {
-          smt=smt%126-33;
-        }
+        smt-=32;
 
         //System.out.println("smt after: "+smt);
         x[j][i]=smt;

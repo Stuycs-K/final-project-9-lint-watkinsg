@@ -114,6 +114,7 @@ void dropdown(int index) {
       println("old: "+cipher);
       println(cipher.textlabelsToString());
       cipher.emptyTextlabels();
+      println(cipher.textlabelsToString());
       cipher=ciphers[i];
       println("new: "+cipher);
       println(cipher.textlabelsToString());

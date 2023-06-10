@@ -44,7 +44,7 @@ public class MorseCode implements Cipher {
       value+=cha[i]+":  "+morse[i];
       yposition+=i%6*60;
       xposition+=i/6*150;
-      println("x: "+xposition+"  y: "+yposition);
+      //println("x: "+xposition+"  y: "+yposition);
       keyContent[i]=cp5.addTextlabel(cha[i]+"")
         .setValue(value)
         .setPosition(xposition,yposition)
@@ -1197,7 +1197,11 @@ public class MorseCode implements Cipher {
   }
   
   public String textlabelsToString(){
-    return Arrays.toString(textlabels);
+    String x="";
+    for(int i=0;i<textlabels.length;i++){
+      x+=textlabels[i].toString()+" ";
+    }
+    return x;
   }
   
 }

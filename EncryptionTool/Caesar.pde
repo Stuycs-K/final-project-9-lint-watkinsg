@@ -152,7 +152,11 @@ public class Caesar implements Cipher {
   }
   
   public String textlabelsToString(){
-    return Arrays.toString(textlabels);
+    String x="";
+    for(int i=0;i<textlabels.length;i++){
+      x+=textlabels[i].toString()+" ";
+    }
+    return x;
   }
   
 }

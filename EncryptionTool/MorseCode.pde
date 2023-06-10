@@ -345,118 +345,292 @@ public class MorseCode implements Cipher {
       if(s.charAt(i)=='z'||s.charAt(i)=='Z'){
         keyContent[25].setColor(#03FF22);
         x[i]="--..";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='9'){
         keyContent[34].setColor(#03FF22);
         x[i]="----.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='8'){
         keyContent[33].setColor(#03FF22);
         x[i]="---..";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='7'){
         keyContent[32].setColor(#03FF22);
         x[i]="--...";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='6'){
         keyContent[31].setColor(#03FF22);
         x[i]="-....";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='5'){
         keyContent[30].setColor(#03FF22);
         x[i]=".....";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='4'){
         keyContent[29].setColor(#03FF22);
         x[i]="....-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='3'){
         keyContent[28].setColor(#03FF22);
         x[i]="...--";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='2'){
         keyContent[27].setColor(#03FF22);
         x[i]="..---";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='1'){
         keyContent[26].setColor(#03FF22);
         x[i]=".----";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='0'){
         keyContent[35].setColor(#03FF22);
         x[i]="-----";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='.'){
         keyContent[36].setColor(#03FF22);
         x[i]=".-.-.-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)==','){
         keyContent[37].setColor(#03FF22);
         x[i]="--..--";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='?'){
         keyContent[38].setColor(#03FF22);
         x[i]="..--..";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='!'){
         keyContent[39].setColor(#03FF22);
         x[i]="-.-.--";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='\''){
         keyContent[40].setColor(#03FF22);
         x[i]=".----.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='\"'){
         keyContent[41].setColor(#03FF22);
         x[i]=".-..-.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='('){
         keyContent[42].setColor(#03FF22);
         x[i]="-.--.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)==')'){
         keyContent[43].setColor(#03FF22);
         x[i]="-.--.-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='&'){
         keyContent[44].setColor(#03FF22);
         x[i]=".-...";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)==':'){
         keyContent[45].setColor(#03FF22);
         x[i]="---...";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)==';'){
         keyContent[46].setColor(#03FF22);
         x[i]="-.-.-.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='/'){
         keyContent[47].setColor(#03FF22);
         x[i]="-..-.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='_'){
         keyContent[48].setColor(#03FF22);
         x[i]="..--.-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='='){
         keyContent[49].setColor(#03FF22);
         x[i]="-...-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='+'){
         keyContent[50].setColor(#03FF22);
         x[i]=".-.-.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='-'){
         keyContent[51].setColor(#03FF22);
         x[i]="-...-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='$'){
         keyContent[52].setColor(#03FF22);
         x[i]="...-..-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='@'){
         keyContent[53].setColor(#03FF22);
         x[i]=".--.-.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       answer+=x[i]+" ";
     }
@@ -472,7 +646,7 @@ public class MorseCode implements Cipher {
       if(x[i].equals(".-")){
         keyContent[0].setColor(#03FF22);
         a="a";
-        cp5.addTextlabel(i+"")
+        cp5.addTextlabel("input "+i+"")
           .setValue(morse[i])
           .setPosition(100+i*50,450)
           .setColor(#FFFFFF)
@@ -482,7 +656,7 @@ public class MorseCode implements Cipher {
       if(x[i].equals("-...")){
         keyContent[1].setColor(#03FF22);
         a="b";
-        cp5.addTextlabel(i+"")
+        cp5.addTextlabel("input "+i+"")
           .setValue(morse[i])
           .setPosition(100+i*50,450)
           .setColor(#FFFFFF)
@@ -492,210 +666,522 @@ public class MorseCode implements Cipher {
       if(x[i].equals("-.-.")){
         keyContent[2].setColor(#03FF22);
         a="c";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-..")){
         keyContent[3].setColor(#03FF22);
         a="d";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".")){
         keyContent[4].setColor(#03FF22);
         a="e";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("..-.")){
         keyContent[5].setColor(#03FF22);
         a="f";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("--.")){
         keyContent[6].setColor(#03FF22);
         a="g";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("....")){
         keyContent[7].setColor(#03FF22);
         a="h";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("..")){
         keyContent[8].setColor(#03FF22);
         a="i";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".---")){
         keyContent[9].setColor(#03FF22);
         a="j";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-.-")){
         keyContent[10].setColor(#03FF22);
         a="k";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".-..")){
         keyContent[11].setColor(#03FF22);
         a="l";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("--")){
         keyContent[12].setColor(#03FF22);
         a="m";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-.")){
         keyContent[13].setColor(#03FF22);
         a="n";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("---")){
         keyContent[14].setColor(#03FF22);
         a="o";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".--.")){
         keyContent[15].setColor(#03FF22);
         a="p";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("--.-")){
         keyContent[16].setColor(#03FF22);
         a="q";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".-.")){
         keyContent[17].setColor(#03FF22);
         a="r";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("...")){
         keyContent[18].setColor(#03FF22);
         a="s";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-")){
         keyContent[19].setColor(#03FF22);
         a="t";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("..-")){
         keyContent[20].setColor(#03FF22);
         a="u";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("...-")){
         keyContent[21].setColor(#03FF22);
         a="v";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".--")){
         keyContent[22].setColor(#03FF22);
         a="w";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-..-")){
         keyContent[23].setColor(#03FF22);
         a="x";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-.--")){
         keyContent[24].setColor(#03FF22);
         a="y";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("--..")){
         keyContent[25].setColor(#03FF22);
         a="z";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("----.")){
         keyContent[34].setColor(#03FF22);
         a="9";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("---..")){
         keyContent[33].setColor(#03FF22);
         a="8";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("--...")){
         keyContent[32].setColor(#03FF22);
         a="7";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-....")){
         keyContent[31].setColor(#03FF22);
         a="6";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".....")){
         keyContent[30].setColor(#03FF22);
         a="5";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("....-")){
         keyContent[29].setColor(#03FF22);
         a="4";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("...--")){
         keyContent[28].setColor(#03FF22);
         a="3";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("..---")){
         keyContent[27].setColor(#03FF22);
         a="2";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".----")){
         keyContent[26].setColor(#03FF22);
         a="1";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-----")){
         keyContent[35].setColor(#03FF22);
         a="0";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".-.-.-")){
         keyContent[36].setColor(#03FF22);
         a=".";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("--..--")){
         keyContent[37].setColor(#03FF22);
         a=",";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("..--..")){
         keyContent[38].setColor(#03FF22);
         a="?";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-.-.--")){
         keyContent[39].setColor(#03FF22);
         a="!";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".----.")){
         keyContent[40].setColor(#03FF22);
         a="\'";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".-..-.")){
         keyContent[41].setColor(#03FF22);
         a="\"";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-.--.")){
         keyContent[42].setColor(#03FF22);
         a="(";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-.--.-")){
         keyContent[43].setColor(#03FF22);
         a=")";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".-...")){
         keyContent[44].setColor(#03FF22);
         a="&";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("---...")){
         keyContent[45].setColor(#03FF22);
         a=":";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-.-.-.")){
         keyContent[46].setColor(#03FF22);
         a=";";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-..-.")){
         keyContent[47].setColor(#03FF22);
         a="/";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("..--.-")){
         keyContent[48].setColor(#03FF22);
         a="_";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-...-")){
         keyContent[49].setColor(#03FF22);
         a="=";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".-.-.")){
         keyContent[50].setColor(#03FF22);
         a="+";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-...-")){
         keyContent[51].setColor(#03FF22);
         a="-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("...-..-")){
         keyContent[52].setColor(#03FF22);
         a="$";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals(".--.-.")){
         keyContent[53].setColor(#03FF22);
         a="@";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       answer+=a;
     }

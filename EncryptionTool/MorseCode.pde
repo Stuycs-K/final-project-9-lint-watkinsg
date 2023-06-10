@@ -93,165 +93,369 @@ public class MorseCode implements Cipher {
     for(int i=0;i<s.length();i++){
       x[i]="/";
       if(s.charAt(i)=='a'||s.charAt(i)=='A'){
+        keyContent[0].setColor(#03FF22);
         x[i]=".-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='b'||s.charAt(i)=='B'){
+        keyContent[1].setColor(#03FF22);
         x[i]="-...";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='c'||s.charAt(i)=='C'){
+        keyContent[2].setColor(#03FF22);
         x[i]="-.-.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='d'||s.charAt(i)=='D'){
+        keyContent[3].setColor(#03FF22);
         x[i]="-..";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='e'||s.charAt(i)=='E'){
+        keyContent[4].setColor(#03FF22);
         x[i]=".";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='f'||s.charAt(i)=='F'){
+        keyContent[5].setColor(#03FF22);
         x[i]="..-.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='g'||s.charAt(i)=='G'){
+        keyContent[6].setColor(#03FF22);
         x[i]="--.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='h'||s.charAt(i)=='H'){
+        keyContent[7].setColor(#03FF22);
         x[i]="....";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='i'||s.charAt(i)=='I'){
+        keyContent[8].setColor(#03FF22);
         x[i]="..";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='j'||s.charAt(i)=='J'){
+        keyContent[9].setColor(#03FF22);
         x[i]=".---";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='k'||s.charAt(i)=='K'){
+        keyContent[10].setColor(#03FF22);
         x[i]="-.-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='l'||s.charAt(i)=='L'){
+        keyContent[11].setColor(#03FF22);
         x[i]=".-..";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='m'||s.charAt(i)=='M'){
+        keyContent[12].setColor(#03FF22);
         x[i]="--";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='n'||s.charAt(i)=='N'){
+        keyContent[13].setColor(#03FF22);
         x[i]="-.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='o'||s.charAt(i)=='O'){
+        keyContent[14].setColor(#03FF22);
         x[i]="---";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='p'||s.charAt(i)=='P'){
+        keyContent[15].setColor(#03FF22);
         x[i]=".--.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='q'||s.charAt(i)=='Q'){
+        keyContent[16].setColor(#03FF22);
         x[i]="--.-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='r'||s.charAt(i)=='R'){
+        keyContent[17].setColor(#03FF22);
         x[i]=".-.";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='s'||s.charAt(i)=='S'){
+        keyContent[18].setColor(#03FF22);
         x[i]="...";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='t'||s.charAt(i)=='T'){
+        keyContent[19].setColor(#03FF22);
         x[i]="-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='u'||s.charAt(i)=='U'){
+        keyContent[20].setColor(#03FF22);
         x[i]="..-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='v'||s.charAt(i)=='V'){
+        keyContent[21].setColor(#03FF22);
         x[i]="...-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='w'||s.charAt(i)=='W'){
+        keyContent[22].setColor(#03FF22);
         x[i]=".--";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='x'||s.charAt(i)=='X'){
+        keyContent[23].setColor(#03FF22);
         x[i]="-..-";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='y'||s.charAt(i)=='Y'){
+        keyContent[24].setColor(#03FF22);
         x[i]="-.--";
+        cp5.addTextlabel("input "+i+"")
+          .setValue(cha[i])
+          .setPosition(100+i*20,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(s.charAt(i)=='z'||s.charAt(i)=='Z'){
+        keyContent[25].setColor(#03FF22);
         x[i]="--..";
       }
       if(s.charAt(i)=='9'){
+        keyContent[34].setColor(#03FF22);
         x[i]="----.";
       }
       if(s.charAt(i)=='8'){
+        keyContent[33].setColor(#03FF22);
         x[i]="---..";
       }
       if(s.charAt(i)=='7'){
+        keyContent[32].setColor(#03FF22);
         x[i]="--...";
       }
       if(s.charAt(i)=='6'){
+        keyContent[31].setColor(#03FF22);
         x[i]="-....";
       }
       if(s.charAt(i)=='5'){
+        keyContent[30].setColor(#03FF22);
         x[i]=".....";
       }
       if(s.charAt(i)=='4'){
+        keyContent[29].setColor(#03FF22);
         x[i]="....-";
       }
       if(s.charAt(i)=='3'){
+        keyContent[28].setColor(#03FF22);
         x[i]="...--";
       }
       if(s.charAt(i)=='2'){
+        keyContent[27].setColor(#03FF22);
         x[i]="..---";
       }
       if(s.charAt(i)=='1'){
+        keyContent[26].setColor(#03FF22);
         x[i]=".----";
       }
       if(s.charAt(i)=='0'){
+        keyContent[35].setColor(#03FF22);
         x[i]="-----";
       }
       if(s.charAt(i)=='.'){
+        keyContent[36].setColor(#03FF22);
         x[i]=".-.-.-";
       }
       if(s.charAt(i)==','){
+        keyContent[37].setColor(#03FF22);
         x[i]="--..--";
       }
       if(s.charAt(i)=='?'){
+        keyContent[38].setColor(#03FF22);
         x[i]="..--..";
       }
       if(s.charAt(i)=='!'){
+        keyContent[39].setColor(#03FF22);
         x[i]="-.-.--";
       }
       if(s.charAt(i)=='\''){
+        keyContent[40].setColor(#03FF22);
         x[i]=".----.";
       }
       if(s.charAt(i)=='\"'){
+        keyContent[41].setColor(#03FF22);
         x[i]=".-..-.";
       }
       if(s.charAt(i)=='('){
+        keyContent[42].setColor(#03FF22);
         x[i]="-.--.";
       }
       if(s.charAt(i)==')'){
+        keyContent[43].setColor(#03FF22);
         x[i]="-.--.-";
       }
       if(s.charAt(i)=='&'){
+        keyContent[44].setColor(#03FF22);
         x[i]=".-...";
       }
       if(s.charAt(i)==':'){
+        keyContent[45].setColor(#03FF22);
         x[i]="---...";
       }
       if(s.charAt(i)==';'){
+        keyContent[46].setColor(#03FF22);
         x[i]="-.-.-.";
       }
       if(s.charAt(i)=='/'){
+        keyContent[47].setColor(#03FF22);
         x[i]="-..-.";
       }
       if(s.charAt(i)=='_'){
+        keyContent[48].setColor(#03FF22);
         x[i]="..--.-";
       }
       if(s.charAt(i)=='='){
+        keyContent[49].setColor(#03FF22);
         x[i]="-...-";
       }
       if(s.charAt(i)=='+'){
+        keyContent[50].setColor(#03FF22);
         x[i]=".-.-.";
       }
       if(s.charAt(i)=='-'){
+        keyContent[51].setColor(#03FF22);
         x[i]="-...-";
       }
       if(s.charAt(i)=='$'){
+        keyContent[52].setColor(#03FF22);
         x[i]="...-..-";
       }
       if(s.charAt(i)=='@'){
+        keyContent[53].setColor(#03FF22);
         x[i]=".--.-.";
       }
       answer+=x[i]+" ";
@@ -266,165 +470,231 @@ public class MorseCode implements Cipher {
     for(int i=0;i<x.length;i++){
       String a=" ";
       if(x[i].equals(".-")){
+        keyContent[0].setColor(#03FF22);
         a="a";
+        cp5.addTextlabel(i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-...")){
+        keyContent[1].setColor(#03FF22);
         a="b";
+        cp5.addTextlabel(i+"")
+          .setValue(morse[i])
+          .setPosition(100+i*50,450)
+          .setColor(#FFFFFF)
+          .setFont(createFont("arial", 30))
+          ;
       }
       if(x[i].equals("-.-.")){
+        keyContent[2].setColor(#03FF22);
         a="c";
       }
       if(x[i].equals("-..")){
+        keyContent[3].setColor(#03FF22);
         a="d";
       }
       if(x[i].equals(".")){
+        keyContent[4].setColor(#03FF22);
         a="e";
       }
       if(x[i].equals("..-.")){
+        keyContent[5].setColor(#03FF22);
         a="f";
       }
       if(x[i].equals("--.")){
+        keyContent[6].setColor(#03FF22);
         a="g";
       }
       if(x[i].equals("....")){
+        keyContent[7].setColor(#03FF22);
         a="h";
       }
       if(x[i].equals("..")){
+        keyContent[8].setColor(#03FF22);
         a="i";
       }
       if(x[i].equals(".---")){
+        keyContent[9].setColor(#03FF22);
         a="j";
       }
       if(x[i].equals("-.-")){
+        keyContent[10].setColor(#03FF22);
         a="k";
       }
       if(x[i].equals(".-..")){
+        keyContent[11].setColor(#03FF22);
         a="l";
       }
       if(x[i].equals("--")){
+        keyContent[12].setColor(#03FF22);
         a="m";
       }
       if(x[i].equals("-.")){
+        keyContent[13].setColor(#03FF22);
         a="n";
       }
       if(x[i].equals("---")){
+        keyContent[14].setColor(#03FF22);
         a="o";
       }
       if(x[i].equals(".--.")){
+        keyContent[15].setColor(#03FF22);
         a="p";
       }
       if(x[i].equals("--.-")){
+        keyContent[16].setColor(#03FF22);
         a="q";
       }
       if(x[i].equals(".-.")){
+        keyContent[17].setColor(#03FF22);
         a="r";
       }
       if(x[i].equals("...")){
+        keyContent[18].setColor(#03FF22);
         a="s";
       }
       if(x[i].equals("-")){
+        keyContent[19].setColor(#03FF22);
         a="t";
       }
       if(x[i].equals("..-")){
+        keyContent[20].setColor(#03FF22);
         a="u";
       }
       if(x[i].equals("...-")){
+        keyContent[21].setColor(#03FF22);
         a="v";
       }
       if(x[i].equals(".--")){
+        keyContent[22].setColor(#03FF22);
         a="w";
       }
       if(x[i].equals("-..-")){
+        keyContent[23].setColor(#03FF22);
         a="x";
       }
       if(x[i].equals("-.--")){
+        keyContent[24].setColor(#03FF22);
         a="y";
       }
       if(x[i].equals("--..")){
+        keyContent[25].setColor(#03FF22);
         a="z";
       }
       if(x[i].equals("----.")){
+        keyContent[34].setColor(#03FF22);
         a="9";
       }
       if(x[i].equals("---..")){
+        keyContent[33].setColor(#03FF22);
         a="8";
       }
       if(x[i].equals("--...")){
+        keyContent[32].setColor(#03FF22);
         a="7";
       }
       if(x[i].equals("-....")){
+        keyContent[31].setColor(#03FF22);
         a="6";
       }
       if(x[i].equals(".....")){
+        keyContent[30].setColor(#03FF22);
         a="5";
       }
       if(x[i].equals("....-")){
+        keyContent[29].setColor(#03FF22);
         a="4";
       }
       if(x[i].equals("...--")){
+        keyContent[28].setColor(#03FF22);
         a="3";
       }
       if(x[i].equals("..---")){
+        keyContent[27].setColor(#03FF22);
         a="2";
       }
       if(x[i].equals(".----")){
+        keyContent[26].setColor(#03FF22);
         a="1";
       }
       if(x[i].equals("-----")){
+        keyContent[35].setColor(#03FF22);
         a="0";
       }
       if(x[i].equals(".-.-.-")){
+        keyContent[36].setColor(#03FF22);
         a=".";
       }
       if(x[i].equals("--..--")){
+        keyContent[37].setColor(#03FF22);
         a=",";
       }
       if(x[i].equals("..--..")){
+        keyContent[38].setColor(#03FF22);
         a="?";
       }
       if(x[i].equals("-.-.--")){
+        keyContent[39].setColor(#03FF22);
         a="!";
       }
       if(x[i].equals(".----.")){
+        keyContent[40].setColor(#03FF22);
         a="\'";
       }
       if(x[i].equals(".-..-.")){
+        keyContent[41].setColor(#03FF22);
         a="\"";
       }
       if(x[i].equals("-.--.")){
+        keyContent[42].setColor(#03FF22);
         a="(";
       }
       if(x[i].equals("-.--.-")){
+        keyContent[43].setColor(#03FF22);
         a=")";
       }
       if(x[i].equals(".-...")){
+        keyContent[44].setColor(#03FF22);
         a="&";
       }
       if(x[i].equals("---...")){
+        keyContent[45].setColor(#03FF22);
         a=":";
       }
       if(x[i].equals("-.-.-.")){
+        keyContent[46].setColor(#03FF22);
         a=";";
       }
       if(x[i].equals("-..-.")){
+        keyContent[47].setColor(#03FF22);
         a="/";
       }
       if(x[i].equals("..--.-")){
+        keyContent[48].setColor(#03FF22);
         a="_";
       }
       if(x[i].equals("-...-")){
+        keyContent[49].setColor(#03FF22);
         a="=";
       }
       if(x[i].equals(".-.-.")){
+        keyContent[50].setColor(#03FF22);
         a="+";
       }
       if(x[i].equals("-...-")){
+        keyContent[51].setColor(#03FF22);
         a="-";
       }
       if(x[i].equals("...-..-")){
+        keyContent[52].setColor(#03FF22);
         a="$";
       }
       if(x[i].equals(".--.-.")){
+        keyContent[53].setColor(#03FF22);
         a="@";
       }
       answer+=a;

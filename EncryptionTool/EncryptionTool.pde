@@ -20,7 +20,7 @@ void setup() {
   ciphers[0]=new HillCipher(cp5);
   ciphers[1]=new Caesar(cp5);
   ciphers[2]=new MorseCode(cp5);
-  cipher=ciphers[1];
+  cipher=ciphers[0];
   cipher.showElements();
   println(frameCount);
   //possible addition for yes or no visualization

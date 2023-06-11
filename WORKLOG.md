@@ -101,6 +101,7 @@ more visualization planning
 ### date 6/8
 
 start working on visualization and planning how it is going to work
+try to organize the cp5 stuffs into individual classes and try different type of making it more organized and easier to change later
 
 ### date 6/9
 
@@ -109,7 +110,9 @@ work on what happens to screen when the cipher changes and try to understand mor
 ### date 6/10
 
 finish visualization for MorseCode and screen change when switching between ciphers
+fix hillcipher previous error
 
 ### date 6/11
 
 finish visualization for Caesar and update prototype work on uml and log everything aka all the extraneous stuff
+add newkey function to caesar and hide the button for morse

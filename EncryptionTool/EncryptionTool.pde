@@ -19,6 +19,8 @@ void setup() {
   ciphers[2]=new MorseCode(cp5);
   cipher=ciphers[2];
   cipher.showElements();
+  //possible addition for yes or no visualization
+  //cp5.addToggle("no",true,245,80,30,15).setMode(ControlP5.SWITCH);
   int textBoxSize=1000;
   cp5.addTextfield("textinput")
     .setFont(createFont("arial", 20))
@@ -113,8 +115,14 @@ void dropdown(int index) {
   String x= cp5.get(ScrollableList.class, "dropdown").getItem(index).get("name").toString();
   for(int i=0;i<ciphers.length;i++){
     if(ciphers[i].toString().equals(x)){
+      println("b4: ");
+      println(cipher);
+      println(elements);
       cipher=ciphers[i];
       cipher.showElements();
+      println("after: ");
+      println(cipher);
+      println(elements);
     }
   }
 }

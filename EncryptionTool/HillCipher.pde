@@ -43,6 +43,16 @@ public class HillCipher implements Cipher {
   }
   
   public void showElements(){
+    for(int i=0;i<elements.size();i++){
+      elements.get(i).setValue("");
+    }
+    elements=new ArrayList<Textlabel>();
+    elements.add(cp5.addTextlabel("HCkeyLabel"));
+    elements.add(cp5.addTextlabel("HCkeyContent"));
+    elements.add(cp5.addTextlabel("HCinputLabel"));
+    elements.add(cp5.addTextlabel("HCoutputLabel"));
+    elements.add(cp5.addTextlabel("HCinputContent"));
+    elements.add(cp5.addTextlabel("HCoutputContent"));
     elements.get(0)
       .setValue("KEY")
       .setPosition(width/2-700, height/2-100-100+20)

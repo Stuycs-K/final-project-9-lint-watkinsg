@@ -17,6 +17,11 @@ public class MorseCode implements Cipher {
   }
   
   public void showElements(){
+    for(int i=0;i<elements.size();i++){
+      elements.get(i).setValue("");
+    }
+    elements=new ArrayList<Textlabel>();
+    elements.add(cp5.addTextlabel("MCkeyLabel"));
     elements.get(0)
       .setValue("KEY")
       .setPosition(width/2-49+15, 30)

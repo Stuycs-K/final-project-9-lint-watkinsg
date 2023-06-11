@@ -21,6 +21,10 @@ public class Caesar implements Cipher {
   }
   
   public void showElements(){
+    for(int i=0;i<elements.size();i++){
+      elements.get(i).setValue("");
+    }
+    elements=new ArrayList<Textlabel>();
     //keyLabel =  cp5.addTextlabel("keyLabel")
     //  //.setValue("KEY")
     //  //.setPosition(width/2-700, height/2-100-100+20)

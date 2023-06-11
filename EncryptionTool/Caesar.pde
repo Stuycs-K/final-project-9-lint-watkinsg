@@ -199,4 +199,8 @@ public class Caesar implements Cipher {
     return "Caesar (rot"+" "+rot+")";
   }
   
+  public String extraToString() {
+    return "Caesar";
+  }
+  
 }

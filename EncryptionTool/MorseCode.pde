@@ -1393,4 +1393,8 @@ public class MorseCode implements Cipher {
     return answer;
   }
   
+  public String extraToString() {
+    return "Morse Code";
+  }
+  
 }

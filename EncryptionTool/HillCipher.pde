@@ -402,4 +402,8 @@ public class HillCipher implements Cipher {
     return "Hill Cipher";
   }
   
+  public String extraToString() {
+    return "Hill Cipher";
+  }
+  
 }

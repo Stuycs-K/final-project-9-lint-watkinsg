@@ -4,5 +4,6 @@ interface Cipher {
   public String decrypt(String s, ControlP5 cp5);
   public String toString();
   public void showElements();
+  public String extraToString();
   
 }

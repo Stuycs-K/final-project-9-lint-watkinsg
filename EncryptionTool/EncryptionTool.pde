@@ -24,6 +24,10 @@ void setup() {
   //possible addition for yes or no visualization
   //cp5.addToggle("no",true,245,80,30,15).setMode(ControlP5.SWITCH);
   int textBoxSize=1000;
+  String[] cs = new String[ciphers.length];
+  for (int i = 0; i < ciphers.length; i++) {
+    cs[i] = ciphers[i].toString();
+  }
   cp5.addTextfield("textinput")
     .setFont(createFont("arial", 20))
     .setPosition(width/2-textBoxSize/2, 680)
@@ -82,31 +86,26 @@ void setup() {
       float value = theEvent.getController().getValue();
       println("got a press from a " + name + ", the value is " + value);
       System.out.println(cipher);
-      if(cipher.toString().equals("Hill Cipher")){
+      if(cipher.extraToString().equals("Hill Cipher")){
         System.out.println("press newkey");
         ((HillCipher)cipher).defaultKey=((HillCipher)cipher).randomKey();
         ((HillCipher)cipher).makeDecryptKey();
         cipher.showElements();
       }
-      if(cipher.toString().equals(ciphers[1].toString())){
-        println("rot: "+((Caesar)cipher).rot);
+      if(cipher.extraToString().equals("Caesar")){
+        println("rot b4: "+((Caesar)cipher).rot);
         ((Caesar)cipher).rot=(((Caesar)cipher).rot+1)%26;
         if(((Caesar)cipher).rot==0){
           ((Caesar)cipher).rot=26;
         }
-        println("rot: "+((Caesar)cipher).rot);
+        println("rot after: "+((Caesar)cipher).rot);
         ciphers[1]=new Caesar(((Caesar)cipher).rot,cp5);
         cipher=ciphers[1];
         cipher.showElements();
-        println("final elements: "+elements);
       }
     }
     }
     );
-  String[] cs = new String[ciphers.length];
-  for (int i = 0; i < ciphers.length; i++) {
-    cs[i] = ciphers[i].toString();
-  }
   cp5.addScrollableList("dropdown")
     .setPosition(50, 50)
     .setSize(200, 100)
@@ -128,15 +127,13 @@ void draw() {
 void dropdown(int index) {
   String x= cp5.get(ScrollableList.class, "dropdown").getItem(index).get("name").toString();
   for(int i=0;i<ciphers.length;i++){
-    if(ciphers[i].toString().equals(x)){
+    if(ciphers[i].extraToString().substring(0,6).equals(x.substring(0,6))){
       println("b4: ");
       println(cipher);
-      println(elements);
       cipher=ciphers[i];
       cipher.showElements();
       println("after: ");
       println(cipher);
-      println(elements);
     }
   }
 }

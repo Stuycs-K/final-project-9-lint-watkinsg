@@ -24,10 +24,6 @@ void setup() {
   //possible addition for yes or no visualization
   //cp5.addToggle("no",true,245,80,30,15).setMode(ControlP5.SWITCH);
   int textBoxSize=1000;
-  String[] cs = new String[ciphers.length];
-  for (int i = 0; i < ciphers.length; i++) {
-    cs[i] = ciphers[i].toString();
-  }
   cp5.addTextfield("textinput")
     .setFont(createFont("arial", 20))
     .setPosition(width/2-textBoxSize/2, 680)
@@ -106,6 +102,11 @@ void setup() {
     }
     }
     );
+  String[] cs = new String[ciphers.length];
+  for (int i = 0; i < ciphers.length; i++) {
+    cs[i] = ciphers[i].toString();
+  }
+  cs[1]="Caesar";
   cp5.addScrollableList("dropdown")
     .setPosition(50, 50)
     .setSize(200, 100)

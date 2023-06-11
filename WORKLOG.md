@@ -97,3 +97,19 @@ start visualization for hillcipher by trying to keep all the necessary component
 
 solve cp5 error, apparently me just dumb and blind
 more visualization planning
+
+### date 6/8
+
+start working on visualization and planning how it is going to work
+
+### date 6/9
+
+work on what happens to screen when the cipher changes and try to understand more about cp5 why is it not working TT
+
+### date 6/10
+
+finish visualization for MorseCode and screen change when switching between ciphers
+
+### date 6/11
+
+finish visualization for Caesar and update prototype work on uml and log everything aka all the extraneous stuff

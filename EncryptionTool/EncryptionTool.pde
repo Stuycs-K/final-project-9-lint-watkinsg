@@ -9,6 +9,8 @@ Cipher[] ciphers;
 Cipher cipher;
 ArrayList<Textlabel> elements;
 int DELAY=10;
+Button newKeyButton;
+boolean newKeyButtonDisplay=true;
 
 void setup() {
   size(1600, 800);
@@ -69,7 +71,7 @@ void setup() {
     .setColorForeground(buttonColor)
     .setColorBackground(buttonColor)
     .setLabel("Decrypt");
-  cp5.addButton("newKeyButton")
+  newKeyButton = cp5.addButton("newKeyButton")
     .setFont(createFont("Georgia", 20))
     .setPosition(100, 680)
     .setSize(105,45)
@@ -123,6 +125,15 @@ void setup() {
 void draw() {
   // createMatrix(new int[][]{{}}, 0, 0);
   background(bgColor);
+  hideButton();
+}
+
+void hideButton(){
+  if(newKeyButtonDisplay==false){
+    newKeyButton.hide();
+  }else{
+    newKeyButton.show();
+  }
 }
 
 void dropdown(int index) {
@@ -133,6 +144,11 @@ void dropdown(int index) {
       println(cipher);
       cipher=ciphers[i];
       cipher.showElements();
+      if(cipher.extraToString().equals("Morse Code")){
+        newKeyButtonDisplay=false;
+      }else{
+        newKeyButtonDisplay=true;
+      }
       println("after: ");
       println(cipher);
     }

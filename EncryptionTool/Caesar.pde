@@ -30,7 +30,6 @@ public class Caesar implements Cipher {
       elements.get(i).setValue("");
     }
     elements=new ArrayList<Textlabel>();
-    println("elements: "+elements);
     elements.add(cp5.addTextlabel("ROT: "+rot));
     elements.get(0)
       .setValue("ROT: "+rot)
@@ -38,7 +37,6 @@ public class Caesar implements Cipher {
       .setColor(#FFFFFF)
       .setFont(createFont("arial", 30))
       ;
-    println("elements: "+elements);
     for(int i=0;i<alphabet.length;i++){
       float xposition=130;
       float yposition=140;

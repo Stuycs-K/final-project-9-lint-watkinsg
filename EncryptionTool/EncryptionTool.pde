@@ -22,9 +22,6 @@ void setup() {
   ciphers[2]=new MorseCode(cp5);
   cipher=ciphers[0];
   cipher.showElements();
-  println(frameCount);
-  //possible addition for yes or no visualization
-  //cp5.addToggle("no",true,245,80,30,15).setMode(ControlP5.SWITCH);
   int textBoxSize=1000;
   cp5.addTextfield("textinput")
     .setFont(createFont("arial", 20))
@@ -83,20 +80,16 @@ void setup() {
       String name = theEvent.getController().getName();
       float value = theEvent.getController().getValue();
       println("got a press from a " + name + ", the value is " + value);
-      System.out.println(cipher);
       if(cipher.extraToString().equals("Hill Cipher")){
-        System.out.println("press newkey");
         ((HillCipher)cipher).defaultKey=((HillCipher)cipher).randomKey();
         ((HillCipher)cipher).makeDecryptKey();
         cipher.showElements();
       }
       if(cipher.extraToString().equals("Caesar")){
-        println("rot b4: "+((Caesar)cipher).rot);
         ((Caesar)cipher).rot=(((Caesar)cipher).rot+1)%26;
         if(((Caesar)cipher).rot==0){
           ((Caesar)cipher).rot=26;
         }
-        println("rot after: "+((Caesar)cipher).rot);
         ciphers[1]=new Caesar(((Caesar)cipher).rot,cp5);
         cipher=ciphers[1];
         cipher.showElements();
@@ -123,7 +116,6 @@ void setup() {
 }
 
 void draw() {
-  // createMatrix(new int[][]{{}}, 0, 0);
   background(bgColor);
   hideButton();
 }
@@ -140,8 +132,6 @@ void dropdown(int index) {
   String x= cp5.get(ScrollableList.class, "dropdown").getItem(index).get("name").toString();
   for(int i=0;i<ciphers.length;i++){
     if(ciphers[i].extraToString().substring(0,6).equals(x.substring(0,6))){
-      println("b4: ");
-      println(cipher);
       cipher=ciphers[i];
       cipher.showElements();
       if(cipher.extraToString().equals("Morse Code")){
@@ -149,8 +139,6 @@ void dropdown(int index) {
       }else{
         newKeyButtonDisplay=true;
       }
-      println("after: ");
-      println(cipher);
     }
   }
 }

@@ -213,43 +213,29 @@ public class HillCipher implements Cipher {
     while (x<0) {
       x+=alphabet.length;
     }
-    //System.out.println("x:   "+x%alphabet.length);
     return x%alphabet.length;
   }
 
   void makeDecryptKey() {
-    //System.out.println("testing");
-    //System.out.println(alphabet.length);
-    // System.out.ln("makeDecryptKey");
     float d = determinent(defaultKey);
     boolean b=false;
     if (d<0) {
       d*=-1;
       b=true;
     }
-    // System.out.println("d: "+d);
     int igiveup=0;
     while ((d*igiveup)%alphabet.length!=1) {
       igiveup++;
       if (igiveup<5)
-        // System.out.println(igiveup);
       if (igiveup>100) {
-        // System.out.println("key noninvertible mod "+alphabet.length);
         break;
       }
     }
     if (b) {
       igiveup*=-1;
     }
-    // System.out.println("makeDecryptKey");
     d=igiveup;
-    // System.out.println("d: "+d);
     inverseDefaultKey=transpose(cofactor(defaultKey));
-    // System.out.println("transpose: ");
-    //for (int i=0; i<defaultKey.length; i++) {
-    //  System.out.println(Arrays.toString(inverseDefaultKey[i]));
-    //}
-    //mod(inverseDefaultKey);
     if (defaultKey.length<=2) {
       for (int i=0; i<defaultKey.length; i++) {
         for (int j=0; j<defaultKey[0].length; j++) {
@@ -261,14 +247,12 @@ public class HillCipher implements Cipher {
   }
 
   String encrypt(String s, ControlP5 cp5) {
-    System.out.println("encrypt");
     
     float[][] input=stringToNum(s);
     
     elements.get(1)
       .setValue(arrayToString(defaultKey,6));
       
-    //System.out.println("--------------------------------------------------\n"+(int)Math.pow(arrayToString(input,2).length(),0.5));
     int position=width/2-(int)(7.55*(arrayToString(input,2).length()/(defaultKey.length+(defaultKey.length-1)*2)));
 
     elements.get(4)
@@ -285,10 +269,6 @@ public class HillCipher implements Cipher {
         }
         newInput[j][i]=replace;
       }
-    }
-    // System.out.println("newInput");
-    for (int i=0; i<newInput.length; i++) {
-      // System.out.println(Arrays.toString(newInput[i]));
     }
     newInput=mod(newInput);
  
@@ -341,30 +321,17 @@ public class HillCipher implements Cipher {
 
   float[][] stringToNum(String s) {
     float[][] x=new float[defaultKey.length][ceil(float(s.length())/defaultKey.length)];
-    //System.out.println(x[0].length);
     while (s.length()%defaultKey.length!=0) {
       s+=" ";
     }
-    // System.out.println(s);
-    // System.out.println(x.length+" "+x[0].length);
     for (int i=0; i<x[0].length; i++) {
       for (int j=0; j<x.length; j++) {
         int smt=s.charAt(i*x.length+j);
 
-        //System.out.println("smt b4: "+smt);
-
-        //smt=smt%65;
-
         smt-=32;
 
-        //System.out.println("smt after: "+smt);
         x[j][i]=smt;
       }
-    }
-    //System.out.println("final x[i]: "+Arrays.toString(x));
-    // System.out.println("x stn");
-    for (int i=0; i<x.length; i++) {
-      // System.out.println(Arrays.toString(x[i]));
     }
     return x;
   }
@@ -372,30 +339,15 @@ public class HillCipher implements Cipher {
   String numToString(float[][] x) {
     String s="";
     x=mod(x);
-    //System.out.println(Arrays.toString(alphabet));
-    //System.out.println("x nts");
-    //System.out.println(Arrays.toString(x[0]));
-    //System.out.println(Arrays.toString(x[1]));
     for (int i=0; i<x[0].length; i++) {
       for (int j=0; j<x.length; j++) {
-        //System.out.println((int)(x[i]%alphabet.length));
-        //System.out.println("x[i]: "+x[i]);
         float y=x[j][i];
         while (y<0) {
           y+=alphabet.length;
         }
-        //System.out.println((y%alphabet.length));
-        //System.out.println(alphabet[(int)(y%alphabet.length)]);
         s+=alphabet[(int)(y%alphabet.length)];
       }
     }
-    //for(int i=0;i<x.length;i++){
-    //  System.out.println(x[i]);
-    //}
-    // System.out.println("x nts");
-    //for (int i=0; i<x.length; i++) {
-    //  System.out.println(Arrays.toString(x[i]));
-    //}
     return s;
   }
   String toString() {

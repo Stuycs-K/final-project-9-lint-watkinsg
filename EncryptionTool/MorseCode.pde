@@ -34,7 +34,6 @@ public class MorseCode implements Cipher {
       value+=cha[i]+":  "+morse[i];
       yposition+=i%6*60;
       xposition+=i/6*150;
-      //println("x: "+xposition+"  y: "+yposition);
       elements.add(cp5.addTextlabel(cha[i]+""));
       elements.get(i+1)
         .setValue(value)
@@ -44,17 +43,6 @@ public class MorseCode implements Cipher {
         ;
     }
   }
-  
-  //String morseComparison(){
-  //  String x="";
-  //  for(int i=0;i<morse.length;i++){
-  //    x+=cha[i]+":  "+morse[i]+"     ";
-  //    if(i>0&&i%4==0){
-  //      x+="\n";
-  //    }
-  //  }
-  //  return x;
-  //}
   
   String toString(){
     return "Morse Code";
@@ -737,7 +725,6 @@ public class MorseCode implements Cipher {
     }
     String answer="";
     String[] x=s.split(" ");
-    System.out.println("s.split(\" \": "+ Arrays.toString(x));
     for(int i=0;i<x.length;i++){
       String a=" ";
       int somenumber=0;

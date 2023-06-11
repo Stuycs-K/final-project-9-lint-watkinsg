@@ -15,79 +15,62 @@ public class HillCipher implements Cipher {
   public String alpha=" !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
   public char[] alphabet=alpha.toCharArray();
   
-  public Textlabel inputContent;
-  public Textlabel inputLabel;
-  public Textlabel outputContent;
-  public Textlabel outputLabel;
-  public Textlabel keyContent;
-  public Textlabel keyLabel;
-  public Textlabel[] textlabels=new Textlabel[6];
   public ControlP5 cp5;
 
   public HillCipher(ControlP5 cp5) {
     makeDecryptKey();
     this.cp5 = cp5;
-    keyLabel =  cp5.addTextlabel("keyLabel");
-    textlabels[0]=keyLabel;
-    keyContent =  cp5.addTextlabel("keyContent");
-    textlabels[1]=keyContent;
-    inputLabel=cp5.addTextlabel("inputLabel");
-    textlabels[2]=inputLabel;
-    outputLabel=cp5.addTextlabel("outputLabel");
-    textlabels[3]=outputLabel;
-    inputContent=cp5.addTextlabel("inputContent");
-    textlabels[4]=inputContent;
-    outputContent=cp5.addTextlabel("outputContent");
-    textlabels[5]=outputContent;
+    elements=new ArrayList<Textlabel>();
+    elements.add(cp5.addTextlabel("HCkeyLabel"));
+    elements.add(cp5.addTextlabel("HCkeyContent"));
+    elements.add(cp5.addTextlabel("HCinputLabel"));
+    elements.add(cp5.addTextlabel("HCoutputLabel"));
+    elements.add(cp5.addTextlabel("HCinputContent"));
+    elements.add(cp5.addTextlabel("HCoutputContent"));
   }
   
   public HillCipher(float[][] newKey, ControlP5 cp5){
     defaultKey=newKey;
     makeDecryptKey();
     this.cp5=cp5;
-    keyLabel =  cp5.addTextlabel("keyLabel");
-    textlabels[0]=keyLabel;
-    keyContent =  cp5.addTextlabel("keyContent");
-    textlabels[1]=keyContent;
-    inputLabel=cp5.addTextlabel("inputLabel");
-    textlabels[2]=inputLabel;
-    outputLabel=cp5.addTextlabel("outputLabel");
-    textlabels[3]=outputLabel;
-    inputContent=cp5.addTextlabel("inputContent");
-    textlabels[4]=inputContent;
-    outputContent=cp5.addTextlabel("outputContent");
-    textlabels[5]=outputContent;
+    elements=new ArrayList<Textlabel>();
+    elements.add(cp5.addTextlabel("HCkeyLabel"));
+    elements.add(cp5.addTextlabel("HCkeyContent"));
+    elements.add(cp5.addTextlabel("HCinputLabel"));
+    elements.add(cp5.addTextlabel("HCoutputLabel"));
+    elements.add(cp5.addTextlabel("HCinputContent"));
+    elements.add(cp5.addTextlabel("HCoutputContent"));
   }
   
-  public void showTextlabels(){
-    keyLabel =  cp5.addTextlabel("keyLabel")
+  public void showElements(){
+    elements.get(0)
       .setValue("KEY")
       .setPosition(width/2-700, height/2-100-100+20)
       .setColor(#FFFFFF)
       .setFont(createFont("arial", 30))
       ;
-    keyContent =  cp5.addTextlabel("keyContent")
+    elements.get(1)
       .setValue(arrayToString(defaultKey,6))
       .setPosition(width/2-700, height/2-100+20)
       .setColor(#FFFFFF)
       .setFont(createFont("Georgia", 30))
       ;
-    inputLabel=cp5.addTextlabel("inputLabel")
+    elements.get(2)
       .setValue("INPUT")
       .setPosition(width/2-49+15, 15)
       .setColor(#FFFFFF)
       .setFont(createFont("arial", 30))
       ;
-    outputLabel=cp5.addTextlabel("outputLabel")
+    elements.get(3)
       .setValue("OUTPUT")
       .setPosition(width/2-700+500+400, height/2-100-100+20)
       .setColor(#FFFFFF)
       .setFont(createFont("arial", 30))
       ;
-    inputContent=cp5.addTextlabel("inputContent")
+    elements.get(4)
       .setColor(#FFFFFF)
       .setFont(createFont("Georgia", 20));
-    outputContent=cp5.addTextlabel("OutputContent")
+    elements.get(5)
       .setColor(#FFFFFF)
       .setFont(createFont("Georgia", 20));
   }
@@ -272,13 +255,13 @@ public class HillCipher implements Cipher {
     
     float[][] input=stringToNum(s);
     
-    keyContent
+    elements.get(1)
       .setValue(arrayToString(defaultKey,6));
       
     //System.out.println("--------------------------------------------------\n"+(int)Math.pow(arrayToString(input,2).length(),0.5));
     int position=width/2-(int)(7.55*(arrayToString(input,2).length()/(defaultKey.length+(defaultKey.length-1)*2)));
 
-    inputContent
+    elements.get(4)
       .setValue(arrayToString(input,2))
       .setPosition(position+20, 15+80)
       ;
@@ -299,7 +282,7 @@ public class HillCipher implements Cipher {
     }
     newInput=mod(newInput);
  
-    outputContent
+    elements.get(5)
       .setValue(arrayToString(newInput,2))
       .setPosition(width/2-700+500+400, height/2-100+20)
       ;
@@ -317,12 +300,12 @@ public class HillCipher implements Cipher {
   String decrypt(String s, ControlP5 cp5) {
     float[][] input=stringToNum(s);
     
-    keyContent
+    elements.get(1)
       .setValue(arrayToString(inverseDefaultKey,6));
     
     int position=width/2-(int)(7.55*(arrayToString(input,2).length()/(defaultKey.length+(defaultKey.length-1)*2)));
 
-    inputContent
+    elements.get(4)
       .setValue(arrayToString(input,2))
       .setPosition(position+25, 15+80);
         
@@ -338,7 +321,7 @@ public class HillCipher implements Cipher {
     }
     newInput=mod(newInput);
     
-    outputContent
+    elements.get(5)
       .setValue(arrayToString(newInput,2))
       .setPosition(width/2-700+500+400, height/2-100+20);
       
@@ -407,22 +390,6 @@ public class HillCipher implements Cipher {
   }
   String toString() {
     return "Hill Cipher";
-  }
-  
-  public void emptyTextlabels(){
-    if(textlabels.length>0){
-      for(int i=0;i<textlabels.length;i++){
-        textlabels[i].setValue("");
-      }
-    }
-  }
-  
-  public String textlabelsToString(){
-    String x="";
-    for(int i=0;i<textlabels.length;i++){
-      x+=textlabels[i].toString()+" ";
-    }
-    return x;
   }
   
 }

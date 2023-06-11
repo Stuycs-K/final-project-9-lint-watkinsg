@@ -7,6 +7,7 @@ color buttonColor=#629b5e;
 // array of identifiers for controlp5 stuff
 Cipher[] ciphers;
 Cipher cipher;
+ArrayList<Textlabel> elements;
 
 void setup() {
   size(1600, 800);
@@ -17,7 +18,7 @@ void setup() {
   ciphers[1]=new Caesar(cp5);
   ciphers[2]=new MorseCode(cp5);
   cipher=ciphers[2];
-  cipher.showTextlabels();
+  cipher.showElements();
   int textBoxSize=1000;
   cp5.addTextfield("textinput")
     .setFont(createFont("arial", 20))
@@ -79,8 +80,9 @@ void setup() {
       System.out.println(cipher);
       if(cipher.toString().equals("Hill Cipher")){
         System.out.println("press newkey");
-        cipher=new HillCipher(((HillCipher) cipher).randomKey(), cp5);
-        cipher.showTextlabels();
+        ((HillCipher)cipher).defaultKey=((HillCipher)cipher).randomKey();
+        ((HillCipher)cipher).makeDecryptKey();
+        cipher.showElements();
       }
     }
     }
@@ -111,14 +113,8 @@ void dropdown(int index) {
   String x= cp5.get(ScrollableList.class, "dropdown").getItem(index).get("name").toString();
   for(int i=0;i<ciphers.length;i++){
     if(ciphers[i].toString().equals(x)){
-      println("old: "+cipher);
-      println(cipher.textlabelsToString());
-      cipher.emptyTextlabels();
-      println(cipher.textlabelsToString());
       cipher=ciphers[i];
-      println("new: "+cipher);
-      println(cipher.textlabelsToString());
-      cipher.showTextlabels();
+      cipher.showElements();
     }
   }
 }

@@ -121,9 +121,7 @@ void dropdown(int index) {
       println(cipher);
       println(elements);
       cipher=ciphers[i];
-      if(cipher!=ciphers[1]){
-        cipher.showElements();
-      }
+      cipher.showElements();
       println("after: ");
       println(cipher);
       println(elements);

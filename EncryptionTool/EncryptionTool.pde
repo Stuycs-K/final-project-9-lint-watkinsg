@@ -8,6 +8,7 @@ color buttonColor=#629b5e;
 Cipher[] ciphers;
 Cipher cipher;
 ArrayList<Textlabel> elements;
+int DELAY=10;
 
 void setup() {
   size(1600, 800);
@@ -17,8 +18,9 @@ void setup() {
   ciphers[0]=new HillCipher(cp5);
   ciphers[1]=new Caesar(cp5);
   ciphers[2]=new MorseCode(cp5);
-  cipher=ciphers[2];
+  cipher=ciphers[1];
   cipher.showElements();
+  println(frameCount);
   //possible addition for yes or no visualization
   //cp5.addToggle("no",true,245,80,30,15).setMode(ControlP5.SWITCH);
   int textBoxSize=1000;
@@ -119,7 +121,9 @@ void dropdown(int index) {
       println(cipher);
       println(elements);
       cipher=ciphers[i];
-      cipher.showElements();
+      if(cipher!=ciphers[1]){
+        cipher.showElements();
+      }
       println("after: ");
       println(cipher);
       println(elements);

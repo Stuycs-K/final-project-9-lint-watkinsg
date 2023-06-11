@@ -88,6 +88,18 @@ void setup() {
         ((HillCipher)cipher).makeDecryptKey();
         cipher.showElements();
       }
+      if(cipher.toString().equals(ciphers[1].toString())){
+        println("rot: "+((Caesar)cipher).rot);
+        ((Caesar)cipher).rot=(((Caesar)cipher).rot+1)%26;
+        if(((Caesar)cipher).rot==0){
+          ((Caesar)cipher).rot=26;
+        }
+        println("rot: "+((Caesar)cipher).rot);
+        ciphers[1]=new Caesar(((Caesar)cipher).rot,cp5);
+        cipher=ciphers[1];
+        cipher.showElements();
+        println("final elements: "+elements);
+      }
     }
     }
     );

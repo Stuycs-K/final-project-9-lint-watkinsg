@@ -12,7 +12,6 @@ public class Caesar implements Cipher {
   public Caesar(ControlP5 cp5){
     rot=13;
     this.cp5=cp5;
-    elements=new ArrayList<Textlabel>();
     for(int i=0;i<rot;i++){
       rot();
     }
@@ -21,7 +20,6 @@ public class Caesar implements Cipher {
   public Caesar(int x, ControlP5 cp5){
     rot=x;
     this.cp5=cp5;
-    elements=new ArrayList<Textlabel>();
     for(int i=0;i<rot;i++){
       rot();
     }
@@ -32,6 +30,7 @@ public class Caesar implements Cipher {
       elements.get(i).setValue("");
     }
     elements=new ArrayList<Textlabel>();
+    println("elements: "+elements);
     elements.add(cp5.addTextlabel("ROT: "+rot));
     elements.get(0)
       .setValue("ROT: "+rot)
@@ -39,6 +38,7 @@ public class Caesar implements Cipher {
       .setColor(#FFFFFF)
       .setFont(createFont("arial", 30))
       ;
+    println("elements: "+elements);
     for(int i=0;i<alphabet.length;i++){
       float xposition=130;
       float yposition=140;

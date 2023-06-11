@@ -97,19 +97,26 @@ public class Caesar implements Cipher {
     String answer="";
     int[] x=stringToNum(s);
     for(int i=0;i<x.length;i++){
+      String str=" ";
       if(x[i]!=-1){
         elements.get(x[i]+1).setColor(#F6FF03);
         elements.get(x[i]+27)
           .setColor(0)
           .setFont(createFont("arial", 40));
       }
-      if(x[i]==-1){
-        answer+=" ";
-      }else{
+      if(x[i]!=-1){
         x[i]+=rot;
         x[i]=x[i]%alphabet.length;
-        answer+=alphabet[x[i]];
+        str=alphabet[x[i]]+"";
       }
+      answer+=str;
+      elements.add(cp5.addTextlabel("Caesar input"+i));
+      elements.get(elements.size()-1)
+        .setValue(str)
+        .setPosition(100+(i+1)*50,522)
+        .setColor(0)
+        .setFont(createFont("arial",20))
+        ;
     }
     return answer;
   }
@@ -135,22 +142,29 @@ public class Caesar implements Cipher {
     String answer="";
     int[] x=stringToNum(s);
     for(int i=0;i<x.length;i++){
+      String str=" ";
       if(x[i]!=-1){
         elements.get(x[i]+1).setColor(#F6FF03);
         elements.get(x[i]+27)
           .setColor(0)
           .setFont(createFont("arial", 40));
       }
-      if(x[i]==-1){
-        answer+=" ";
-      }else{
+      if(x[i]!=-1){
         x[i]-=rot;
         if(x[i]<0){
           x[i]+=26;
         }
         x[i]=x[i]%alphabet.length;
-        answer+=alphabet[x[i]];
+        str=alphabet[x[i]]+"";
       }
+      answer+=str;
+      elements.add(cp5.addTextlabel("Caesar input"+i));
+      elements.get(elements.size()-1)
+        .setValue(str)
+        .setPosition(100+(i+1)*50,522)
+        .setColor(0)
+        .setFont(createFont("arial",20))
+        ;
     }
     return answer;
   }

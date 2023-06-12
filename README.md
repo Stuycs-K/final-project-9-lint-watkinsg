@@ -4,7 +4,7 @@ Period 9, Gus Watkins and Tracey Lin
 
 ## Overview
 
-This is a cipher encryption and decryption tool. It uses a graphical interface with interactive elements such as buttons and text boxes. The primary cipher used is hill cipher, but it also features other simple ciphers such as Morse Code and Caesar Shift. The key that is used to encrypt the message will be displayed to help the user better understand how the message is being encrypted. There is also a newKey button in case the user want to generate a new key (does not work for Morse Code though).
+This is a cipher encryption tool. It uses a graphical interface with interactive elements such as buttons and text boxes. The primary cipher used is hill cipher, but it also features other simple ciphers such as Morse Code and Caesar Shift. The key that is used to encrypt the message will be displayed to help the user better understand how the message is being encrypted. There is also a newKey button in case the user wants to generate a new key (does not work for Morse Code though).
 
 ## Instructions
 

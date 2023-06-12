@@ -3,6 +3,7 @@ import controlP5.*;
 ControlP5 cp5;
 color bgColor=#962832;
 color buttonColor=#629b5e;
+Controller keyboardInput;
 
 // array of identifiers for controlp5 stuff
 Cipher[] ciphers;
@@ -14,6 +15,7 @@ boolean newKeyButtonDisplay=true;
 
 void setup() {
   size(1600, 800);
+  keyboardInput = new Controller();
   background(bgColor);
   cp5 = new ControlP5(this);
   ciphers = new Cipher[3];
@@ -118,6 +120,14 @@ void setup() {
 void draw() {
   background(bgColor);
   hideButton();
+  //check if the button P1_LEFT is being pressed:
+  if (keyboardInput.isPressed(Controller.P1_LEFT)) {
+    rect(10, 10, 10, 10);
+  }
+  //check if the button P1_RIGHT is being pressed:
+  if (keyboardInput.isPressed(Controller.P1_RIGHT)) {
+    rect(30, 10, 10, 10);
+  }
 }
 
 void hideButton(){
@@ -141,4 +151,12 @@ void dropdown(int index) {
       }
     }
   }
+}
+
+void keyPressed() {
+  keyboardInput.press(keyCode);
+}
+
+void keyReleased() {
+  keyboardInput.release(keyCode);
 }

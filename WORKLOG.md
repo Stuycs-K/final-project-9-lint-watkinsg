@@ -116,3 +116,29 @@ fix hillcipher previous error
 
 finish visualization for Caesar and update prototype work on uml and log everything aka all the extraneous stuff
 add newkey function to caesar and hide the button for morse
+
+
+I. Working features
+- Hill Cipher encryption and decryption
+- Morse Code encryption and decryption
+- Caesar encryption and decryption
+- use the dropdown to display all the cipher types
+- change the cipher by clicking on the cipher you want
+- change the screen background based on the cipher chosen
+- display the key of the ciphers (Hill Cipher, Morse Code, and Caesar)
+- newKey Button that automatically generates a new key when clicked
+- highlight the input elements in the key and their corresponding value
+
+II. Broken features
+- can not show the in between steps for the encryption and decryption process because draw only works after all of the functions finish running (realized that we need a tick() too late)
+- cannot show the process of numbers or characters drifting on the screen because I could not figure out how to do it with ControlP5 and also the same problem with the draw() mentioned above
+- Cannot do pop ups messages to warn the user about illegal input because I don't know how to do that in processing
+- cannot make the key for Hill Cipher NxN matrix because it starts to become hard to satisfy the requirement (be modable by the amount of characters that could be encrypted and have an inverse matrix)
+- cannot change the items in the dropdown after initialization because I don't know ControlP5 that well
+- did not have time to add keyboard shortcuts
+
+III. Helpful Resources
+- ControlP5 document https://sojamo.de/libraries/controlP5/reference/allclasses-noframe.html to look for useful classes and their methods
+- Processing forum https://forum.processing.org/one/allforums.html to see how ControlP5 is supposed to be used and answering some questions I have with why ControlP5 behaves this way
+- StackOverFlow for general coding questions
+- Mr. K's website for useful methods he wrote before

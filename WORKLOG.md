@@ -142,3 +142,4 @@ III. Helpful Resources
 - Processing forum https://forum.processing.org/one/allforums.html to see how ControlP5 is supposed to be used and answering some questions I have with why ControlP5 behaves this way
 - StackOverFlow for general coding questions
 - Mr. K's website for useful methods he wrote before
+- https://www.dcode.fr/hill-cipher this thing that showed me how hill cipher works and allows me to check if my method correctly encrypted stuff
